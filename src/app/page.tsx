@@ -1,4 +1,21 @@
 "use client";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Best Dentist in Wakad Pune | Zircon Dental & Implant Clinic",
+  description:
+    "Zircon Dental & Implant Clinic — Wakad's most trusted dental clinic. Dental implants from ₹25,000, smile design, root canal & orthodontics. 18+ years expertise. 98.5% success rate. Free consultation. Call +91 75586 97707.",
+  keywords: [
+    "best dentist wakad pune",
+    "dental implants wakad pune",
+    "dental clinic near phoenix mall wakad",
+    "implant dentist pune",
+    "zircon dental wakad",
+  ],
+  alternates: {
+    canonical: "https://zircondentalpune.com",
+  },
+};
 
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/home/HeroSection";

@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-dark-800 font-body overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-primary-500 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-600;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-dark-900/80 backdrop-blur-lg border border-white/10;
+  }
+
+  /* ✅ Updated gradient to teal */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600;
+  }
+
+  /* ✅ Updated CTA gradient to blue */
+  .text-gradient-cta {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cta-600 via-cta-500 to-cta-600;
+  }
+
+  /* ✅ Updated buttons to teal + blue */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wider uppercase text-white bg-primary-600 rounded-full overflow-hidden transition-all duration-500 hover:bg-primary-700 hover:shadow-primary hover:-translate-y-0.5;
+  }
+
+  .btn-cta {
+    @apply relative inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wider uppercase text-white bg-cta-600 rounded-full overflow-hidden transition-all duration-500 hover:bg-cta-700 hover:shadow-cta hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply relative inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wider uppercase text-primary-600 border-2 border-primary-600 rounded-full overflow-hidden transition-all duration-500 hover:bg-primary-600 hover:text-white hover:-translate-y-0.5;
+  }
+
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wider uppercase text-dark-900 bg-gold-gradient rounded-full overflow-hidden transition-all duration-500 hover:shadow-gold hover:-translate-y-0.5;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-2xl shadow-premium overflow-hidden transition-all duration-500 hover:shadow-premium-lg hover:-translate-y-2;
+  }
+
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold leading-tight;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl lg:text-5xl font-heading font-bold leading-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl lg:text-4xl font-heading font-bold leading-tight;
+  }
+
+  .subtitle {
+    @apply text-lg md:text-xl text-dark-500 leading-relaxed font-light;
+  }
+
+  .image-shine {
+    @apply relative overflow-hidden;
+  }
+
+  .image-shine::after {
+    content: "";
+    @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent;
+    animation: shimmer 3s infinite;
+  }
+
+  .divider-gradient {
+    @apply h-px bg-gradient-to-r from-transparent via-primary-500 to-transparent;
+  }
+
+  .blur-blob {
+    @apply absolute rounded-full blur-3xl opacity-20;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .mask-gradient {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+}

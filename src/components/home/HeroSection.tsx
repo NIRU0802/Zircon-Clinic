@@ -109,7 +109,7 @@ const HeroSection = () => {
             >
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span className="text-xs text-white/80 font-medium tracking-wider uppercase">
-                #1 Rated Aesthetic Clinic in India
+                #1 Rated Dental Clinic in Pune
               </span>
             </motion.div>
 

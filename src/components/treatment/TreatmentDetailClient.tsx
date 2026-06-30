@@ -425,8 +425,14 @@ export default function TreatmentDetailClient({
               <a href={`tel:${SITE_CONFIG.phone}`} className="flex items-center justify-center gap-2 px-6 py-4 text-white border border-white/20 rounded-full hover:bg-white/10 transition-all text-sm font-semibold">
                 <FiPhone className="w-4 h-4" /> Call Us
               </a>
-              <a href="#" className="flex items-center justify-center gap-2 px-6 py-4 text-white border border-white/20 rounded-full hover:bg-white/10 transition-all text-sm font-semibold">
-                <FiMapPin className="w-4 h-4" /> Get Directions
+              <a
+                href={SITE_CONFIG.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-6 py-4 text-white border border-white/20 rounded-full hover:bg-white/10 transition-all text-sm font-semibold"
+              >
+                <FiMapPin className="w-4 h-4" />
+                Get Directions
               </a>
             </div>
 

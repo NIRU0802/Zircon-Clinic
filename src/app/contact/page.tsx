@@ -54,7 +54,7 @@ export default function ContactPage() {
           >
             <FiMapPin className="w-3 h-3 text-primary-400" />
             <span className="text-xs text-white/80 font-medium tracking-wider uppercase">
-              Wakad, Pune â€” Opp. Phoenix Mall Road
+              Wakad, Pune — Opp. Phoenix Mall Road
             </span>
           </motion.div>
 

@@ -21,7 +21,13 @@ const DoctorsSection = () => {
             <motion.div key={doctor.id} variants={staggerItem} className="group">
               <div className="relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500">
                 <div className="relative h-80 overflow-hidden">
-                  <Image src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600" alt={doctor.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <Image
+                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600"
+                    alt={doctor.name}
+                    fill
+                    sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-dark-900/20 to-transparent" />
                   <div className="absolute top-4 right-4 px-3 py-1.5 bg-gold-gradient rounded-full text-xs font-bold text-dark-900">{doctor.experience}</div>
                   <div className="absolute bottom-0 left-0 right-0 p-6">

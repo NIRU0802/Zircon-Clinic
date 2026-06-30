@@ -154,7 +154,9 @@ export default function AboutPage() {
           <Image
             src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2000"
             alt="About Us"
-            className="w-full h-full object-cover opacity-15"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-15"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-950/60 to-dark-950" />
         </div>
@@ -233,7 +235,9 @@ export default function AboutPage() {
                   <Image
                     src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=800"
                     alt="Zircon Dental Clinic Wakad"
-                    className="w-full aspect-[4/5] object-cover"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
                   />
                 </div>
 
@@ -371,7 +375,9 @@ export default function AboutPage() {
           <Image
             src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2000"
             alt="Stats"
-            className="w-full h-full object-cover opacity-5"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-5"
           />
         </div>
         <div className="container-custom relative">
@@ -502,6 +508,8 @@ export default function AboutPage() {
                     <Image
                       src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600"
                       alt={doctor.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent" />
@@ -609,6 +617,8 @@ export default function AboutPage() {
                 <Image
                   src={src}
                   alt={`Clinic Photo ${i + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </motion.div>

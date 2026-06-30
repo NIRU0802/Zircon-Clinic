@@ -151,20 +151,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/icon-16.png", sizes: "16x16", type: "image/png" },
-      { url: "/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: [
-      { url: "/apple-icon.png" },
-      { url: "/apple-icon-180.png", sizes: "180x180" },
-    ],
-    other: [
-      {
-        rel: "mask-icon",
-        url: "/safari-pinned-tab.svg",
-        color: "#0d9488",
-      },
-    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
 
   // Manifest
@@ -180,6 +170,7 @@ export default function RootLayout({
     <html
       lang="en-IN"
       className={`${inter.variable} ${playfair.variable} ${cormorant.variable}`}
+      suppressHydrationWarning
     >
       <head>
         {/* ✅ Local Business Schema - Most important for dental SEO */}

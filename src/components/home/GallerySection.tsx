@@ -33,7 +33,15 @@ const GallerySection = () => {
           {galleryImages.map((image) => (
             <motion.div key={image.id} variants={staggerItem} className={`relative group rounded-2xl overflow-hidden cursor-pointer ${image.span}`} onMouseEnter={() => setHoveredId(image.id)} onMouseLeave={() => setHoveredId(null)}>
               <div className={`${image.span.includes("row-span-2") ? "h-full min-h-[400px]" : "aspect-square"} relative`}>
-                <Image src={image.src} alt={image.category} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image
+                  src={image.src}
+                  alt={image.category}
+                  fill
+                  sizes="(max-width: 768px) 100vw,
+         (max-width: 1024px) 50vw,
+         33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
                 <div className={`absolute inset-0 bg-primary-900/60 flex items-center justify-center transition-opacity duration-300 ${hoveredId === image.id ? "opacity-100" : "opacity-0"}`}>
                   <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                     <FiZoomIn className="w-6 h-6 text-white" />

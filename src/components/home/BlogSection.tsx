@@ -29,8 +29,14 @@ const BlogSection = () => {
               <Link href={`/blog/${post.slug}`}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 hover:-translate-y-2">
                   <div className="relative h-52 overflow-hidden">
-                    <Image src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute top-4 left-4"><span className="px-3 py-1 bg-primary-500 text-white text-xs font-semibold rounded-full">{post.category}</span></div>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      unoptimized
+                    />                    <div className="absolute top-4 left-4"><span className="px-3 py-1 bg-primary-500 text-white text-xs font-semibold rounded-full">{post.category}</span></div>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-4 text-xs text-gray-400 mb-3">

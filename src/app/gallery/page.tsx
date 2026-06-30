@@ -58,7 +58,7 @@ export default function GalleryPage() {
             {filtered.map((image) => (
               <motion.div key={image.id} variants={staggerItem} className="group cursor-pointer" onClick={() => setSelectedImage(image)}>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500">
-                  <Image src={image.src} alt={image.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <Image src={image.src} alt={image.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-dark-900/0 group-hover:bg-dark-900/50 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity text-center">
                       <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-2">

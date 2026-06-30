@@ -6,8 +6,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
-
-  // ✅ Allow images from all these domains
   images: {
     remotePatterns: [
       {
@@ -29,10 +27,8 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
-    // ✅ Allow unoptimized images (fixes external URL issues)
     unoptimized: true,
   },
-
   compress: true,
   poweredByHeader: false,
 };

@@ -17,7 +17,9 @@ export default function TreatmentsPage() {
           <Image
             src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2000"
             alt="Treatments"
-            className="w-full h-full object-cover opacity-10"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-10"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-950/60 to-dark-950" />
         </div>
@@ -54,7 +56,7 @@ export default function TreatmentsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Comprehensive dental care solutions — from routine checkups
+            Comprehensive dental care solutions â€” from routine checkups
             to advanced implant procedures. All under one roof at Wakad,
             Pune.
           </motion.p>
@@ -110,7 +112,9 @@ export default function TreatmentsPage() {
                       <Image
                         src={treatment.image}
                         alt={treatment.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -225,7 +229,7 @@ export default function TreatmentsPage() {
               viewport={{ once: true }}
               transition={{ type: "spring", delay: 0.2 }}
             >
-              <span className="text-2xl">🦷</span>
+              <span className="text-2xl">ðŸ¦·</span>
             </motion.div>
 
             <span className="inline-flex items-center gap-2 text-gold-400 text-sm font-semibold tracking-[0.25em] uppercase mb-6">
@@ -242,13 +246,13 @@ export default function TreatmentsPage() {
 
             <p className="text-gray-400 max-w-xl mx-auto mb-4 font-light">
               Our specialists will examine, diagnose, and recommend the
-              best treatment plan for you — absolutely free. No
+              best treatment plan for you â€” absolutely free. No
               obligation, no pressure.
             </p>
 
             <p className="text-gray-600 text-sm mb-10">
-              ✅ Free Consultation &nbsp;•&nbsp; ✅ Same Day Appointment
-              &nbsp;•&nbsp; ✅ 0% EMI Available
+              âœ… Free Consultation &nbsp;â€¢&nbsp; âœ… Same Day Appointment
+              &nbsp;â€¢&nbsp; âœ… 0% EMI Available
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">

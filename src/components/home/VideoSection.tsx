@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -14,8 +15,12 @@ const VideoSection = () => {
         <Image
           src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2000"
           alt="Clinic"
-          className="w-full h-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
+
         <div className="absolute inset-0 bg-dark-950/70" />
       </div>
 
@@ -37,21 +42,21 @@ const VideoSection = () => {
 
           <p className="text-white/60 max-w-xl mx-auto mb-12 font-light">
             Experience our world-class facility from the comfort of your home.
-            See why thousands of patients trust Esthetica.
+            See why thousands of patients trust Zircon Dental.
           </p>
 
           {/* Play Button */}
           <motion.button
-            className="relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-white/10 backdrop-blur-sm border-2 border-white/20 group"
+            type="button"
             onClick={() => setIsPlaying(true)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            className="relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-white/10 backdrop-blur-sm border-2 border-white/20 group"
           >
-            {/* Ripple effect */}
             <span className="absolute inset-0 rounded-full border-2 border-white/20 animate-ping" />
-            <span className="absolute inset-[-8px] rounded-full border border-white/10 animate-pulse" />
+            <span className="absolute -inset-2 rounded-full border border-white/10 animate-pulse" />
 
-            <FiPlay className="w-10 h-10 text-white ml-1" />
+            <FiPlay className="w-10 h-10 text-white ml-1 relative z-10" />
           </motion.button>
         </motion.div>
       </div>
@@ -62,14 +67,17 @@ const VideoSection = () => {
           className="fixed inset-0 z-[200] bg-dark-950/95 flex items-center justify-center p-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           onClick={() => setIsPlaying(false)}
         >
           <button
+            type="button"
             className="absolute top-8 right-8 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
             onClick={() => setIsPlaying(false)}
           >
             <FiX className="w-6 h-6" />
           </button>
+
           <motion.div
             className="w-full max-w-4xl aspect-video bg-dark-900 rounded-2xl overflow-hidden"
             initial={{ scale: 0.8, opacity: 0 }}
@@ -79,6 +87,7 @@ const VideoSection = () => {
           >
             <iframe
               src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              title="Clinic Tour"
               className="w-full h-full"
               allow="autoplay; fullscreen"
               allowFullScreen

@@ -28,7 +28,7 @@ const implantPlans = [
   {
     id: 1,
     name: "Single Tooth Implant",
-    icon: "🦷",
+    icon: "ðŸ¦·",
     price: "25,000",
     originalPrice: "35,000",
     unit: "per implant",
@@ -47,7 +47,7 @@ const implantPlans = [
   {
     id: 2,
     name: "All-on-4 Implants",
-    icon: "⚡",
+    icon: "âš¡",
     price: "4,50,000",
     originalPrice: "6,00,000",
     unit: "per arch",
@@ -68,7 +68,7 @@ const implantPlans = [
   {
     id: 3,
     name: "Full Mouth Implants",
-    icon: "👑",
+    icon: "ðŸ‘‘",
     price: "8,00,000",
     originalPrice: "10,00,000",
     unit: "both arches",
@@ -93,7 +93,7 @@ const implantPlans = [
 const treatmentCategories = [
   {
     category: "Dental Implants",
-    icon: "🦷",
+    icon: "ðŸ¦·",
     items: [
       { treatment: "Single Tooth Implant", price: "25,000 - 50,000" },
       { treatment: "All-on-4 (per arch)", price: "4,50,000 - 6,00,000" },
@@ -107,7 +107,7 @@ const treatmentCategories = [
   },
   {
     category: "Cosmetic Dentistry",
-    icon: "✨",
+    icon: "âœ¨",
     items: [
       { treatment: "Porcelain Veneers", price: "15,000 - 25,000 / tooth" },
       { treatment: "Composite Veneers", price: "5,000 - 8,000 / tooth" },
@@ -120,7 +120,7 @@ const treatmentCategories = [
   },
   {
     category: "Crowns & Bridges",
-    icon: "👑",
+    icon: "ðŸ‘‘",
     items: [
       { treatment: "Zirconia Crown", price: "10,000 - 18,000" },
       { treatment: "E-max Crown", price: "15,000 - 22,000" },
@@ -132,7 +132,7 @@ const treatmentCategories = [
   },
   {
     category: "Root Canal & General",
-    icon: "🔬",
+    icon: "ðŸ”¬",
     items: [
       { treatment: "Single Visit Root Canal", price: "5,000 - 10,000" },
       { treatment: "Multi-Visit Root Canal", price: "8,000 - 15,000" },
@@ -145,7 +145,7 @@ const treatmentCategories = [
   },
   {
     category: "Orthodontics",
-    icon: "😬",
+    icon: "ðŸ˜¬",
     items: [
       { treatment: "Metal Braces", price: "30,000 - 50,000" },
       { treatment: "Ceramic Braces", price: "45,000 - 70,000" },
@@ -157,7 +157,7 @@ const treatmentCategories = [
   },
   {
     category: "Oral Surgery",
-    icon: "🏥",
+    icon: "ðŸ¥",
     items: [
       { treatment: "Simple Extraction", price: "1,000 - 2,500" },
       { treatment: "Surgical Extraction", price: "3,000 - 5,000" },
@@ -174,31 +174,31 @@ const treatmentCategories = [
 const globalComparison = [
   {
     country: "USA",
-    flag: "🇺🇸",
-    implant: "$3,000 – $5,000",
-    crown: "$800 – $1,500",
-    rct: "$500 – $1,000",
+    flag: "ðŸ‡ºðŸ‡¸",
+    implant: "$3,000 â€“ $5,000",
+    crown: "$800 â€“ $1,500",
+    rct: "$500 â€“ $1,000",
   },
   {
     country: "UK",
-    flag: "🇬🇧",
-    implant: "$2,000 – $4,500",
-    crown: "$600 – $1,200",
-    rct: "$400 – $800",
+    flag: "ðŸ‡¬ðŸ‡§",
+    implant: "$2,000 â€“ $4,500",
+    crown: "$600 â€“ $1,200",
+    rct: "$400 â€“ $800",
   },
   {
     country: "Australia",
-    flag: "🇦🇺",
-    implant: "$2,000 – $4,000",
-    crown: "$700 – $1,300",
-    rct: "$500 – $900",
+    flag: "ðŸ‡¦ðŸ‡º",
+    implant: "$2,000 â€“ $4,000",
+    crown: "$700 â€“ $1,300",
+    rct: "$500 â€“ $900",
   },
   {
     country: "India (Avg)",
-    flag: "🇮🇳",
-    implant: "$450 – $700",
-    crown: "$100 – $250",
-    rct: "$60 – $120",
+    flag: "ðŸ‡®ðŸ‡³",
+    implant: "$450 â€“ $700",
+    crown: "$100 â€“ $250",
+    rct: "$60 â€“ $120",
   },
 ];
 
@@ -212,7 +212,7 @@ const pricingFaqs = [
   {
     question: "Do you offer EMI / installment options?",
     answer:
-      "Yes! We offer 0% EMI options on treatments above ₹20,000 through multiple banking partners. EMI tenure from 3 to 24 months. No-cost EMI available on select plans.",
+      "Yes! We offer 0% EMI options on treatments above â‚¹20,000 through multiple banking partners. EMI tenure from 3 to 24 months. No-cost EMI available on select plans.",
   },
   {
     question: "Is consultation free?",
@@ -250,7 +250,9 @@ export default function PricingPage() {
           <Image
             src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2000"
             alt="Pricing"
-            className="w-full h-full object-cover opacity-10"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-10"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-950/60 to-dark-950" />
         </div>
@@ -268,7 +270,7 @@ export default function PricingPage() {
           >
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             <span className="text-xs text-white/80 font-medium tracking-wider uppercase">
-              Updated for 2026 • No Hidden Costs
+              Updated for 2026 â€¢ No Hidden Costs
             </span>
           </motion.div>
 
@@ -310,7 +312,7 @@ export default function PricingPage() {
           >
             {[
               {
-                icon: "🩺",
+                icon: "ðŸ©º",
                 value: "Free",
                 label: "Consultation",
                 border: "border-green-500/20",
@@ -318,7 +320,7 @@ export default function PricingPage() {
                 text: "text-green-400",
               },
               {
-                icon: "🛡️",
+                icon: "ðŸ›¡ï¸",
                 value: "Zero",
                 label: "Hidden Costs",
                 border: "border-blue-500/20",
@@ -326,7 +328,7 @@ export default function PricingPage() {
                 text: "text-blue-400",
               },
               {
-                icon: "💳",
+                icon: "ðŸ’³",
                 value: "0%",
                 label: "EMI Available",
                 border: "border-gold-500/20",
@@ -334,7 +336,7 @@ export default function PricingPage() {
                 text: "text-gold-400",
               },
               {
-                icon: "🏆",
+                icon: "ðŸ†",
                 value: "Price",
                 label: "Match Promise",
                 border: "border-primary-500/20",
@@ -420,31 +422,31 @@ export default function PricingPage() {
             {/* Price highlight bar */}
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-gray-50 rounded-full border border-gray-100">
               <div className="flex items-center gap-2">
-                <span className="text-lg">🦷</span>
+                <span className="text-lg">ðŸ¦·</span>
                 <div className="text-left">
                   <p className="text-xs text-gray-400">Starting from</p>
                   <p className="text-lg font-heading font-bold text-primary-600">
-                    ₹25,000
+                    â‚¹25,000
                   </p>
                 </div>
               </div>
               <div className="w-px h-8 bg-gray-200" />
               <div className="flex items-center gap-2">
-                <span className="text-lg">⚡</span>
+                <span className="text-lg">âš¡</span>
                 <div className="text-left">
                   <p className="text-xs text-gray-400">All-on-4 from</p>
                   <p className="text-lg font-heading font-bold text-primary-600">
-                    ₹4,50,000
+                    â‚¹4,50,000
                   </p>
                 </div>
               </div>
               <div className="w-px h-8 bg-gray-200" />
               <div className="flex items-center gap-2">
-                <span className="text-lg">💳</span>
+                <span className="text-lg">ðŸ’³</span>
                 <div className="text-left">
                   <p className="text-xs text-gray-400">EMI from</p>
                   <p className="text-lg font-heading font-bold text-green-600">
-                    ₹2,083/mo
+                    â‚¹2,083/mo
                   </p>
                 </div>
               </div>
@@ -501,7 +503,7 @@ export default function PricingPage() {
                   <div className="text-center mb-8">
                     <div className="flex items-center justify-center gap-2 mb-1">
                       <span className="text-sm text-gray-400 line-through">
-                        ₹{plan.originalPrice}
+                        â‚¹{plan.originalPrice}
                       </span>
                       <span className="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-bold rounded-full">
                         Save{" "}
@@ -514,13 +516,13 @@ export default function PricingPage() {
                       </span>
                     </div>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-lg text-gray-500">₹</span>
+                      <span className="text-lg text-gray-500">â‚¹</span>
                       <span className="text-5xl font-heading font-bold text-dark-900">
                         {plan.price}
                       </span>
                     </div>
                     <p className="text-xs text-gray-400 mt-2">
-                      EMI from ₹
+                      EMI from â‚¹
                       {Math.round(
                         parseInt(plan.price.replace(/,/g, "")) / 12
                       ).toLocaleString()}
@@ -564,9 +566,9 @@ export default function PricingPage() {
             viewport={{ once: true }}
           >
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-green-50 rounded-full border border-green-200">
-              <span className="text-lg">💳</span>
+              <span className="text-lg">ðŸ’³</span>
               <p className="text-sm text-green-800">
-                <strong>EMI Plans Available</strong> — Starting from ₹2,083/month with{" "}
+                <strong>EMI Plans Available</strong> â€” Starting from â‚¹2,083/month with{" "}
                 <strong>0% interest</strong> on select plans
               </p>
             </div>
@@ -650,7 +652,7 @@ export default function PricingPage() {
                   </span>
                 </div>
                 <span className="text-sm font-semibold tracking-wider uppercase text-right">
-                  Price (₹)
+                  Price (â‚¹)
                 </span>
               </div>
 
@@ -667,7 +669,7 @@ export default function PricingPage() {
                     {item.treatment}
                   </span>
                   <span className="text-sm font-bold text-primary-600 text-right">
-                    ₹{item.price}
+                    â‚¹{item.price}
                   </span>
                 </div>
               ))}
@@ -675,8 +677,8 @@ export default function PricingPage() {
 
             <div className="mt-6 p-4 bg-gold-50 rounded-xl border border-gold-200">
               <p className="text-xs text-gray-600 text-center">
-                💡 <strong>Note:</strong> Prices may vary based on case complexity. Final pricing after consultation.{" "}
-                <strong>0% EMI available</strong> on treatments above ₹20,000.
+                ðŸ’¡ <strong>Note:</strong> Prices may vary based on case complexity. Final pricing after consultation.{" "}
+                <strong>0% EMI available</strong> on treatments above â‚¹20,000.
               </p>
             </div>
           </motion.div>
@@ -779,14 +781,14 @@ export default function PricingPage() {
               <div className="bg-dark-950 rounded-t-2xl py-4 px-6">
                 <div className="flex items-center justify-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-primary-gradient flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm">🦷</span>
+                    <span className="text-sm">ðŸ¦·</span>
                   </div>
                   <div className="text-center">
                     <h3 className="text-base sm:text-lg font-heading font-bold text-white">
                       Zircon Dental & Implant Clinic
                     </h3>
                     <p className="text-gold-400 text-[10px] sm:text-xs tracking-[0.2em] uppercase">
-                      Wakad, Pune — Prices for 2026
+                      Wakad, Pune â€” Prices for 2026
                     </p>
                   </div>
                 </div>
@@ -796,9 +798,9 @@ export default function PricingPage() {
               <div className="bg-gradient-to-br from-primary-600 via-primary-500 to-pink-500 rounded-b-2xl p-6 sm:p-10">
                 <div className="grid grid-cols-3 gap-3 sm:gap-6">
                   {[
-                    { label: "Implant", usd: "$300 – $800", inr: "₹25,000 – ₹66,000", icon: "🦷" },
-                    { label: "Crown", usd: "$60 – $240", inr: "₹5,000 – ₹20,000", icon: "👑" },
-                    { label: "Root Canal", usd: "$60 – $180", inr: "₹5,000 – ₹15,000", icon: "🔬" },
+                    { label: "Implant", usd: "$300 â€“ $800", inr: "â‚¹25,000 â€“ â‚¹66,000", icon: "ðŸ¦·" },
+                    { label: "Crown", usd: "$60 â€“ $240", inr: "â‚¹5,000 â€“ â‚¹20,000", icon: "ðŸ‘‘" },
+                    { label: "Root Canal", usd: "$60 â€“ $180", inr: "â‚¹5,000 â€“ â‚¹15,000", icon: "ðŸ”¬" },
                   ].map((item, i) => (
                     <div
                       key={i}
@@ -824,7 +826,7 @@ export default function PricingPage() {
 
                 <div className="text-center">
                   <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-3">
-                    <span className="text-xl">💰</span>
+                    <span className="text-xl">ðŸ’°</span>
                     <p className="text-sm sm:text-base font-bold text-white">
                       Save up to{" "}
                       <span className="text-gold-300 text-lg sm:text-2xl">85%</span>{" "}
@@ -832,7 +834,7 @@ export default function PricingPage() {
                     </p>
                   </div>
                   <p className="text-white/40 text-[10px] sm:text-xs">
-                    (1 USD ≈ 83 INR) • Prices are indicative • Free consultation to get accurate estimate
+                    (1 USD â‰ˆ 83 INR) â€¢ Prices are indicative â€¢ Free consultation to get accurate estimate
                   </p>
                 </div>
               </div>
@@ -904,10 +906,10 @@ export default function PricingPage() {
             >
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { label: "Starting EMI", value: "₹2,500/mo", icon: "💰" },
-                  { label: "Tenure", value: "3-24 months", icon: "📅" },
-                  { label: "Interest", value: "0% on select", icon: "✅" },
-                  { label: "Processing", value: "Minimal", icon: "⚡" },
+                  { label: "Starting EMI", value: "â‚¹2,500/mo", icon: "ðŸ’°" },
+                  { label: "Tenure", value: "3-24 months", icon: "ðŸ“…" },
+                  { label: "Interest", value: "0% on select", icon: "âœ…" },
+                  { label: "Processing", value: "Minimal", icon: "âš¡" },
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -948,7 +950,7 @@ export default function PricingPage() {
             >
               <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
                 <h3 className="text-xl font-heading font-bold text-white mb-2">
-                  💡 EMI Calculator
+                  ðŸ’¡ EMI Calculator
                 </h3>
                 <p className="text-xs text-gray-500 mb-6">
                   Example monthly payments (12-month tenure)
@@ -956,11 +958,11 @@ export default function PricingPage() {
 
                 <div className="space-y-3">
                   {[
-                    { treatment: "Single Implant (₹25K)", emi: "₹2,083" },
-                    { treatment: "Zirconia Crown (₹15K)", emi: "₹1,250" },
-                    { treatment: "Clear Aligners (₹1L)", emi: "₹8,333" },
-                    { treatment: "All-on-4 (₹4.5L)", emi: "₹37,500" },
-                    { treatment: "Smile Design (₹1.5L)", emi: "₹12,500" },
+                    { treatment: "Single Implant (â‚¹25K)", emi: "â‚¹2,083" },
+                    { treatment: "Zirconia Crown (â‚¹15K)", emi: "â‚¹1,250" },
+                    { treatment: "Clear Aligners (â‚¹1L)", emi: "â‚¹8,333" },
+                    { treatment: "All-on-4 (â‚¹4.5L)", emi: "â‚¹37,500" },
+                    { treatment: "Smile Design (â‚¹1.5L)", emi: "â‚¹12,500" },
                   ].map((item, i) => (
                     <div
                       key={i}
@@ -1123,11 +1125,11 @@ export default function PricingPage() {
             </h2>
 
             <p className="text-gray-400 mb-4 font-light text-lg max-w-xl mx-auto">
-              Every smile is unique. Book a free consultation to get an accurate, personalized cost estimate — no obligation, no pressure.
+              Every smile is unique. Book a free consultation to get an accurate, personalized cost estimate â€” no obligation, no pressure.
             </p>
 
             <p className="text-gray-600 text-sm mb-10">
-              ✅ Free Consultation &nbsp;•&nbsp; ✅ No Obligation &nbsp;•&nbsp; ✅ Same Day Appointment Available
+              âœ… Free Consultation &nbsp;â€¢&nbsp; âœ… No Obligation &nbsp;â€¢&nbsp; âœ… Same Day Appointment Available
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -1161,7 +1163,7 @@ export default function PricingPage() {
             <div className="p-5 bg-white/5 border border-white/10 rounded-2xl inline-block">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary-gradient flex items-center justify-center flex-shrink-0">
-                  <span>📍</span>
+                  <span>ðŸ“</span>
                 </div>
                 <div className="text-left">
                   <p className="text-white text-sm font-semibold">

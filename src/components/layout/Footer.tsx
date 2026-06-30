@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import {
   FiPhone, FiMail, FiMapPin, FiArrowRight, FiSend, FiClock,
 } from "react-icons/fi";
@@ -14,16 +15,18 @@ import { fadeInUp, staggerContainer, staggerItem } from "@/utils/animations";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  // Find and replace ONLY this array in Footer.tsx
-// Find and replace ONLY this array in Footer.tsx
-const quickLinks = [
-  { label: "About Us", href: "/about" },
-  { label: "Treatments", href: "/treatments" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
-];
+  const phoneHref = "tel:" + SITE_CONFIG.phone;
+  const mailHref = "mailto:" + SITE_CONFIG.email;
+  const whatsappHref = "https://wa.me/" + SITE_CONFIG.whatsapp;
+
+  const quickLinks = [
+    { label: "About Us", href: "/about" },
+    { label: "Treatments", href: "/treatments" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" },
+  ];
 
   const treatmentLinks = [
     { label: "Dental Implants", href: "/treatments/dental-implants" },
@@ -56,7 +59,13 @@ const quickLinks = [
       {/* Newsletter */}
       <div className="relative border-b border-white/5">
         <div className="container-custom py-16">
-          <motion.div className="flex flex-col lg:flex-row items-center justify-between gap-8" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div
+            className="flex flex-col lg:flex-row items-center justify-between gap-8"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <div className="text-center lg:text-left">
               <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2">
                 Subscribe to <span className="text-gold-400">Zircon Dental</span>
@@ -64,7 +73,11 @@ const quickLinks = [
               <p className="text-gray-400 text-sm">Get dental tips, offers, and appointment reminders.</p>
             </div>
             <div className="flex w-full max-w-md">
-              <input type="email" placeholder="Enter your email" className="flex-1 px-6 py-4 bg-white/5 border border-white/10 rounded-l-full text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-primary-500 transition-colors" />
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-6 py-4 bg-white/5 border border-white/10 rounded-l-full text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+              />
               <button className="px-8 py-4 bg-primary-600 hover:bg-primary-700 rounded-r-full transition-colors flex items-center gap-2 text-sm font-semibold">
                 <FiSend className="w-4 h-4" /> Subscribe
               </button>
@@ -75,28 +88,38 @@ const quickLinks = [
 
       {/* Main Footer */}
       <div className="container-custom py-16">
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {/* Brand */}
           <motion.div variants={staggerItem} className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-primary-gradient flex items-center justify-center">
-                <span className="text-lg">🦷</span>
-              </div>
-              <div>
-                <h2 className="text-2xl font-heading font-bold">
-                  <span className="text-primary-500">Z</span>IRCON
-                </h2>
-                <span className="text-[8px] tracking-[0.2em] text-gold-400 uppercase">
-                  Dental & Implant Clinic
-                </span>
-              </div>
+            <Link href="/" className="inline-flex items-center gap-3 mb-6">
+              <Image
+                src="/images/Logo-white (1).png"
+                alt="Zircon Dental and Implant Clinic"
+                width={140}
+                height={44}
+                className="h-11 w-auto object-contain"
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Pune&apos;s premier dental clinic at Wakad, offering world-class dental implants, cosmetic dentistry & comprehensive dental care. Located opposite Phoenix Mall Road.
+              Pune&apos;s premier dental clinic at Wakad, offering world-class dental implants,
+              cosmetic dentistry &amp; comprehensive dental care. Located opposite Phoenix Mall Road.
             </p>
             <div className="flex gap-3">
               {socials.map((social, index) => (
-                <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:border-primary-500 hover:text-white transition-all duration-300">
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:border-primary-500 hover:text-white transition-all duration-300"
+                >
                   <social.icon className="w-4 h-4" />
                 </a>
               ))}
@@ -111,7 +134,10 @@ const quickLinks = [
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-gray-400 text-sm hover:text-primary-400 transition-colors flex items-center gap-2 group">
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 text-sm hover:text-primary-400 transition-colors flex items-center gap-2 group"
+                  >
                     <FiArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                     <span className="group-hover:translate-x-1 transition-transform">{link.label}</span>
                   </Link>
@@ -128,7 +154,10 @@ const quickLinks = [
             <ul className="space-y-3">
               {treatmentLinks.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-gray-400 text-sm hover:text-primary-400 transition-colors flex items-center gap-2 group">
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 text-sm hover:text-primary-400 transition-colors flex items-center gap-2 group"
+                  >
                     <FiArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                     <span className="group-hover:translate-x-1 transition-transform">{link.label}</span>
                   </Link>
@@ -143,7 +172,11 @@ const quickLinks = [
               <span className="w-6 h-0.5 bg-primary-500" /> Visit Us
             </h4>
             <div className="space-y-4">
-              <a href={`tel:${SITE_CONFIG.phone}`} className="flex items-start gap-4 text-gray-400 text-sm hover:text-primary-400 transition-colors group">
+
+              <a
+                href={phoneHref}
+                className="flex items-start gap-4 text-gray-400 text-sm hover:text-primary-400 transition-colors group"
+              >
                 <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary-500/10 transition-colors">
                   <FiPhone className="w-4 h-4 text-primary-400" />
                 </div>
@@ -153,7 +186,12 @@ const quickLinks = [
                 </div>
               </a>
 
-              <a href={`https://wa.me/${SITE_CONFIG.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 text-gray-400 text-sm hover:text-green-400 transition-colors group">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 text-gray-400 text-sm hover:text-green-400 transition-colors group"
+              >
                 <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/10 transition-colors">
                   <FaWhatsapp className="w-4 h-4 text-green-400" />
                 </div>
@@ -163,7 +201,10 @@ const quickLinks = [
                 </div>
               </a>
 
-              <a href={`mailto:${SITE_CONFIG.email}`} className="flex items-start gap-4 text-gray-400 text-sm hover:text-primary-400 transition-colors group">
+              <a
+                href={mailHref}
+                className="flex items-start gap-4 text-gray-400 text-sm hover:text-primary-400 transition-colors group"
+              >
                 <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary-500/10 transition-colors">
                   <FiMail className="w-4 h-4 text-primary-400" />
                 </div>
@@ -173,7 +214,12 @@ const quickLinks = [
                 </div>
               </a>
 
-              <a href={SITE_CONFIG.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 text-gray-400 text-sm hover:text-primary-400 transition-colors group">
+              <a
+                href={SITE_CONFIG.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 text-gray-400 text-sm hover:text-primary-400 transition-colors group"
+              >
                 <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary-500/10 transition-colors">
                   <FiMapPin className="w-4 h-4 text-primary-400" />
                 </div>
@@ -196,6 +242,7 @@ const quickLinks = [
                   Sun: {SITE_CONFIG.workingHours.sunday}
                 </div>
               </div>
+
             </div>
           </motion.div>
         </motion.div>
@@ -205,7 +252,7 @@ const quickLinks = [
       <div className="border-t border-white/5">
         <div className="container-custom py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-xs">
-            © {currentYear} Zircon Dental & Implant Clinic. All rights reserved.
+            &copy; {currentYear} Zircon Dental &amp; Implant Clinic. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-xs text-gray-500">
             <Link href="/privacy" className="hover:text-primary-400 transition-colors">Privacy Policy</Link>

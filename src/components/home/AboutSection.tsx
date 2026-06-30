@@ -1,23 +1,43 @@
 "use client";
+
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { fadeInLeft, fadeInRight } from "@/utils/animations";
 import GradientButton from "@/components/ui/GradientButton";
-import { FiArrowRight, FiAward, FiShield, FiHeart } from "react-icons/fi";
+import {
+  FiArrowRight,
+  FiAward,
+  FiShield,
+  FiHeart,
+} from "react-icons/fi";
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   });
+
   const imageY = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
 
   const features = [
-    { icon: FiAward, title: "Award Winning", description: "Recognized for excellence in dental care" },
-    { icon: FiShield, title: "FDA Approved", description: "All treatments use certified materials" },
-    { icon: FiHeart, title: "Patient First", description: "Personalized care with dedicated support" },
+    {
+      icon: FiAward,
+      title: "Award Winning",
+      description: "Recognized for excellence in dental care",
+    },
+    {
+      icon: FiShield,
+      title: "FDA Approved",
+      description: "All treatments use certified materials",
+    },
+    {
+      icon: FiHeart,
+      title: "Patient First",
+      description: "Personalized care with dedicated support",
+    },
   ];
 
   return (
@@ -35,16 +55,24 @@ const AboutSection = () => {
             viewport={{ once: true, margin: "-100px" }}
           >
             <div className="relative">
-              <motion.div className="relative rounded-2xl overflow-hidden shadow-premium-lg" style={{ y: imageY }}>
-                <div className="aspect-[4/5] bg-gray-200 relative">
+              <motion.div
+                className="relative rounded-2xl overflow-hidden shadow-premium-lg"
+                style={{ y: imageY }}
+              >
+                <div className="relative aspect-[4/5] bg-gray-200">
                   <Image
                     src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=1000"
                     alt="Zircon Dental Clinic Wakad Pune"
-                    className="w-full h-full object-cover"
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                    className="object-cover"
                   />
+
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-900/30 to-transparent" />
                 </div>
               </motion.div>
+
               <motion.div
                 className="absolute -bottom-8 -right-8 bg-white rounded-2xl shadow-premium p-6 max-w-[240px]"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -54,14 +82,22 @@ const AboutSection = () => {
               >
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-primary-gradient flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl font-heading font-bold text-white">15+</span>
+                    <span className="text-2xl font-heading font-bold text-white">
+                      15+
+                    </span>
                   </div>
+
                   <div>
-                    <p className="text-sm font-bold text-dark-900">Years of</p>
-                    <p className="text-sm font-bold text-primary-500">Excellence</p>
+                    <p className="text-sm font-bold text-dark-900">
+                      Years of
+                    </p>
+                    <p className="text-sm font-bold text-primary-500">
+                      Excellence
+                    </p>
                   </div>
                 </div>
               </motion.div>
+
               <div className="absolute -top-6 -left-6 w-24 h-24 border-2 border-primary-200 rounded-2xl -z-10" />
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gold-100 rounded-full -z-10 blur-sm" />
             </div>
@@ -80,14 +116,22 @@ const AboutSection = () => {
             </span>
 
             <h2 className="heading-lg text-dark-900 mb-6">
-              Pune&apos;s Most Trusted <span className="text-gradient">Dental Clinic</span> in Wakad
+              Pune&apos;s Most Trusted{" "}
+              <span className="text-gradient">Dental Clinic</span> in Wakad
             </h2>
 
             <p className="subtitle mb-6">
-              At Zircon Dental & Implant Clinic, we combine cutting-edge technology with artistic precision to deliver transformative dental results that look naturally beautiful.
+              At Zircon Dental & Implant Clinic, we combine cutting-edge
+              technology with artistic precision to deliver transformative
+              dental results that look naturally beautiful.
             </p>
+
             <p className="text-gray-500 leading-relaxed mb-8">
-              Located at Wakad, opposite Phoenix Mall Road, we have grown to become one of the most trusted dental centres in Pimpri-Chinchwad and greater Pune. With over 50,000 patients treated and a 98.5% implant success rate, every smile we create is a masterpiece.
+              Located at Wakad, opposite Phoenix Mall Road, we have grown to
+              become one of the most trusted dental centres in
+              Pimpri-Chinchwad and greater Pune. With over 50,000 patients
+              treated and a 98.5% implant success rate, every smile we create
+              is a masterpiece.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
@@ -103,15 +147,33 @@ const AboutSection = () => {
                   <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-500 group-hover:text-white transition-all">
                     <feature.icon className="w-5 h-5 text-primary-500 group-hover:text-white transition-colors" />
                   </div>
-                  <h4 className="text-sm font-bold text-dark-900 mb-1">{feature.title}</h4>
-                  <p className="text-xs text-gray-500">{feature.description}</p>
+
+                  <h4 className="text-sm font-bold text-dark-900 mb-1">
+                    {feature.title}
+                  </h4>
+
+                  <p className="text-xs text-gray-500">
+                    {feature.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <GradientButton href="/about" variant="primary" icon={<FiArrowRight />}>Learn More</GradientButton>
-              <GradientButton href="/about#our-team" variant="outline">Meet Our Team</GradientButton>
+              <GradientButton
+                href="/about"
+                variant="primary"
+                icon={<FiArrowRight />}
+              >
+                Learn More
+              </GradientButton>
+
+              <GradientButton
+                href="/about#our-team"
+                variant="outline"
+              >
+                Meet Our Team
+              </GradientButton>
             </div>
           </motion.div>
         </div>

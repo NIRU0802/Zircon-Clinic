@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
@@ -23,6 +23,11 @@ import { SITE_CONFIG } from "@/utils/constants";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function ContactPage() {
+  const phoneHref = "tel:" + SITE_CONFIG.phone;
+  const mailHref = "mailto:" + SITE_CONFIG.email;
+  const waHref = "https://wa.me/" + SITE_CONFIG.whatsapp;
+  const waHrefWithText = "https://wa.me/" + SITE_CONFIG.whatsapp + "?text=" + encodeURIComponent("Hello! I'd like to book an appointment at Zircon Dental.");
+
   return (
     <Layout>
       {/* Hero */}
@@ -31,7 +36,9 @@ export default function ContactPage() {
           <Image
             src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2000"
             alt="Contact"
-            className="w-full h-full object-cover opacity-10"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-10"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-950/60 to-dark-950" />
         </div>
@@ -47,7 +54,7 @@ export default function ContactPage() {
           >
             <FiMapPin className="w-3 h-3 text-primary-400" />
             <span className="text-xs text-white/80 font-medium tracking-wider uppercase">
-              Wakad, Pune — Opp. Phoenix Mall Road
+              Wakad, Pune â€” Opp. Phoenix Mall Road
             </span>
           </motion.div>
 
@@ -84,7 +91,7 @@ export default function ContactPage() {
           >
             {/* Call */}
             <motion.a
-              href={`tel:${SITE_CONFIG.phone}`}
+              href={phoneHref}
               variants={staggerItem}
               className="group"
             >
@@ -106,9 +113,7 @@ export default function ContactPage() {
 
             {/* WhatsApp */}
             <motion.a
-              href={`https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(
-                "Hi! I'd like to book an appointment at Zircon Dental."
-              )}`}
+              href={waHrefWithText}
               target="_blank"
               rel="noopener noreferrer"
               variants={staggerItem}
@@ -132,7 +137,7 @@ export default function ContactPage() {
 
             {/* Email */}
             <motion.a
-              href={`mailto:${SITE_CONFIG.email}`}
+              href={mailHref}
               variants={staggerItem}
               className="group"
             >
@@ -205,13 +210,13 @@ export default function ContactPage() {
                   Contact Information
                 </h3>
                 <p className="text-gray-500 text-sm mb-8">
-                  Reach out to us — we&apos;re here to help!
+                  Reach out to us â€” we&apos;re here to help!
                 </p>
 
                 <div className="space-y-5 relative">
                   {/* Phone */}
                   <a
-                    href={`tel:${SITE_CONFIG.phone}`}
+                    href={phoneHref}
                     className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary-500/30 transition-colors">
@@ -229,7 +234,7 @@ export default function ContactPage() {
 
                   {/* WhatsApp */}
                   <a
-                    href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
+                    href={waHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-green-500/10 transition-colors group"
@@ -249,7 +254,7 @@ export default function ContactPage() {
 
                   {/* Email */}
                   <a
-                    href={`mailto:${SITE_CONFIG.email}`}
+                    href={mailHref}
                     className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-blue-500/10 transition-colors group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/30 transition-colors">
@@ -530,7 +535,7 @@ export default function ContactPage() {
                         </span>
                       </a>
                       <a
-                        href={`tel:${SITE_CONFIG.phone}`}
+                        href={phoneHref}
                         className="flex flex-col items-center gap-1 p-2.5 bg-green-50 rounded-xl hover:bg-green-100 transition-colors"
                       >
                         <FiPhone className="w-4 h-4 text-green-600" />

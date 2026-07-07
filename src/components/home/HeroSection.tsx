@@ -7,12 +7,8 @@ import GradientButton from "@/components/ui/GradientButton";
 import { FiArrowRight, FiPlay } from "react-icons/fi";
 import { staggerContainer, staggerItem } from "@/utils/animations";
 
-// ✅ Import Particles with ssr: false
-// This means Particles.tsx will ONLY run on the browser (client)
-// Never on the server - so Math.random() won't cause hydration mismatch
 const Particles = dynamic(() => import("./Particles"), {
   ssr: false,
-  // Optional: show nothing while particles load
   loading: () => null,
 });
 
@@ -34,8 +30,7 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* ========================================
-          BACKGROUND IMAGE WITH PARALLAX EFFECT
-          Moves slower than scroll = parallax feel
+          BACKGROUND IMAGE WITH PARALLAX
       ======================================== */}
       <motion.div className="absolute inset-0 z-0" style={{ y, scale }}>
         <div
@@ -45,14 +40,12 @@ const HeroSection = () => {
               "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068')",
           }}
         />
-        {/* Dark overlay gradients */}
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-950/95 via-dark-950/70 to-dark-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-950/95 via-dark-950/75 to-dark-950/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent" />
       </motion.div>
 
       {/* ========================================
           ANIMATED BACKGROUND ELEMENTS
-          Blobs + Particles
       ======================================== */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Blob 1 - top right */}
@@ -85,18 +78,17 @@ const HeroSection = () => {
           style={{ bottom: "10%", left: "10%" }}
         />
 
-        {/* ✅ Particles - client only, no hydration error */}
         <Particles />
       </div>
 
       {/* ========================================
-          MAIN HERO CONTENT
+          MAIN HERO CONTENT — LEFT ALIGNED
       ======================================== */}
       <motion.div
-        className="relative z-10 container-custom pt-32 pb-20"
+        className="relative z-10 w-full max-w-[1440px] mx-auto pt-32 pb-20 px-6 md:px-10 xl:px-16"
         style={{ opacity }}
       >
-        <div className="max-w-3xl">
+        <div className="max-w-3xl text-left">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -109,7 +101,7 @@ const HeroSection = () => {
             >
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span className="text-xs text-white/80 font-medium tracking-wider uppercase">
-                #1 Rated Dental Clinic in Pune
+                #1 Rated Dental Clinic in Wakad, Pune
               </span>
             </motion.div>
 
@@ -118,9 +110,9 @@ const HeroSection = () => {
               variants={staggerItem}
               className="heading-xl text-white mb-6"
             >
-              Discover Your
+              Restore Your
               <br />
-              <span className="text-gradient-gold">True Beauty</span>
+              <span className="text-gradient-gold">Perfect Smile</span>
               <br />
               With Confidence
             </motion.h1>
@@ -130,9 +122,9 @@ const HeroSection = () => {
               variants={staggerItem}
               className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-xl font-light"
             >
-              Experience world-class aesthetic treatments delivered by
-              India&apos;s finest cosmetic specialists. Your journey to timeless
-              beauty starts here.
+              From dental implants to complete smile makeovers — experience
+              precision-driven care at Pune&apos;s most trusted dental clinic.
+              Your journey to a healthier, brighter smile starts here.
             </motion.p>
 
             {/* --- CTA Buttons --- */}
@@ -176,12 +168,10 @@ const HeroSection = () => {
               {[
                 { value: "10K+", label: "Happy Patients" },
                 { value: "10+", label: "Years Experience" },
-                { value: "1500+", label: "Treatments" },
+                { value: "5000+", label: "Implants Placed" },
+                { value: "98%", label: "Success Rate" },
               ].map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-center md:text-left"
-                >
+                <div key={index} className="text-left">
                   <p className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">
                     {stat.value}
                   </p>
@@ -196,7 +186,7 @@ const HeroSection = () => {
       </motion.div>
 
       {/* ========================================
-          SCROLL INDICATOR - Bottom Center
+          SCROLL INDICATOR
       ======================================== */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
@@ -216,8 +206,7 @@ const HeroSection = () => {
       </motion.div>
 
       {/* ========================================
-          SIDE DECORATIVE LINE - Right side
-          Only visible on extra large screens
+          SIDE DECORATIVE LINE — Right side
       ======================================== */}
       <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center gap-4 z-10">
         <div className="w-px h-20 bg-gradient-to-b from-transparent to-white/20" />

@@ -85,7 +85,7 @@ const HeroSection = () => {
           MAIN HERO CONTENT — LEFT ALIGNED
       ======================================== */}
       <motion.div
-        className="relative z-10 container-custom pt-32 pb-20"
+        className="relative z-10 w-full max-w-[1440px] mx-auto pt-32 pb-20 px-6 md:px-10 xl:px-16"
         style={{ opacity }}
       >
         <div className="max-w-3xl text-left">

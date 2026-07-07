@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import Layout from "@/components/layout/Layout";
+import BrandComparisonTable from "@/components/treatment/BrandComparisonTable";
+import { brandPriceList } from "@/data/treatments";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import {
@@ -11,6 +13,9 @@ import {
   FiPlus,
   FiMinus,
   FiHeart,
+  FiZap,
+  FiClock,
+  FiCalendar,
 } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import GradientButton from "@/components/ui/GradientButton";
@@ -27,12 +32,33 @@ import {
 const implantPlans = [
   {
     id: 1,
+    name: "Immediate Load Implant",
+    icon: "⚡",
+    price: "35,000",
+    originalPrice: "48,000",
+    unit: "per implant",
+    popular: false,
+    badge: "Fastest Option",
+    features: [
+      "Titanium Implant Post",
+      "Same-Day Temporary Crown",
+      "3D CBCT Scan & Planning",
+      "No Bone Grafting Wait",
+      "Local Anesthesia",
+      "Final Crown in 3-6 Months",
+      "1 Year Warranty",
+    ],
+    color: "from-gold-500 to-amber-500",
+  },
+  {
+    id: 2,
     name: "Single Tooth Implant",
     icon: "🦷",
     price: "25,000",
     originalPrice: "35,000",
     unit: "per implant",
     popular: false,
+    badge: undefined as string | undefined,
     features: [
       "Titanium Implant Post",
       "Healing Abutment",
@@ -45,13 +71,14 @@ const implantPlans = [
     color: "from-blue-500 to-cyan-500",
   },
   {
-    id: 2,
+    id: 3,
     name: "All-on-4 Implants",
-    icon: "⚡",
+    icon: "👑",
     price: "4,50,000",
     originalPrice: "6,00,000",
     unit: "per arch",
     popular: true,
+    badge: undefined as string | undefined,
     features: [
       "4 Titanium Implant Posts",
       "Full Arch Prosthesis",
@@ -66,13 +93,14 @@ const implantPlans = [
     color: "from-primary-500 to-pink-500",
   },
   {
-    id: 3,
+    id: 4,
     name: "Full Mouth Implants",
-    icon: "👑",
+    icon: "💎",
     price: "8,00,000",
     originalPrice: "10,00,000",
     unit: "both arches",
     popular: false,
+    badge: undefined as string | undefined,
     features: [
       "Both Upper & Lower Arches",
       "8-12 Titanium Implants",
@@ -85,7 +113,7 @@ const implantPlans = [
       "Free Annual Checkups",
       "VIP Aftercare Package",
     ],
-    color: "from-gold-500 to-amber-500",
+    color: "from-dark-700 to-dark-900",
   },
 ];
 
@@ -95,6 +123,7 @@ const treatmentCategories = [
     category: "Dental Implants",
     icon: "🦷",
     items: [
+      { treatment: "Immediate Load Implant", price: "35,000 - 55,000" },
       { treatment: "Single Tooth Implant", price: "25,000 - 50,000" },
       { treatment: "All-on-4 (per arch)", price: "4,50,000 - 6,00,000" },
       { treatment: "All-on-6 (per arch)", price: "5,50,000 - 7,00,000" },
@@ -202,6 +231,57 @@ const globalComparison = [
   },
 ];
 
+// ===== IMMEDIATE IMPLANT TIMELINE =====
+const immediateTimeline = [
+  {
+    step: "Day 1",
+    title: "Extraction & Implant Placement",
+    description:
+      "Tooth removed and implant placed in the same sitting — no separate surgery visit.",
+  },
+  {
+    step: "Day 1",
+    title: "Temporary Crown Fitted",
+    description:
+      "Walk out the same day with a natural-looking temporary tooth. No visible gap.",
+  },
+  {
+    step: "3-6 Months",
+    title: "Healing & Osseointegration",
+    description:
+      "Implant fuses with the jawbone while you live normally with your temporary crown.",
+  },
+  {
+    step: "Final Visit",
+    title: "Permanent Crown Placed",
+    description:
+      "Custom-shaded final crown fitted for a seamless, permanent result.",
+  },
+];
+
+const traditionalVsImmediate = [
+  {
+    label: "Waiting time before a tooth is placed",
+    traditional: "3-6 months",
+    immediate: "Same day",
+  },
+  {
+    label: "Number of surgical visits",
+    traditional: "2 separate surgeries",
+    immediate: "1 combined visit",
+  },
+  {
+    label: "Time without a visible tooth",
+    traditional: "Weeks to months",
+    immediate: "None",
+  },
+  {
+    label: "Total treatment visits",
+    traditional: "6-8 visits",
+    immediate: "4-5 visits",
+  },
+];
+
 // ===== FAQ =====
 const pricingFaqs = [
   {
@@ -228,6 +308,11 @@ const pricingFaqs = [
     question: "Does insurance cover dental implants?",
     answer:
       "Many dental insurance plans cover a portion of implant costs. We can provide detailed invoices and documentation for your insurance claim. Check with your provider for specifics.",
+  },
+  {
+    question: "Who is a good candidate for an Immediate Load Implant?",
+    answer:
+      "Patients with sufficient healthy jawbone and no active gum infection at the extraction site are usually good candidates. A quick 3D scan during your free consultation confirms eligibility.",
   },
   {
     question: "Why are your prices lower than other cities?",
@@ -300,11 +385,13 @@ export default function PricingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Quality dental care at honest prices. Free consultation included. 0% EMI available. All prices include procedure, materials & follow-up visits.
+            Quality dental care at honest prices. Free consultation included.
+            0% EMI available. All prices include procedure, materials &
+            follow-up visits.
           </motion.p>
 
-                    {/* Trust Badges */}
-                    <motion.div
+          {/* Trust Badges */}
+          <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -352,7 +439,9 @@ export default function PricingPage() {
                 transition={{ delay: 0.3 + i * 0.1 }}
               >
                 <span className="text-3xl block mb-3">{item.icon}</span>
-                <p className={`text-2xl font-heading font-bold ${item.text} mb-0.5`}>
+                <p
+                  className={`text-2xl font-heading font-bold ${item.text} mb-0.5`}
+                >
                   {item.value}
                 </p>
                 <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">
@@ -362,7 +451,7 @@ export default function PricingPage() {
             ))}
           </motion.div>
 
-          {/* Quick CTAs */}
+          {/* CTAs */}
           <motion.div
             className="flex flex-wrap justify-center gap-4"
             initial={{ opacity: 0, y: 20 }}
@@ -379,11 +468,176 @@ export default function PricingPage() {
             </GradientButton>
             <a
               href={`tel:${SITE_CONFIG.phone}`}
-              className="flex items-center gap-2 px-8 py-5 text-white border border-white/20 rounded-full hover:bg-white/10 transition-all text-sm font-semibold"
+              className="flex items-center gap-2 px-8 py-5 text-white border border-white/20 rounded-full hover:bg-white/10 transition-all duration-300 text-sm font-semibold"
             >
               <FiPhone className="w-4 h-4" />
               {SITE_CONFIG.phone}
             </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ========================================
+          IMMEDIATE IMPLANT SPOTLIGHT
+      ======================================== */}
+      <section className="section-padding bg-dark-950 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="blur-blob w-[450px] h-[450px] bg-gold-500/10 -top-40 right-0" />
+          <div className="blur-blob w-[350px] h-[350px] bg-primary-500/10 bottom-0 -left-32" />
+        </div>
+
+        <div className="container-custom relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left */}
+            <motion.div
+              variants={fadeInLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-bold tracking-[0.2em] uppercase mb-6">
+                <FiZap className="w-3.5 h-3.5" />
+                New at Zircon Dental
+              </span>
+
+              <h2 className="heading-lg text-white mb-4">
+                Immediate Load{" "}
+                <span className="text-gradient">Implants</span>
+              </h2>
+              <p className="text-gray-400 leading-relaxed text-lg mb-8 font-light max-w-xl">
+                Lost a tooth? Don&apos;t wait months for a new one. With
+                Immediate Load Implants, we place the implant and fit a
+                temporary crown in a single visit — so you leave with a full
+                smile the same day.
+              </p>
+
+              {/* Mini Stats */}
+              <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="p-4 bg-white/5 border border-white/10 rounded-xl text-center">
+                  <FiClock className="w-5 h-5 text-gold-400 mx-auto mb-2" />
+                  <p className="text-white font-heading font-bold text-lg">
+                    1 Visit
+                  </p>
+                  <p className="text-gray-500 text-[10px] uppercase tracking-wider">
+                    Surgery + Crown
+                  </p>
+                </div>
+                <div className="p-4 bg-white/5 border border-white/10 rounded-xl text-center">
+                  <FiCalendar className="w-5 h-5 text-gold-400 mx-auto mb-2" />
+                  <p className="text-white font-heading font-bold text-lg">
+                    Same Day
+                  </p>
+                  <p className="text-gray-500 text-[10px] uppercase tracking-wider">
+                    Walk Out Smiling
+                  </p>
+                </div>
+                <div className="p-4 bg-white/5 border border-white/10 rounded-xl text-center">
+                  <FiHeart className="w-5 h-5 text-gold-400 mx-auto mb-2" />
+                  <p className="text-white font-heading font-bold text-lg">
+                    1 Year
+                  </p>
+                  <p className="text-gray-500 text-[10px] uppercase tracking-wider">
+                    Warranty
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-4">
+                <GradientButton
+                  href="/contact"
+                  variant="gold"
+                  icon={<FiArrowRight />}
+                >
+                  Check If I&apos;m a Candidate
+                </GradientButton>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-gray-500 text-sm">Starting from</span>
+                  <span className="text-2xl font-heading font-bold text-white">
+                    ₹35,000
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right — Traditional vs Immediate */}
+            <motion.div
+              variants={fadeInRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-sm">
+                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-6 flex items-center gap-2">
+                  <FiZap className="w-4 h-4 text-gold-400" />
+                  Traditional vs. Immediate Implant
+                </h3>
+
+                <div className="space-y-4">
+                  {traditionalVsImmediate.map((row, i) => (
+                    <div
+                      key={i}
+                      className="pb-4 border-b border-white/5 last:border-0 last:pb-0"
+                    >
+                      <p className="text-xs text-gray-500 mb-2">{row.label}</p>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="px-3 py-2 bg-white/5 rounded-lg">
+                          <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">
+                            Traditional
+                          </p>
+                          <p className="text-sm text-gray-300 font-medium">
+                            {row.traditional}
+                          </p>
+                        </div>
+                        <div className="px-3 py-2 bg-gold-500/10 border border-gold-500/20 rounded-lg">
+                          <p className="text-[10px] text-gold-400 uppercase tracking-wider mb-0.5">
+                            Immediate
+                          </p>
+                          <p className="text-sm text-white font-semibold">
+                            {row.immediate}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Timeline */}
+          <motion.div
+            className="mt-16"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <p className="text-center text-sm text-gray-500 uppercase tracking-[0.2em] mb-8">
+              Your Immediate Implant Journey
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {immediateTimeline.map((item, i) => (
+                <motion.div
+                  key={i}
+                  variants={staggerItem}
+                  className="relative p-5 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors"
+                >
+                  <span className="inline-block px-2.5 py-1 bg-gold-500/10 border border-gold-500/20 rounded-full text-gold-400 text-[10px] font-bold uppercase tracking-wider mb-3">
+                    {item.step}
+                  </span>
+                  <h4 className="text-white font-semibold text-sm mb-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-gray-500 text-xs leading-relaxed">
+                    {item.description}
+                  </p>
+                  {i < immediateTimeline.length - 1 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-white/10" />
+                  )}
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
@@ -397,7 +651,6 @@ export default function PricingPage() {
         </div>
 
         <div className="container-custom relative">
-          {/* Section Heading */}
           <motion.div
             className="text-center mb-16"
             variants={fadeInUp}
@@ -416,23 +669,24 @@ export default function PricingPage() {
               <span className="text-gold-600">(2026)</span>
             </h2>
             <p className="text-sm text-gray-400 mb-4">
-              Transparent pricing with no hidden costs. All prices include consultation, procedure, and follow-up visits.
+              Transparent pricing with no hidden costs. All prices include
+              consultation, procedure, and follow-up visits.
             </p>
 
             {/* Price highlight bar */}
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gray-50 rounded-full border border-gray-100">
+            <div className="inline-flex flex-wrap justify-center items-center gap-3 px-6 py-3 bg-gray-50 rounded-full border border-gray-100">
               <div className="flex items-center gap-2">
-                <span className="text-lg">🦷</span>
+                <span className="text-lg">⚡</span>
                 <div className="text-left">
-                  <p className="text-xs text-gray-400">Starting from</p>
+                  <p className="text-xs text-gray-400">Immediate implant from</p>
                   <p className="text-lg font-heading font-bold text-primary-600">
-                    ₹25,000
+                    ₹35,000
                   </p>
                 </div>
               </div>
               <div className="w-px h-8 bg-gray-200" />
               <div className="flex items-center gap-2">
-                <span className="text-lg">⚡</span>
+                <span className="text-lg">👑</span>
                 <div className="text-left">
                   <p className="text-xs text-gray-400">All-on-4 from</p>
                   <p className="text-lg font-heading font-bold text-primary-600">
@@ -452,7 +706,6 @@ export default function PricingPage() {
               </div>
             </div>
 
-            {/* Decorative dots */}
             <div className="mt-6 flex items-center gap-2 justify-center">
               <span className="w-12 h-0.5 rounded-full bg-primary-500" />
               <span className="w-3 h-3 rounded-full bg-primary-500" />
@@ -462,7 +715,7 @@ export default function PricingPage() {
 
           {/* Pricing Cards */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -474,11 +727,22 @@ export default function PricingPage() {
                 variants={staggerItem}
                 className="relative group"
               >
+                {/* Popular Badge */}
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                    <div className="flex items-center gap-1.5 px-4 py-1.5 bg-primary-gradient rounded-full text-white text-xs font-bold tracking-wider uppercase shadow-primary">
+                    <div className="flex items-center gap-1.5 px-8 py-1.5 bg-primary-gradient rounded-full text-white text-xs font-bold tracking-wider uppercase shadow-primary">
                       <FiStar className="w-3 h-3 fill-white" />
                       Most Popular
+                    </div>
+                  </div>
+                )}
+
+                {/* Custom Badge */}
+                {plan.badge && !plan.popular && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                    <div className="flex items-center gap-1.5 px-8 py-1.5 bg-gold-gradient rounded-full text-dark-900 text-xs font-bold tracking-wider uppercase shadow-lg">
+                      <FiZap className="w-3 h-3" />
+                      {plan.badge}
                     </div>
                   </div>
                 )}
@@ -487,7 +751,9 @@ export default function PricingPage() {
                   className={`relative h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 ${
                     plan.popular
                       ? "border-primary-300 bg-white shadow-premium"
-                      : "border-gray-100 bg-white hover:border-primary-200 hover:shadow-premium"
+                      : plan.badge
+                        ? "border-gold-300 bg-white shadow-premium"
+                        : "border-gray-100 bg-white hover:border-primary-200 hover:shadow-premium"
                   }`}
                 >
                   <div className="text-center mb-8">
@@ -512,7 +778,8 @@ export default function PricingPage() {
                             parseInt(plan.price.replace(/,/g, ""))) /
                             parseInt(plan.originalPrice.replace(/,/g, ""))) *
                             100
-                        )}%
+                        )}
+                        %
                       </span>
                     </div>
                     <div className="flex items-baseline justify-center gap-1">
@@ -568,8 +835,8 @@ export default function PricingPage() {
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-green-50 rounded-full border border-green-200">
               <span className="text-lg">💳</span>
               <p className="text-sm text-green-800">
-                <strong>EMI Plans Available</strong> — Starting from ₹2,083/month with{" "}
-                <strong>0% interest</strong> on select plans
+                <strong>EMI Plans Available</strong> — Starting from
+                ₹2,083/month with <strong>0% interest</strong> on select plans
               </p>
             </div>
           </motion.div>
@@ -581,7 +848,6 @@ export default function PricingPage() {
       ======================================== */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
-          {/* Section Heading */}
           <motion.div
             className="text-center mb-16"
             variants={fadeInUp}
@@ -599,10 +865,9 @@ export default function PricingPage() {
               <span className="text-gradient">Prices</span> in Wakad, Pune
             </h2>
             <p className="subtitle max-w-2xl mx-auto">
-              Comprehensive and transparent pricing for every dental treatment at Zircon Dental. Updated for 2026.
+              Comprehensive and transparent pricing for every dental treatment
+              at Zircon Dental. Updated for 2026.
             </p>
-
-            {/* Decorative dots */}
             <div className="mt-6 flex items-center gap-2 justify-center">
               <span className="w-12 h-0.5 rounded-full bg-primary-500" />
               <span className="w-3 h-3 rounded-full bg-primary-500" />
@@ -677,7 +942,8 @@ export default function PricingPage() {
 
             <div className="mt-6 p-4 bg-gold-50 rounded-xl border border-gold-200">
               <p className="text-xs text-gray-600 text-center">
-                💡 <strong>Note:</strong> Prices may vary based on case complexity. Final pricing after consultation.{" "}
+                💡 <strong>Note:</strong> Prices may vary based on case
+                complexity. Final pricing after consultation.{" "}
                 <strong>0% EMI available</strong> on treatments above ₹20,000.
               </p>
             </div>
@@ -686,11 +952,15 @@ export default function PricingPage() {
       </section>
 
       {/* ========================================
+          BRAND COMPARISON TABLE
+      ======================================== */}
+      <BrandComparisonTable items={brandPriceList} />
+
+      {/* ========================================
           GLOBAL PRICE COMPARISON
       ======================================== */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          {/* Section Heading */}
           <motion.div
             className="text-center mb-16"
             variants={fadeInUp}
@@ -704,13 +974,13 @@ export default function PricingPage() {
               <span className="w-8 h-px bg-primary-500" />
             </span>
             <h2 className="heading-lg text-dark-900 mb-3">
-              Save Up to <span className="text-gradient">85%</span> on Dental Treatments
+              Save Up to <span className="text-gradient">85%</span> on Dental
+              Treatments
             </h2>
             <p className="subtitle max-w-2xl mx-auto">
-              World-class dental care at a fraction of Western prices. See how Pune compares globally.
+              World-class dental care at a fraction of Western prices. See how
+              Pune compares globally.
             </p>
-
-            {/* Decorative dots */}
             <div className="mt-6 flex items-center gap-2 justify-center">
               <span className="w-12 h-0.5 rounded-full bg-primary-500" />
               <span className="w-3 h-3 rounded-full bg-primary-500" />
@@ -777,7 +1047,6 @@ export default function PricingPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              {/* Clinic Name Bar */}
               <div className="bg-dark-950 rounded-t-2xl py-4 px-6">
                 <div className="flex items-center justify-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-primary-gradient flex items-center justify-center flex-shrink-0">
@@ -794,13 +1063,27 @@ export default function PricingPage() {
                 </div>
               </div>
 
-              {/* Price Cards */}
               <div className="bg-gradient-to-br from-primary-600 via-primary-500 to-pink-500 rounded-b-2xl p-6 sm:p-10">
                 <div className="grid grid-cols-3 gap-3 sm:gap-6">
                   {[
-                    { label: "Implant", usd: "$300 – $800", inr: "₹25,000 – ₹66,000", icon: "🦷" },
-                    { label: "Crown", usd: "$60 – $240", inr: "₹5,000 – ₹20,000", icon: "👑" },
-                    { label: "Root Canal", usd: "$60 – $180", inr: "₹5,000 – ₹15,000", icon: "🔬" },
+                    {
+                      label: "Implant",
+                      usd: "$300 – $800",
+                      inr: "₹25,000 – ₹66,000",
+                      icon: "🦷",
+                    },
+                    {
+                      label: "Crown",
+                      usd: "$60 – $240",
+                      inr: "₹5,000 – ₹20,000",
+                      icon: "👑",
+                    },
+                    {
+                      label: "Root Canal",
+                      usd: "$60 – $180",
+                      inr: "₹5,000 – ₹15,000",
+                      icon: "🔬",
+                    },
                   ].map((item, i) => (
                     <div
                       key={i}
@@ -829,12 +1112,15 @@ export default function PricingPage() {
                     <span className="text-xl">💰</span>
                     <p className="text-sm sm:text-base font-bold text-white">
                       Save up to{" "}
-                      <span className="text-gold-300 text-lg sm:text-2xl">85%</span>{" "}
+                      <span className="text-gold-300 text-lg sm:text-2xl">
+                        85%
+                      </span>{" "}
                       compared to Western countries
                     </p>
                   </div>
                   <p className="text-white/40 text-[10px] sm:text-xs">
-                    (1 USD ≈ 83 INR) • Prices are indicative • Free consultation to get accurate estimate
+                    (1 USD ≈ 83 INR) • Prices are indicative • Free
+                    consultation to get accurate estimate
                   </p>
                 </div>
               </div>
@@ -869,7 +1155,6 @@ export default function PricingPage() {
           <div className="blur-blob w-[300px] h-[300px] bg-gold-500/5 bottom-0 left-0" />
         </div>
         <div className="container-custom relative">
-          {/* Section Heading */}
           <motion.div
             className="text-center mb-16"
             variants={fadeInUp}
@@ -883,12 +1168,15 @@ export default function PricingPage() {
               <span className="w-8 h-px bg-gold-400" />
             </span>
             <h2 className="heading-lg text-white mb-3">
-              0% EMI <span className="text-gold-400">Available</span> on All Treatments
+              0% EMI{" "}
+              <span className="text-gold-400">Available</span> on All
+              Treatments
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto font-light">
-              Don&apos;t let cost be a barrier to your perfect smile. Pay in easy monthly installments with 0% interest through India&apos;s leading banks.
+              Don&apos;t let cost be a barrier to your perfect smile. Pay in
+              easy monthly installments with 0% interest through India&apos;s
+              leading banks.
             </p>
-
             <div className="mt-6 flex items-center gap-2 justify-center">
               <span className="w-12 h-0.5 rounded-full bg-gold-500" />
               <span className="w-3 h-3 rounded-full bg-gold-500" />
@@ -897,7 +1185,7 @@ export default function PricingPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Info */}
+            {/* Left */}
             <motion.div
               variants={fadeInLeft}
               initial="hidden"
@@ -928,20 +1216,25 @@ export default function PricingPage() {
                 Banking Partners
               </h4>
               <div className="flex flex-wrap gap-3">
-                {["HDFC Bank", "ICICI Bank", "SBI", "Bajaj Finserv", "Axis Bank", "Kotak"].map(
-                  (bank) => (
-                    <span
-                      key={bank}
-                      className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-300 font-medium"
-                    >
-                      {bank}
-                    </span>
-                  )
-                )}
+                {[
+                  "HDFC Bank",
+                  "ICICI Bank",
+                  "SBI",
+                  "Bajaj Finserv",
+                  "Axis Bank",
+                  "Kotak",
+                ].map((bank) => (
+                  <span
+                    key={bank}
+                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-300 font-medium"
+                  >
+                    {bank}
+                  </span>
+                ))}
               </div>
             </motion.div>
 
-            {/* Right - EMI Calculator */}
+            {/* Right — EMI Calculator */}
             <motion.div
               variants={fadeInRight}
               initial="hidden"
@@ -958,6 +1251,10 @@ export default function PricingPage() {
 
                 <div className="space-y-3">
                   {[
+                    {
+                      treatment: "Immediate Implant (₹35K)",
+                      emi: "₹2,917",
+                    },
                     { treatment: "Single Implant (₹25K)", emi: "₹2,083" },
                     { treatment: "Zirconia Crown (₹15K)", emi: "₹1,250" },
                     { treatment: "Clear Aligners (₹1L)", emi: "₹8,333" },
@@ -968,7 +1265,9 @@ export default function PricingPage() {
                       key={i}
                       className="flex items-center justify-between p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors"
                     >
-                      <span className="text-sm text-gray-300">{item.treatment}</span>
+                      <span className="text-sm text-gray-300">
+                        {item.treatment}
+                      </span>
                       <span className="text-sm font-bold text-gold-400">
                         {item.emi}/mo
                       </span>
@@ -977,7 +1276,8 @@ export default function PricingPage() {
                 </div>
 
                 <p className="text-[10px] text-gray-600 mt-4">
-                  *Based on 12-month tenure. 0% interest on select plans. Actual EMI may vary based on bank and tenure.
+                  *Based on 12-month tenure. 0% interest on select plans.
+                  Actual EMI may vary based on bank and tenure.
                 </p>
 
                 <div className="mt-6">
@@ -1001,7 +1301,6 @@ export default function PricingPage() {
       ======================================== */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          {/* Section Heading */}
           <motion.div
             className="text-center mb-16"
             variants={fadeInUp}
@@ -1019,9 +1318,9 @@ export default function PricingPage() {
               <span className="text-gradient">Pricing & Payments</span>
             </h2>
             <p className="subtitle max-w-2xl mx-auto">
-              Everything you need to know about costs, EMI options, insurance, and payment methods at Zircon Dental.
+              Everything you need to know about costs, EMI options, insurance,
+              and payment methods at Zircon Dental.
             </p>
-
             <div className="mt-6 flex items-center gap-2 justify-center">
               <span className="w-12 h-0.5 rounded-full bg-primary-500" />
               <span className="w-3 h-3 rounded-full bg-primary-500" />
@@ -1103,7 +1402,6 @@ export default function PricingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            {/* Icon */}
             <motion.div
               className="w-20 h-20 rounded-2xl bg-primary-gradient flex items-center justify-center mx-auto mb-8 shadow-primary"
               initial={{ scale: 0 }}
@@ -1121,15 +1419,20 @@ export default function PricingPage() {
             </span>
 
             <h2 className="heading-lg text-white mb-4">
-              Get Your <span className="text-gold-400">Personalized</span> Treatment Plan & Quote
+              Get Your{" "}
+              <span className="text-gold-400">Personalized</span> Treatment
+              Plan & Quote
             </h2>
 
             <p className="text-gray-400 mb-4 font-light text-lg max-w-xl mx-auto">
-              Every smile is unique. Book a free consultation to get an accurate, personalized cost estimate — no obligation, no pressure.
+              Every smile is unique. Book a free consultation to get an
+              accurate, personalized cost estimate — no obligation, no
+              pressure.
             </p>
 
             <p className="text-gray-600 text-sm mb-10">
-              ✅ Free Consultation &nbsp;•&nbsp; ✅ No Obligation &nbsp;•&nbsp; ✅ Same Day Appointment Available
+              ✅ Free Consultation &nbsp;•&nbsp; ✅ No Obligation &nbsp;•&nbsp;
+              ✅ Same Day Appointment Available
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -1170,7 +1473,8 @@ export default function PricingPage() {
                     Zircon Dental & Implant Clinic
                   </p>
                   <p className="text-gray-500 text-xs">
-                    Shop No. 72, Western Avenue, Opp. Phoenix Mall Road, Wakad, Pune - 411057
+                    Shop No. 72, Western Avenue, Opp. Phoenix Mall Road,
+                    Wakad, Pune - 411057
                   </p>
                 </div>
               </div>

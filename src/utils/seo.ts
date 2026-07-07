@@ -12,7 +12,6 @@ interface PageSEOProps {
   image?: string;
   type?: "website" | "article";
 }
-
 // ✅ Generate metadata for any page
 export function generatePageSEO({
   title,

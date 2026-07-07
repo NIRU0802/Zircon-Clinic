@@ -174,9 +174,9 @@ const HeroSection = () => {
               className="flex flex-wrap gap-8 md:gap-12"
             >
               {[
-                { value: "50K+", label: "Happy Patients" },
-                { value: "15+", label: "Years Experience" },
-                { value: "200+", label: "Treatments" },
+                { value: "10K+", label: "Happy Patients" },
+                { value: "10+", label: "Years Experience" },
+                { value: "1500+", label: "Treatments" },
               ].map((stat, index) => (
                 <div
                   key={index}
@@ -222,7 +222,7 @@ const HeroSection = () => {
       <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center gap-4 z-10">
         <div className="w-px h-20 bg-gradient-to-b from-transparent to-white/20" />
         <span className="text-xs text-white/30 tracking-[0.3em] rotate-90 origin-center whitespace-nowrap">
-          ESTHETICA 2024
+          ZIRCON DENTAL
         </span>
         <div className="w-px h-20 bg-gradient-to-b from-white/20 to-transparent" />
       </div>

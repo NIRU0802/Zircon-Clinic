@@ -6,7 +6,7 @@ import { staggerContainer, staggerItem } from "@/utils/animations";
 import { FiAward, FiUsers, FiShield, FiHeart, FiStar, FiZap } from "react-icons/fi";
 
 const features = [
-  { icon: FiAward, title: "18+ Years of Expertise", description: "Internationally trained specialists with decades of combined experience in implants & cosmetic dentistry.", color: "from-primary-500 to-primary-400" },
+  { icon: FiAward, title: "10+ Years of Expertise", description: "Internationally trained specialists with decades of combined experience in implants & cosmetic dentistry.", color: "from-primary-500 to-primary-400" },
   { icon: FiShield, title: "Advanced 3D Technology", description: "CBCT scanning, CAD/CAM, digital impressions & guided surgery for precise, predictable results.", color: "from-cta-600 to-blue-500" },
   { icon: FiHeart, title: "Personalized Treatment", description: "Every plan is customized to your unique needs. No cookie-cutter approaches — just genuine care.", color: "from-emerald-500 to-green-500" },
   { icon: FiUsers, title: "10,000+ Happy Patients", description: "A proven track record across Pune with 98.5% implant success rate and thousands of smile transformations.", color: "from-amber-500 to-yellow-500" },

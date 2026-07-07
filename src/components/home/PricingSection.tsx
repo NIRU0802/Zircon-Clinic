@@ -4,18 +4,39 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { staggerContainer, staggerItem } from "@/utils/animations";
-import { FiCheck, FiArrowRight, FiStar } from "react-icons/fi";
+import { FiCheck, FiArrowRight, FiStar, FiZap } from "react-icons/fi";
 import GradientButton from "@/components/ui/GradientButton";
 
 const pricingPlans = [
   {
     id: 1,
+    name: "Immediate Load Implant",
+    icon: "⚡",
+    price: "35,000",
+    originalPrice: "48,000",
+    unit: "per implant",
+    popular: false,
+    badge: "Fastest Option",
+    features: [
+      "Titanium Implant Post",
+      "Same-Day Temporary Crown",
+      "3D CBCT Scan & Planning",
+      "No Bone Grafting Wait",
+      "Local Anesthesia",
+      "Final Crown in 3-6 Months",
+      "1 Year Warranty",
+    ],
+    color: "from-gold-500 to-amber-500",
+  },
+  {
+    id: 2,
     name: "Single Tooth Implant",
     icon: "🦷",
     price: "25,000",
     originalPrice: "35,000",
     unit: "per implant",
     popular: false,
+    badge: null,
     features: [
       "Titanium Implant Post",
       "Healing Abutment",
@@ -28,13 +49,14 @@ const pricingPlans = [
     color: "from-primary-500 to-primary-400",
   },
   {
-    id: 2,
+    id: 3,
     name: "All-on-4 Implants",
     icon: "⚡",
-    price: "4,50,000",
+    price: "4,00,000",
     originalPrice: "6,00,000",
     unit: "per arch",
     popular: true,
+    badge: null,
     features: [
       "4 Titanium Implant Posts",
       "Full Arch Prosthesis",
@@ -49,13 +71,14 @@ const pricingPlans = [
     color: "from-cta-600 to-blue-500",
   },
   {
-    id: 3,
+    id: 4,
     name: "Full Mouth Implants",
     icon: "👑",
-    price: "8,00,000",
+    price: "5,00,000",
     originalPrice: "10,00,000",
     unit: "both arches",
     popular: false,
+    badge: null,
     features: [
       "Both Upper & Lower Arches",
       "8-12 Titanium Implants",
@@ -73,12 +96,12 @@ const pricingPlans = [
 ];
 
 const additionalPricing = [
-  { treatment: "Root Canal Treatment", price: "5,000 - 15,000" },
+  { treatment: "Root Canal Treatment", price: "4,000 - 15,000" },
   { treatment: "Porcelain Veneers", price: "8,000 - 25,000 / tooth" },
-  { treatment: "Teeth Whitening", price: "8,000 - 20,000" },
-  { treatment: "Zirconia Crown", price: "10,000 - 20,000" },
+  { treatment: "Teeth Whitening", price: "4,000 - 20,000" },
+  { treatment: "Zirconia Crown", price: "8,000 - 20,000" },
   { treatment: "Metal Braces", price: "30,000 - 50,000" },
-  { treatment: "Clear Aligners", price: "80,000 - 2,00,000" },
+  { treatment: "Clear Aligners", price: "50,000 - 2,00,000" },
   { treatment: "Wisdom Tooth Extraction", price: "3,000 - 8,000" },
   { treatment: "Bone Grafting", price: "15,000 - 30,000" },
 ];
@@ -100,10 +123,10 @@ const PricingSection = () => {
         />
 
         {/* ========================================
-            IMPLANT PRICING CARDS
-        ======================================== */}
+          IMPLANT PRICING CARDS
+          ======================================== */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -118,19 +141,28 @@ const PricingSection = () => {
               {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                  <div className="flex items-center gap-1.5 px-4 py-1.5 bg-primary-gradient rounded-full text-white text-xs font-bold tracking-wider uppercase shadow-primary">
+                  <div className="flex items-center gap-1.5 px-8 py-1.5 bg-primary-gradient rounded-full text-white text-xs font-bold tracking-wider uppercase shadow-primary">
                     <FiStar className="w-3 h-3 fill-white" />
                     Most Popular
                   </div>
                 </div>
               )}
 
+              {/* Custom Badge (e.g. Fastest Option) */}
+              {plan.badge && !plan.popular && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                  <div className="flex items-center gap-1.5 px-8 py-1.5 bg-gold-gradient rounded-full text-dark-900 text-xs font-bold tracking-wider uppercase shadow-lg">
+                    <FiZap className="w-3 h-3" />
+                    {plan.badge}
+                  </div>
+                </div>
+              )}
+
               <div
-                className={`relative h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 ${
-                  plan.popular
+                className={`relative h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 ${plan.popular
                     ? "border-primary-300 bg-white shadow-premium"
                     : "border-gray-100 bg-white hover:border-primary-200 hover:shadow-premium"
-                }`}
+                  }`}
               >
                 {/* Header */}
                 <div className="text-center mb-8">
@@ -154,10 +186,8 @@ const PricingSection = () => {
                       {Math.round(
                         ((parseInt(plan.originalPrice.replace(/,/g, "")) -
                           parseInt(plan.price.replace(/,/g, ""))) /
-                          parseInt(
-                            plan.originalPrice.replace(/,/g, "")
-                          )) *
-                          100
+                          parseInt(plan.originalPrice.replace(/,/g, ""))) *
+                        100
                       )}
                       %
                     </span>
@@ -189,9 +219,7 @@ const PricingSection = () => {
                       >
                         <FiCheck className="w-3 h-3 text-white" />
                       </div>
-                      <span className="text-sm text-gray-600">
-                        {feature}
-                      </span>
+                      <span className="text-sm text-gray-600">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -238,11 +266,10 @@ const PricingSection = () => {
             {additionalPricing.map((item, i) => (
               <div
                 key={i}
-                className={`grid grid-cols-2 gap-4 px-6 py-4 items-center transition-colors hover:bg-primary-50 ${
-                  i !== additionalPricing.length - 1
-                    ? "border-b border-gray-100"
-                    : ""
-                }`}
+                className={`grid grid-cols-2 gap-4 px-6 py-4 items-center transition-colors hover:bg-primary-50 ${i !== additionalPricing.length - 1
+                  ? "border-b border-gray-100"
+                  : ""
+                  }`}
               >
                 <span className="text-sm font-medium text-dark-900">
                   {item.treatment}
@@ -284,7 +311,7 @@ const PricingSection = () => {
           </div>
         </motion.div>
       </div>
-    </section>
+    </section >
   );
 };
 

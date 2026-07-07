@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
     "Pune's premier dental implant clinic offering world-class treatments. Dental Implants, Smile Design, Root Canal, Orthodontics, Cosmetic Dentistry & more in Wakad, Pune.",
 
   phone: "+91 75586 97707",
-  email: "info@zircondentalpune.com",
+  email: "Zircondental77@gmail.com",
 
   address:
     "Shop No. 72, Western Avenue, Western High Street, Opp. Phoenix Mall of the Millennium, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057",
@@ -54,8 +54,8 @@ export const SITE_CONFIG = {
 };
 
 export const STATS = [
-  { value: 50000, suffix: "+", label: "Happy Patients", icon: "😊" },
-  { value: 15, suffix: "+", label: "Years Experience", icon: "🏆" },
-  { value: 5000, suffix: "+", label: "Dental Implants", icon: "🦷" },
+  { value: 10000, suffix: "+", label: "Happy Patients", icon: "😊" },
+  { value: 10, suffix: "+", label: "Years Experience", icon: "🏆" },
+  { value: 2500, suffix: "+", label: "Dental Implants", icon: "🦷" },
   { value: 98.5, suffix: "%", label: "Success Rate", icon: "⭐" },
 ];

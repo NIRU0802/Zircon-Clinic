@@ -1,6 +1,10 @@
 "use client";
 import Image from "next/image";
 import Layout from "@/components/layout/Layout";
+import DoctorCard from "@/components/team/DoctorCard";
+import DoctorExpertiseGrid from "@/components/team/DoctorExpertiseGrid";
+import DoctorStatsGrid from "@/components/team/DoctorStatsGrid";
+import HighlightCard from "@/components/ui/HighlightCard";
 import { motion } from "framer-motion";
 import {
   fadeInUp,
@@ -18,6 +22,12 @@ import {
   FiCheck,
   FiTarget,
   FiEye,
+  FiFlag,
+  FiTrendingUp,
+  FiCpu,
+  FiHome,
+  FiZap,
+  FiSmile,
 } from "react-icons/fi";
 import GradientButton from "@/components/ui/GradientButton";
 import { SITE_CONFIG, STATS } from "@/utils/constants";
@@ -68,36 +78,49 @@ export default function AboutPage() {
       title: "Clinic Founded",
       description:
         "Started with a vision to provide world-class dental care in Pune.",
+      icon: FiFlag,
     },
     {
       year: "2012",
-      title: "1000+ Implants",
+      title: "1500+ Implants",
       description:
-        "Crossed 1000 successful dental implant placements milestone.",
+        "Crossed 1500 successful dental implant placements milestone.",
+      icon: FiTrendingUp,
     },
     {
       year: "2015",
       title: "Advanced Technology",
       description:
         "Introduced 3D CBCT scanning and CAD/CAM technology.",
+      icon: FiCpu,
     },
     {
       year: "2018",
       title: "New Facility",
       description:
         "Moved to our state-of-the-art facility at Wakad, opp. Phoenix Mall.",
+      icon: FiHome,
     },
     {
       year: "2021",
       title: "All-on-4 Launch",
       description:
         "Introduced same-day full arch implant solutions.",
+      icon: FiZap,
     },
     {
-      year: "2024",
-      title: "50,000+ Patients",
+      year: "2025",
+      title: "Digital Smile Design Suite",
       description:
-        "Celebrated serving over 50,000 happy patients across Pune.",
+        "Launched an in-house Digital Smile Design lab for fully personalized cosmetic treatments.",
+      icon: FiEye,
+    },
+    {
+      year: "2026",
+      title: "15,000+ Patients",
+      description:
+        "Crossed 15,000 happy patients, backed by a growing team and expanded success record.",
+      icon: FiSmile,
     },
   ];
 
@@ -231,7 +254,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <div className="relative">
-                <div className="rounded-2xl overflow-hidden shadow-premium-lg">
+                <div className="relative rounded-2xl overflow-hidden shadow-premium-lg aspect-[4/5]">
                   <Image
                     src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=800"
                     alt="Zircon Dental Clinic Wakad"
@@ -252,7 +275,7 @@ export default function AboutPage() {
                   <div className="flex items-center gap-3">
                     <div className="w-14 h-14 rounded-full bg-primary-gradient flex items-center justify-center">
                       <span className="text-xl font-heading font-bold text-white">
-                        15+
+                        10+
                       </span>
                     </div>
                     <div>
@@ -296,7 +319,7 @@ export default function AboutPage() {
                 Located at Wakad, opposite Phoenix Mall Road, our clinic
                 has grown from a small practice to one of the most trusted
                 dental centres in Pimpri-Chinchwad and greater Pune. With
-                over 50,000 patients treated and a 98.5% implant success
+                over 10,000 patients treated and a 98.5% implant success
                 rate, we combine cutting-edge technology with artistic
                 precision to create smiles that transform lives. Our team
                 of specialists is trained internationally and committed to
@@ -336,8 +359,8 @@ export default function AboutPage() {
               {/* Key Points */}
               <div className="grid grid-cols-2 gap-3 mb-8">
                 {[
-                  "15+ Years Experience",
-                  "50,000+ Patients",
+                  "10+ Years Experience",
+                  "10,000+ Patients",
                   "98.5% Success Rate",
                   "0% EMI Available",
                   "3D CBCT Technology",
@@ -464,8 +487,8 @@ export default function AboutPage() {
       </section>
 
       {/* ================================
-          SECTION 5: OUR TEAM
-      ================================ */}
+    SECTION 5: OUR TEAM (SIDE BY SIDE)
+================================ */}
       <section id="our-team" className="section-padding bg-gray-50">
         <div className="container-custom">
           <motion.div
@@ -477,78 +500,132 @@ export default function AboutPage() {
           >
             <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.25em] uppercase text-primary-500 mb-4">
               <span className="w-8 h-px bg-primary-500" />
-              Our Team
+              Meet Our Team
               <span className="w-8 h-px bg-primary-500" />
             </span>
             <h2 className="heading-lg text-dark-900">
-              Meet Our <span className="text-gradient">Specialists</span>
+              Experts Behind Your <span className="text-gradient">Perfect Smile</span>
             </h2>
             <p className="subtitle max-w-2xl mx-auto mt-4">
-              Expert dentists dedicated to your perfect smile. Trained
-              internationally with decades of combined experience.
+              Internationally trained specialists combining clinical precision
+              with genuine, patient-first care.
             </p>
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {doctors.map((doctor) => (
-              <motion.div
-                key={doctor.id}
-                variants={staggerItem}
-                className="group"
+            {/* ---------- DOCTOR 1 ---------- */}
+            <motion.div variants={staggerItem}>
+              <DoctorCard
+                doctor={{
+                  ...doctors[0],
+                  image:
+                    "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1200",
+                }}
+                roleLabel="Chief Implantologist"
+                accent="primary"
+                expertise={["Dental Implants", "Full Mouth Rehab", "All-on-4", "Bone Grafting"]}
+                highlights={[
+                  { title: "10+", subtitle: "Years Experience" },
+                  { title: "10,000+", subtitle: "Treatments" },
+                  { title: "98.5%", subtitle: "Success Rate" },
+                  { title: "100+", subtitle: "Courses" },
+                ]}
+                memberships={["IDA", "ISOI", "ICOI", "Cosmetic Dentistry"]}
+                languages={["English", "Hindi", "Marathi"]}
               >
-                <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-premium transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-transparent">
-                  {/* Doctor Image */}
-                  <div className="relative h-80 overflow-hidden bg-gray-100">
-                    <Image
-                      src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600"
-                      alt={doctor.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent" />
-
-                    {/* Experience badge */}
-                    <div className="absolute top-4 right-4 px-3 py-1.5 bg-gold-gradient rounded-full text-xs font-bold text-dark-900">
-                      {doctor.experience}
-                    </div>
-
-                    {/* Name overlay at bottom */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-xl font-heading font-bold text-white mb-0.5">
-                        {doctor.name}
-                      </h3>
-                      <p className="text-primary-300 text-sm font-medium">
-                        {doctor.specialization}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Doctor Info */}
-                  <div className="p-6">
-                    <p className="text-xs text-gray-400 mb-3">
-                      {doctor.qualification}
-                    </p>
-                    <p className="text-sm text-gray-500 leading-relaxed">
-                      {doctor.description}
-                    </p>
-                  </div>
+                <div>
+                  <h4 className="mb-2 text-base font-bold">Professional Summary</h4>
+                  <p className="text-sm text-gray-600 leading-6 line-clamp-3">
+                    {doctors[0].description}
+                  </p>
                 </div>
-              </motion.div>
-            ))}
+
+                <div>
+                  <h4 className="mb-3 text-base font-bold">Areas of Expertise</h4>
+                  <DoctorExpertiseGrid
+                    accent="primary"
+                    items={["Dental Implants", "Full Mouth Rehab", "All-on-4", "Bone Grafting"]}
+                  />
+                </div>
+
+                <div>
+                  <h4 className="mb-3 text-base font-bold">Professional Highlights</h4>
+                  <DoctorStatsGrid
+                    accent="primary"
+                    items={[
+                      { title: "10+", subtitle: "Years Experience" },
+                      { title: "10,000+", subtitle: "Treatments" },
+                      { title: "98.5%", subtitle: "Success Rate" },
+                      { title: "100+", subtitle: "Courses" },
+                    ]}
+                  />
+                </div>
+              </DoctorCard>
+            </motion.div>
+
+            {/* ---------- DOCTOR 2 ---------- */}
+            <motion.div variants={staggerItem}>
+              <DoctorCard
+                doctor={{
+                  ...doctors[1],
+                  image:
+                    "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=1200",
+                }}
+                roleLabel="Prosthodontist & Cosmetic Specialist"
+                accent="gold"
+                expertise={["Smile Design", "Crowns & Bridges", "Veneers", "CAD/CAM Dentistry"]}
+                highlights={[
+                  { title: "10+", subtitle: "Years Experience" },
+                  { title: "7,000+", subtitle: "Treatments" },
+                  { title: "97%", subtitle: "Satisfaction" },
+                  { title: "50+", subtitle: "Courses" },
+                ]}
+                memberships={["Prosthodontic Society", "ICP", "Asia Dental Forum"]}
+                languages={["English", "Hindi", "Marathi"]}
+              >
+                <div>
+                  <h4 className="mb-2 text-base font-bold">Professional Summary</h4>
+                  <p className="text-sm text-gray-600 leading-6 line-clamp-3">
+                    {doctors[1].description}
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="mb-3 text-base font-bold">Areas of Expertise</h4>
+                  <DoctorExpertiseGrid
+                    accent="gold"
+                    items={["Smile Design", "Crowns & Bridges", "Veneers", "CAD/CAM Dentistry"]}
+                  />
+                </div>
+
+                <div>
+                  <h4 className="mb-3 text-base font-bold">Professional Highlights</h4>
+                  <DoctorStatsGrid
+                    accent="gold"
+                    items={[
+                      { title: "10+", subtitle: "Years Experience" },
+                      { title: "7,000+", subtitle: "Treatments" },
+                      { title: "97%", subtitle: "Satisfaction" },
+                      { title: "50+", subtitle: "Courses" },
+                    ]}
+                  />
+                </div>
+              </DoctorCard>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
+
       {/* ================================
-          SECTION 6: INFRASTRUCTURE
-      ================================ */}
+    SECTION 6: INFRASTRUCTURE
+================================ */}
       <section id="infrastructure" className="section-padding bg-white">
         <div className="container-custom">
           <motion.div
@@ -612,14 +689,14 @@ export default function AboutPage() {
               <motion.div
                 key={i}
                 variants={staggerItem}
-                className="aspect-square rounded-2xl overflow-hidden group"
+                className="relative aspect-square rounded-2xl overflow-hidden group"
               >
                 <Image
                   src={src}
                   alt={`Clinic Photo ${i + 1}`}
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </motion.div>
             ))}
@@ -628,12 +705,12 @@ export default function AboutPage() {
       </section>
 
       {/* ================================
-          SECTION 7: MILESTONES TIMELINE
-      ================================ */}
-      <section id="milestones" className="section-padding bg-gray-50">
+    SECTION 7: MILESTONES TIMELINE (ZIGZAG)
+================================ */}
+      <section id="milestones" className="section-padding bg-gray-50 overflow-hidden">
         <div className="container-custom">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-20"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
@@ -647,36 +724,156 @@ export default function AboutPage() {
             <h2 className="heading-lg text-dark-900">
               Key <span className="text-gradient">Milestones</span>
             </h2>
+            <p className="subtitle max-w-2xl mx-auto mt-4">
+              From a small practice to Pune&apos;s most trusted dental clinic —
+              here&apos;s our story, year by year.
+            </p>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto">
-            {milestones.map((item, i) => (
-              <motion.div
-                key={i}
-                className="flex gap-6 mb-8 last:mb-0"
-                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
-                <div className="flex flex-col items-center">
-                  <div className="w-14 h-14 rounded-full bg-primary-gradient flex items-center justify-center text-white font-heading font-bold text-sm flex-shrink-0 shadow-primary">
-                    {item.year}
+          {/* ---------- DESKTOP: ZIGZAG HORIZONTAL ---------- */}
+          <div className="hidden lg:block relative">
+            <div className="absolute top-1/2 left-0 right-0 h-0.5 -translate-y-1/2 bg-gradient-to-r from-primary-200 via-primary-400 to-gold-400" />
+
+            <motion.div
+              className="relative grid grid-cols-7 gap-3"
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {milestones.map((item, i) => {
+                const isUp = i % 2 === 0;
+                const isLast = i === milestones.length - 1;
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={i}
+                    variants={staggerItem}
+                    className="relative flex flex-col items-center"
+                  >
+                    {isUp && (
+                      <div className="mb-6 relative bg-white rounded-2xl pl-5 pr-4 py-5 shadow-sm border border-gray-100 hover:shadow-premium hover:-translate-y-1 transition-all duration-300 min-h-[172px] w-full overflow-hidden">
+                        <div
+                          className={`absolute left-0 top-0 bottom-0 w-1 ${isLast ? "bg-gold-gradient" : "bg-primary-gradient"
+                            }`}
+                        />
+                        <div className="flex items-start justify-between mb-3">
+                          <div
+                            className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${isLast
+                                ? "bg-gold-50 text-gold-600"
+                                : "bg-primary-50 text-primary-600"
+                              }`}
+                          >
+                            <Icon className="w-5 h-5" />
+                          </div>
+                          <span
+                            className={`text-2xl font-heading font-bold ${isLast ? "text-gold-200" : "text-primary-100"
+                              }`}
+                          >
+                            {item.year}
+                          </span>
+                        </div>
+                        <h3 className="text-sm font-heading font-bold text-dark-900 mb-2 leading-snug">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs text-gray-500 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    )}
+
+                    <div
+                      className={`w-px flex-shrink-0 ${isUp ? "h-6" : "h-6 order-2"} ${isLast ? "bg-gold-300" : "bg-primary-300"
+                        }`}
+                    />
+
+                    <div
+                      className={`relative z-10 w-16 h-16 rounded-full flex items-center justify-center text-white font-heading font-bold text-xs shadow-lg ring-[6px] ring-gray-50 flex-shrink-0 ${isLast ? "bg-gold-gradient text-dark-900" : "bg-primary-gradient"
+                        } ${!isUp ? "order-1" : ""}`}
+                    >
+                      {item.year}
+                    </div>
+
+                    {!isUp && (
+                      <div className="mt-6 relative bg-white rounded-2xl pl-5 pr-4 py-5 shadow-sm border border-gray-100 hover:shadow-premium hover:-translate-y-1 transition-all duration-300 min-h-[172px] w-full order-3 overflow-hidden">
+                        <div
+                          className={`absolute left-0 top-0 bottom-0 w-1 ${isLast ? "bg-gold-gradient" : "bg-primary-gradient"
+                            }`}
+                        />
+                        <div className="flex items-start justify-between mb-3">
+                          <div
+                            className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${isLast
+                                ? "bg-gold-50 text-gold-600"
+                                : "bg-primary-50 text-primary-600"
+                              }`}
+                          >
+                            <Icon className="w-5 h-5" />
+                          </div>
+                          <span
+                            className={`text-2xl font-heading font-bold ${isLast ? "text-gold-200" : "text-primary-100"
+                              }`}
+                          >
+                            {item.year}
+                          </span>
+                        </div>
+                        <h3 className="text-sm font-heading font-bold text-dark-900 mb-2 leading-snug">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs text-gray-500 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    )}
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </div>
+
+          {/* ---------- MOBILE/TABLET: VERTICAL FALLBACK ---------- */}
+          <div className="lg:hidden max-w-lg mx-auto">
+            {milestones.map((item, i) => {
+              const isLast = i === milestones.length - 1;
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={i}
+                  className="flex gap-5 mb-6 last:mb-0"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                >
+                  <div className="flex flex-col items-center flex-shrink-0">
+                    <div
+                      className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-heading font-bold text-[11px] shadow-lg ${isLast ? "bg-gold-gradient text-dark-900" : "bg-primary-gradient"
+                        }`}
+                    >
+                      {item.year}
+                    </div>
+                    {i < milestones.length - 1 && (
+                      <div className="w-px flex-1 bg-primary-200 mt-2" />
+                    )}
                   </div>
-                  {i < milestones.length - 1 && (
-                    <div className="w-px h-full bg-primary-200 mt-2" />
-                  )}
-                </div>
-                <div className="pb-8">
-                  <h3 className="text-lg font-heading font-bold text-dark-900 mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-gray-500">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                  <div className="pb-2 relative bg-white rounded-2xl pl-5 pr-4 py-4 shadow-sm border border-gray-100 flex-1 h-fit overflow-hidden">
+                    <div
+                      className={`absolute left-0 top-0 bottom-0 w-1 ${isLast ? "bg-gold-gradient" : "bg-primary-gradient"
+                        }`}
+                    />
+                    <div
+                      className={`w-9 h-9 rounded-lg flex items-center justify-center mb-2 ${isLast ? "bg-gold-50 text-gold-600" : "bg-primary-50 text-primary-600"
+                        }`}
+                    >
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <h3 className="text-base font-heading font-bold text-dark-900 mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-gray-500">{item.description}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -707,7 +904,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto mb-8 font-light">
               Visit our state-of-the-art clinic at Wakad, Pune. Book your
-              free consultation and discover why 50,000+ patients trust us
+              free consultation and discover why 10,000+ patients trust us
               with their smiles.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

@@ -431,7 +431,7 @@ export default function TreatmentDetailClient({
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
               variants={staggerContainer}
               initial="hidden"
               whileInView="visible"
@@ -454,11 +454,10 @@ export default function TreatmentDetailClient({
                     )}
 
                     <div
-                      className={`relative h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 ${
-                        solution.popular
+                      className={`relative h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 ${solution.popular
                           ? "border-primary-300 bg-white shadow-premium"
                           : "border-gray-100 bg-white hover:border-primary-200 hover:shadow-premium"
-                      }`}
+                        }`}
                     >
                       <h3 className="text-xl font-heading font-bold text-dark-900 mb-1">
                         {solution.title}
@@ -674,11 +673,10 @@ export default function TreatmentDetailClient({
                     )}
 
                     <div
-                      className={`relative h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 ${
-                        plan.popular
+                      className={`relative h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 ${plan.popular
                           ? "border-primary-300 bg-white shadow-premium"
                           : "border-gray-100 bg-white hover:border-primary-200 hover:shadow-premium"
-                      }`}
+                        }`}
                     >
                       {/* Header */}
                       <div className="text-center mb-8">
@@ -817,11 +815,10 @@ export default function TreatmentDetailClient({
                     (item: PriceComparisonItem, i: number) => (
                       <div
                         key={i}
-                        className={`grid grid-cols-3 gap-4 px-6 py-5 items-center bg-white hover:bg-gray-50 transition-colors ${
-                          i !== treatment.priceComparison.length - 1
+                        className={`grid grid-cols-3 gap-4 px-6 py-5 items-center bg-white hover:bg-gray-50 transition-colors ${i !== treatment.priceComparison.length - 1
                             ? "border-b border-gray-100"
                             : ""
-                        }`}
+                          }`}
                       >
                         <span className="text-sm font-semibold text-dark-900">
                           {item.country}
@@ -1016,31 +1013,28 @@ export default function TreatmentDetailClient({
                   transition={{ delay: i * 0.05 }}
                 >
                   <button
-                    className={`w-full text-left p-5 rounded-2xl transition-all ${
-                      activeFaq === i
+                    className={`w-full text-left p-5 rounded-2xl transition-all ${activeFaq === i
                         ? "bg-primary-50 border border-primary-100"
                         : "bg-white hover:bg-gray-100 border border-transparent"
-                    }`}
+                      }`}
                     onClick={() =>
                       setActiveFaq(activeFaq === i ? null : i)
                     }
                   >
                     <div className="flex items-center justify-between gap-4">
                       <h4
-                        className={`font-semibold text-sm ${
-                          activeFaq === i
+                        className={`font-semibold text-sm ${activeFaq === i
                             ? "text-primary-600"
                             : "text-dark-900"
-                        }`}
+                          }`}
                       >
                         {faq.question}
                       </h4>
                       <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                          activeFaq === i
+                        className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${activeFaq === i
                             ? "bg-primary-500 text-white"
                             : "bg-gray-200 text-gray-500"
-                        }`}
+                          }`}
                       >
                         {activeFaq === i ? (
                           <FiMinus className="w-4 h-4" />

@@ -390,7 +390,7 @@ export default function PricingPage() {
               {
                 icon: "🩺",
                 value: "Free",
-                label: "Consultation",
+                label: "Implant Consultation",
                 border: "border-green-500/20",
                 bg: "bg-green-500/5",
                 text: "text-green-400",

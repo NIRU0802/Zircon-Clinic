@@ -20,7 +20,7 @@ export const brandPriceList: BrandPriceItem[] = [
   {
     brand: "Simpladent",
     type: "Economy",
-    priceINR: "₹10,000",
+    priceINR: "₹15,000",
     priceUSD: "$108",
     warranty: "5 Years",
     tier: "budget",
@@ -28,7 +28,7 @@ export const brandPriceList: BrandPriceItem[] = [
   {
     brand: "BioLine",
     type: "Economy",
-    priceINR: "₹12,000",
+    priceINR: "₹10,000",
     priceUSD: "$130",
     warranty: "7 Years",
     tier: "budget",

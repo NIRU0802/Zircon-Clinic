@@ -67,16 +67,6 @@ export default function DoctorCard({
                     </p>
                 </div>
 
-                {/* Qualification */}
-                <div
-                    className={`absolute right-6 top-6 rounded-full px-5 py-2 text-xs font-bold uppercase tracking-wider shadow-lg ${accent === "gold"
-                        ? "bg-gold-gradient text-dark-900"
-                        : "bg-primary-gradient text-white"
-                        }`}
-                >
-                    {doctor.qualification}
-                </div>
-
                 {/* Bottom overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                     <span

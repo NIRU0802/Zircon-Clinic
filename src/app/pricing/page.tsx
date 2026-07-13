@@ -237,25 +237,19 @@ const immediateTimeline = [
     step: "Day 1",
     title: "Extraction & Implant Placement",
     description:
-      "Tooth removed and implant placed in the same sitting — no separate surgery visit.",
+      "The damaged tooth is carefully removed, and the dental implant is placed during the same appointment for a seamless treatment experience.",
   },
   {
-    step: "Day 1",
-    title: "Temporary Crown Fitted",
+    step: "Day 2",
+    title: "Final Measurements",
     description:
-      "Walk out the same day with a natural-looking temporary tooth. No visible gap.",
+      "A precise digital scan is performed to design your custom prosthesis for an accurate fit, optimal comfort, and natural aesthetics.",
   },
   {
-    step: "3-6 Months",
-    title: "Healing & Osseointegration",
+    step: "Day 3",
+    title: "Permanent Prosthesis Delivered",
     description:
-      "Implant fuses with the jawbone while you live normally with your temporary crown.",
-  },
-  {
-    step: "Final Visit",
-    title: "Permanent Crown Placed",
-    description:
-      "Custom-shaded final crown fitted for a seamless, permanent result.",
+      "Walk out on the third day with your custom-designed permanent prosthesis, restoring your smile with a natural look and confident function.",
   },
 ];
 
@@ -263,22 +257,22 @@ const traditionalVsImmediate = [
   {
     label: "Waiting time before a tooth is placed",
     traditional: "3-6 months",
-    immediate: "Same day",
+    immediate: "3 Day",
   },
   {
     label: "Number of surgical visits",
     traditional: "2 separate surgeries",
-    immediate: "1 combined visit",
+    immediate: "3 Visit",
   },
   {
     label: "Time without a visible tooth",
     traditional: "Weeks to months",
-    immediate: "None",
+    immediate: "42 Hours",
   },
   {
     label: "Total treatment visits",
     traditional: "6-8 visits",
-    immediate: "4-5 visits",
+    immediate: "3 Visits",
   },
 ];
 
@@ -295,11 +289,6 @@ const pricingFaqs = [
       "Yes! We offer 0% EMI options on treatments above ₹20,000 through multiple banking partners. EMI tenure from 3 to 24 months. No-cost EMI available on select plans.",
   },
   {
-    question: "Is consultation free?",
-    answer:
-      "Yes, your first consultation is completely free. This includes examination, X-ray (if basic), treatment planning, and a detailed cost estimate.",
-  },
-  {
     question: "What payment methods do you accept?",
     answer:
       "We accept cash, all major credit/debit cards, UPI (Google Pay, PhonePe, Paytm), bank transfers, and cheques. EMI through HDFC, ICICI, SBI, Bajaj Finserv, and more.",
@@ -312,7 +301,7 @@ const pricingFaqs = [
   {
     question: "Who is a good candidate for an Immediate Load Implant?",
     answer:
-      "Patients with sufficient healthy jawbone and no active gum infection at the extraction site are usually good candidates. A quick 3D scan during your free consultation confirms eligibility.",
+      "Most patients are suitable candidates for Immediate Load Implants after a thorough clinical evaluation. This treatment can also be successfully performed in many patients with diabetes, high blood pressure, or those taking blood thinners, provided their medical condition is well controlled and assessed by our dental team.",
   },
   {
     question: "Why are your prices lower than other cities?",
@@ -502,7 +491,7 @@ export default function PricingPage() {
 
               <h2 className="heading-lg text-white mb-4">
                 Immediate Load{" "}
-                <span className="text-gradient">Implants</span>
+                <span className="text-gradient">Implants (3 Days)</span>
               </h2>
               <p className="text-gray-400 leading-relaxed text-lg mb-8 font-light max-w-xl">
                 Lost a tooth? Don&apos;t wait months for a new one. With
@@ -516,7 +505,7 @@ export default function PricingPage() {
                 <div className="p-4 bg-white/5 border border-white/10 rounded-xl text-center">
                   <FiClock className="w-5 h-5 text-gold-400 mx-auto mb-2" />
                   <p className="text-white font-heading font-bold text-lg">
-                    1 Visit
+                    3 Visit
                   </p>
                   <p className="text-gray-500 text-[10px] uppercase tracking-wider">
                     Surgery + Crown
@@ -525,7 +514,7 @@ export default function PricingPage() {
                 <div className="p-4 bg-white/5 border border-white/10 rounded-xl text-center">
                   <FiCalendar className="w-5 h-5 text-gold-400 mx-auto mb-2" />
                   <p className="text-white font-heading font-bold text-lg">
-                    Same Day
+                    3 Day
                   </p>
                   <p className="text-gray-500 text-[10px] uppercase tracking-wider">
                     Walk Out Smiling
@@ -534,7 +523,7 @@ export default function PricingPage() {
                 <div className="p-4 bg-white/5 border border-white/10 rounded-xl text-center">
                   <FiHeart className="w-5 h-5 text-gold-400 mx-auto mb-2" />
                   <p className="text-white font-heading font-bold text-lg">
-                    1 Year
+                    Min 5 Year
                   </p>
                   <p className="text-gray-500 text-[10px] uppercase tracking-wider">
                     Warranty
@@ -553,7 +542,7 @@ export default function PricingPage() {
                 <div className="flex items-baseline gap-2">
                   <span className="text-gray-500 text-sm">Starting from</span>
                   <span className="text-2xl font-heading font-bold text-white">
-                    ₹35,000
+                    ₹10,000
                   </span>
                 </div>
               </div>
@@ -606,35 +595,74 @@ export default function PricingPage() {
 
           {/* Timeline */}
           <motion.div
-            className="mt-16"
+            className="mt-20"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <p className="text-center text-sm text-gray-500 uppercase tracking-[0.2em] mb-8">
-              Your Immediate Implant Journey
-            </p>
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.25em] uppercase text-gold-400">
+                <span className="w-10 h-px bg-gold-400" />
+                Your Immediate Implant Journey
+                <span className="w-10 h-px bg-gold-400" />
+              </span>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <h3 className="mt-4 text-3xl md:text-4xl font-heading font-bold text-white">
+                Your <span className="text-gradient">Smile Transformation</span>
+              </h3>
+
+              <p className="mt-3 max-w-2xl mx-auto text-gray-400">
+                A streamlined treatment process designed to restore your smile quickly,
+                comfortably, and with precision.
+              </p>
+            </div>
+
+            <div
+              className={`mx-auto grid gap-6 ${immediateTimeline.length === 3
+                  ? "max-w-6xl grid-cols-1 md:grid-cols-3"
+                  : immediateTimeline.length === 4
+                    ? "max-w-7xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+                    : "max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                }`}
+            >
               {immediateTimeline.map((item, i) => (
                 <motion.div
                   key={i}
                   variants={staggerItem}
-                  className="relative p-5 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors"
+                  className="relative group"
                 >
-                  <span className="inline-block px-2.5 py-1 bg-gold-500/10 border border-gold-500/20 rounded-full text-gold-400 text-[10px] font-bold uppercase tracking-wider mb-3">
-                    {item.step}
-                  </span>
-                  <h4 className="text-white font-semibold text-sm mb-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-500 text-xs leading-relaxed">
-                    {item.description}
-                  </p>
+                  {/* Connector */}
                   {i < immediateTimeline.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-white/10" />
+                    <div className="hidden md:block absolute top-12 left-full w-6 lg:w-10 h-px bg-gradient-to-r from-gold-500/50 via-white/20 to-transparent z-0" />
                   )}
+
+                  <div className="relative h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-7 transition-all duration-300 hover:-translate-y-2 hover:border-gold-500/30 hover:bg-white/10">
+                    {/* Step Badge */}
+                    <div className="inline-flex items-center justify-center rounded-full bg-gold-500/10 border border-gold-500/20 px-4 py-1.5 mb-5">
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold-400">
+                        {item.step}
+                      </span>
+                    </div>
+
+                    {/* Number */}
+                    <div className="absolute top-6 right-6 text-5xl font-heading font-bold text-white/5 group-hover:text-gold-500/10 transition-colors">
+                      {i + 1}
+                    </div>
+
+                    {/* Title */}
+                    <h4 className="text-xl font-heading font-semibold text-white mb-4 leading-snug">
+                      {item.title}
+                    </h4>
+
+                    {/* Description */}
+                    <p className="text-sm leading-7 text-gray-400">
+                      {item.description}
+                    </p>
+
+                    {/* Bottom Accent */}
+                    <div className="mt-6 h-1 w-12 rounded-full bg-gradient-to-r from-primary-500 to-gold-500 group-hover:w-20 transition-all duration-300" />
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -748,13 +776,12 @@ export default function PricingPage() {
                 )}
 
                 <div
-                  className={`relative h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 ${
-                    plan.popular
+                  className={`relative h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:-translate-y-2 ${plan.popular
                       ? "border-primary-300 bg-white shadow-premium"
                       : plan.badge
                         ? "border-gold-300 bg-white shadow-premium"
                         : "border-gray-100 bg-white hover:border-primary-200 hover:shadow-premium"
-                  }`}
+                    }`}
                 >
                   <div className="text-center mb-8">
                     <span className="text-4xl mb-3 block">{plan.icon}</span>
@@ -777,7 +804,7 @@ export default function PricingPage() {
                           ((parseInt(plan.originalPrice.replace(/,/g, "")) -
                             parseInt(plan.price.replace(/,/g, ""))) /
                             parseInt(plan.originalPrice.replace(/,/g, ""))) *
-                            100
+                          100
                         )}
                         %
                       </span>
@@ -886,11 +913,10 @@ export default function PricingPage() {
               <button
                 key={i}
                 onClick={() => setActiveCategory(i)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === i
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === i
                     ? "bg-primary-600 text-white shadow-primary"
                     : "bg-white text-gray-600 hover:bg-primary-50 hover:text-primary-600 shadow-sm"
-                }`}
+                  }`}
               >
                 <span>{cat.icon}</span>
                 {cat.category}
@@ -924,11 +950,10 @@ export default function PricingPage() {
               {treatmentCategories[activeCategory].items.map((item, i) => (
                 <div
                   key={i}
-                  className={`grid grid-cols-2 gap-4 px-6 py-4 items-center transition-colors hover:bg-primary-50 ${
-                    i !== treatmentCategories[activeCategory].items.length - 1
+                  className={`grid grid-cols-2 gap-4 px-6 py-4 items-center transition-colors hover:bg-primary-50 ${i !== treatmentCategories[activeCategory].items.length - 1
                       ? "border-b border-gray-100"
                       : ""
-                  }`}
+                    }`}
                 >
                   <span className="text-sm font-medium text-dark-900">
                     {item.treatment}
@@ -1014,11 +1039,10 @@ export default function PricingPage() {
               {globalComparison.map((item, i) => (
                 <div
                   key={i}
-                  className={`grid grid-cols-4 gap-2 sm:gap-4 px-4 sm:px-6 py-5 items-center bg-white hover:bg-gray-50 transition-colors ${
-                    i !== globalComparison.length - 1
+                  className={`grid grid-cols-4 gap-2 sm:gap-4 px-4 sm:px-6 py-5 items-center bg-white hover:bg-gray-50 transition-colors ${i !== globalComparison.length - 1
                       ? "border-b border-gray-100"
                       : ""
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-2">
                     <span className="text-lg sm:text-2xl">{item.flag}</span>
@@ -1338,27 +1362,24 @@ export default function PricingPage() {
                 transition={{ delay: i * 0.05 }}
               >
                 <button
-                  className={`w-full text-left p-5 rounded-2xl transition-all ${
-                    activeFaq === i
+                  className={`w-full text-left p-5 rounded-2xl transition-all ${activeFaq === i
                       ? "bg-primary-50 border border-primary-100"
                       : "bg-gray-50 hover:bg-gray-100 border border-transparent"
-                  }`}
+                    }`}
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
                 >
                   <div className="flex items-center justify-between gap-4">
                     <h4
-                      className={`font-semibold text-sm ${
-                        activeFaq === i ? "text-primary-600" : "text-dark-900"
-                      }`}
+                      className={`font-semibold text-sm ${activeFaq === i ? "text-primary-600" : "text-dark-900"
+                        }`}
                     >
                       {faq.question}
                     </h4>
                     <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                        activeFaq === i
+                      className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${activeFaq === i
                           ? "bg-primary-500 text-white"
                           : "bg-gray-200 text-gray-500"
-                      }`}
+                        }`}
                     >
                       {activeFaq === i ? (
                         <FiMinus className="w-4 h-4" />

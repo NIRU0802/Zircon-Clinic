@@ -35,11 +35,8 @@ export const SITE_CONFIG = {
   },
 
   social: {
-    instagram: "https://instagram.com/zircondentalpune",
-    facebook: "https://facebook.com/zircondentalpune",
-    youtube: "https://youtube.com/@zircondentalpune",
-    twitter: "https://twitter.com/zircondental",
-    linkedin: "https://linkedin.com/company/zircondental",
+    instagram: "https://www.instagram.com/zircondental_pune",
+    facebook: "https://www.facebook.com/Zircondentalandimplantstudio",
   },
 
   workingHours: {

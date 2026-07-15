@@ -1,7 +1,7 @@
 import { TreatmentDetail } from "./types";
 
 export const advancedImplants: TreatmentDetail = {
-  id: "2",
+  id: "3",
   title: "Advanced Implants",
   slug: "advanced-implants",
   category: "Implants",

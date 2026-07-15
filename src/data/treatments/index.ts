@@ -1,3 +1,4 @@
+import { immediateLoadImplants } from "./immediateLoadImplants";
 import { dentalImplants } from "./dentalImplants";
 import { advancedImplants } from "./advancedImplants";
 import { rootCanal } from "./rootCanal";
@@ -6,11 +7,13 @@ import { teethWhitening } from "./teethWhitening";
 import { crownsBridges } from "./crownsBridges";
 import { orthodontics } from "./orthodontics";
 import { oralSurgery } from "./oralSurgery";
+import { childDentistry } from "./childDentistry";
 
 // ✅ Export all shared types
 export * from "./types";
 
 // Export treatment data
+export * from "./immediateLoadImplants";
 export * from "./dentalImplants";
 export * from "./advancedImplants";
 export * from "./rootCanal";
@@ -20,8 +23,10 @@ export * from "./crownsBridges";
 export * from "./orthodontics";
 export * from "./oralSurgery";
 export * from "./brandPriceList";
+export * from "./childDentistry";
 
 export const treatments = [
+  immediateLoadImplants,
   dentalImplants,
   advancedImplants,
   rootCanal,
@@ -30,6 +35,7 @@ export const treatments = [
   crownsBridges,
   orthodontics,
   oralSurgery,
+  childDentistry,
 ];
 
 export const getTreatmentBySlug = (slug: string) =>

@@ -1,7 +1,7 @@
 import { TreatmentDetail } from "./types";
 
 export const smileDesign: TreatmentDetail = {
-    id: "4",
+    id: "5",
     title: "Smile Design",
     slug: "smile-design",
     category: "Cosmetic",

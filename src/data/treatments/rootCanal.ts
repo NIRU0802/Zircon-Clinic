@@ -1,7 +1,7 @@
 import { TreatmentDetail } from "./types";
 
 export const rootCanal: TreatmentDetail = {
-    id: "3",
+    id: "4",
     title: "Root Canal",
     slug: "root-canal",
     category: "General",

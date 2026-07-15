@@ -96,8 +96,6 @@ const Navbar = () => {
                 {[
                   { icon: FaInstagram, href: SITE_CONFIG.social.instagram },
                   { icon: FaFacebookF, href: SITE_CONFIG.social.facebook },
-                  { icon: FaYoutube, href: SITE_CONFIG.social.youtube },
-                  { icon: FaTwitter, href: SITE_CONFIG.social.twitter },
                 ].map((social, index) => (
                   <a
                     key={index}

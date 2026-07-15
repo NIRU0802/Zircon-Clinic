@@ -42,9 +42,6 @@ const Footer = () => {
   const socials = [
     { icon: FaInstagram, href: SITE_CONFIG.social.instagram, label: "Instagram" },
     { icon: FaFacebookF, href: SITE_CONFIG.social.facebook, label: "Facebook" },
-    { icon: FaYoutube, href: SITE_CONFIG.social.youtube, label: "YouTube" },
-    { icon: FaTwitter, href: SITE_CONFIG.social.twitter, label: "Twitter" },
-    { icon: FaLinkedinIn, href: SITE_CONFIG.social.linkedin, label: "LinkedIn" },
   ];
 
   return (

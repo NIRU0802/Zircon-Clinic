@@ -13,6 +13,7 @@ export const navigationItems: NavItem[] = [
     label: "Treatments",
     href: "/treatments",
     children: [
+      {label: "Immediate Load Implants", href: "/treatments/immediate-load-implants"},
       { label: "Dental Implants", href: "/treatments/dental-implants" },
       { label: "Advanced Implants", href: "/treatments/advanced-implants" },
       { label: "Root Canal", href: "/treatments/root-canal" },
@@ -21,6 +22,7 @@ export const navigationItems: NavItem[] = [
       { label: "Crowns & Bridges", href: "/treatments/crowns-bridges" },
       { label: "Orthodontics", href: "/treatments/orthodontics" },
       { label: "Oral Surgery", href: "/treatments/oral-surgery" },
+      {label: "Child Dentistry", href: "/treatments/child-dentistry"},
     ],
   },
   {

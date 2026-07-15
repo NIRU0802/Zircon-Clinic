@@ -7,7 +7,7 @@ export const advancedImplants: TreatmentDetail = {
   category: "Implants",
   icon: "⚡",
   image:
-    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=600",
+    "/images/treatments/advanced-implants.png",
   heroImage:
     "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1920",
 

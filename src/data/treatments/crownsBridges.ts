@@ -8,7 +8,7 @@ export const crownsBridges: TreatmentDetail = {
     icon: "👑",
 
     image:
-        "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=600",
+        "/images/treatments/crown-bridges.png",
 
     heroImage:
         "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1920",

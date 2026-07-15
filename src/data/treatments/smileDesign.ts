@@ -8,7 +8,7 @@ export const smileDesign: TreatmentDetail = {
     icon: "😁",
 
     image:
-        "https://images.unsplash.com/photo-1581585095203-c0c5c6608e72?q=80&w=600",
+        "/images/treatments/smile-design.png",
 
     heroImage:
         "https://images.unsplash.com/photo-1581585095203-c0c5c6608e72?q=80&w=1920",

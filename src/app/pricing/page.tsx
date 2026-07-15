@@ -819,7 +819,7 @@ export default function PricingPage() {
                       EMI from ₹
                       {Math.round(
                         parseInt(plan.price.replace(/,/g, "")) / 12
-                      ).toLocaleString()}
+                      ).toLocaleString("en-IN")}
                       /month
                     </p>
                   </div>

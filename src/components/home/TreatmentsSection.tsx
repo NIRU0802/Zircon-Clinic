@@ -118,8 +118,8 @@ const TreatmentsSection = () => {
         >
 
           {
-            categories.map((category)=>(
-              
+            categories.map((category) => (
+
               <button
 
                 key={category}
@@ -142,10 +142,9 @@ const TreatmentsSection = () => {
                   transition-all
                   whitespace-nowrap
 
-                  ${
-                    activeCategory === category
+                  ${activeCategory === category
 
-                    ? 
+                    ?
                     `
                     bg-primary-600
                     text-white
@@ -202,37 +201,37 @@ const TreatmentsSection = () => {
           >
 
 
-          {
-            filteredTreatments.map(
-              (treatment,index)=>(
+            {
+              filteredTreatments.map(
+                (treatment, index) => (
 
 
-              <motion.div
+                  <motion.div
 
-                key={treatment.id}
+                    key={treatment.id}
 
-                variants={staggerItem}
+                    variants={staggerItem}
 
-                whileHover={{
-                  y:-8
-                }}
+                    whileHover={{
+                      y: -8
+                    }}
 
-                transition={{
-                  duration:.3
-                }}
+                    transition={{
+                      duration: .3
+                    }}
 
-              >
-
-
-                <Link
-                  href={`/treatments/${treatment.slug}`}
-                  className="block h-full"
-                >
+                  >
 
 
-                <article
+                    <Link
+                      href={`/treatments/${treatment.slug}`}
+                      className="block h-full"
+                    >
 
-                  className="
+
+                      <article
+
+                        className="
                     group
                     h-full
                     bg-white
@@ -245,78 +244,78 @@ const TreatmentsSection = () => {
                     transition-all
                   "
 
-                >
+                      >
 
 
 
-                {/* IMAGE */}
+                        {/* IMAGE */}
 
 
-                <div
-                  className="
+                        <div
+                          className="
                   relative
                   h-60
                   overflow-hidden
                   "
-                >
+                        >
 
-                  <Image
+                          <Image
 
-                    src={treatment.image}
+                            src={treatment.image}
 
-                    alt={treatment.title}
+                            alt={treatment.title}
 
-                    fill
+                            fill
 
-                    priority={
-                      index < 4
-                    }
+                            priority={
+                              index < 4
+                            }
 
-                    sizes="
+                            sizes="
                     (max-width:768px)100vw,
                     (max-width:1200px)50vw,
                     25vw
                     "
 
-                    className="
+                            className="
                     object-cover
                     transition-transform
                     duration-700
                     group-hover:scale-110
                     "
 
-                  />
+                          />
 
 
-                  <div
-                    className="
+                          <div
+                            className="
                     absolute
                     inset-0
                     bg-gradient-to-t
                     from-black/70
                     via-black/10
                     "
-                  />
+                          />
 
 
 
-                  <div
-                    className="
+                          <div
+                            className="
                     absolute
                     top-4
                     left-4
                     text-3xl
                     "
-                  >
+                          >
 
-                    {treatment.icon}
+                            {treatment.icon}
 
-                  </div>
+                          </div>
 
 
 
-                  <div
-                    className="
+                          <div
+                            className="
                     absolute
                     top-4
                     right-4
@@ -328,16 +327,16 @@ const TreatmentsSection = () => {
                     font-bold
                     text-primary-600
                     "
-                  >
+                          >
 
-                    {treatment.category}
+                            {treatment.category}
 
-                  </div>
+                          </div>
 
 
 
-                  <div
-                    className="
+                          <div
+                            className="
                     absolute
                     bottom-4
                     left-5
@@ -348,69 +347,69 @@ const TreatmentsSection = () => {
                     text-sm
                     font-semibold
                     "
-                  >
+                          >
 
-                    View Details
+                            View Details
 
-                    <FiArrowRight/>
+                            <FiArrowRight />
 
-                  </div>
-
-
-
-                </div>
+                          </div>
 
 
 
+                        </div>
 
 
-                {/* CONTENT */}
 
 
-                <div
-                  className="
+
+                        {/* CONTENT */}
+
+
+                        <div
+                          className="
                   p-6
                   flex
                   flex-col
                   min-h-[210px]
                   "
-                >
+                        >
 
 
-                  <h3
-                    className="
+                          <h3
+                            className="
                     text-xl
                     font-bold
                     text-gray-900
                     group-hover:text-primary-600
                     transition
                     "
-                  >
+                          >
 
-                    {treatment.title}
+                            {treatment.title}
 
-                  </h3>
+                          </h3>
 
 
 
-                  <p
-                    className="
+                          <p
+                            className="
                     mt-3
                     text-sm
                     text-gray-500
                     line-clamp-3
                     "
-                  >
+                          >
 
-                    {treatment.description}
+                            {treatment.description}
 
-                  </p>
-
-
+                          </p>
 
 
-                  <div
-                    className="
+
+
+                          <div
+                            className="
                     mt-auto
                     pt-4
                     border-t
@@ -419,29 +418,29 @@ const TreatmentsSection = () => {
                     justify-between
                     items-center
                     "
-                  >
+                          >
 
 
-                    <div>
+                            <div>
 
-                      <p
-                        className="
+                              <p
+                                className="
                         text-primary-600
                         font-bold
                         text-sm
                         "
-                      >
+                              >
 
-                        {treatment.priceRange}
+                                {treatment.priceRange}
 
-                      </p>
+                              </p>
 
 
-                      {
-                        treatment.duration && (
+                              {
+                                treatment.duration && (
 
-                        <p
-                          className="
+                                  <p
+                                    className="
                           flex
                           items-center
                           gap-1
@@ -449,48 +448,48 @@ const TreatmentsSection = () => {
                           text-gray-400
                           mt-1
                           "
-                        >
+                                  >
 
-                          <FiClock/>
+                                    <FiClock />
 
-                          {treatment.duration}
+                                    {treatment.duration}
 
-                        </p>
+                                  </p>
 
-                        )
-                      }
-
-
-                    </div>
+                                )
+                              }
 
 
+                            </div>
 
-                    <FiCheckCircle
-                      className="
+
+
+                            <FiCheckCircle
+                              className="
                       text-green-500
                       w-6
                       h-6
                       "
-                    />
+                            />
 
 
-                  </div>
+                          </div>
 
 
-                </div>
+                        </div>
 
 
-                </article>
+                      </article>
 
 
-                </Link>
+                    </Link>
 
 
-              </motion.div>
+                  </motion.div>
 
+                )
               )
-            )
-          }
+            }
 
 
           </motion.div>
@@ -531,7 +530,7 @@ const TreatmentsSection = () => {
 
             Explore All Treatments
 
-            <FiArrowRight/>
+            <FiArrowRight />
 
           </Link>
 

@@ -7,7 +7,7 @@ export const rootCanal: TreatmentDetail = {
     category: "General",
     icon: "🔬",
     image:
-        "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=600",
+        "/images/treatments/root-canal.png",
     heroImage:
         "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=1920",
 

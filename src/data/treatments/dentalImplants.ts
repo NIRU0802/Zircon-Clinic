@@ -7,7 +7,7 @@ export const dentalImplants: TreatmentDetail = {
     category: "Implants",
     icon: "🦷",
     image:
-        "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=600",
+        "/images/treatments/dental-implants.png",
     heroImage:
         "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1920",
     tagline: "Confident smile with dental implants",

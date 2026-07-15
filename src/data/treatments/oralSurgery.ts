@@ -8,7 +8,7 @@ export const oralSurgery: TreatmentDetail = {
   icon: "🏥",
 
   image:
-    "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600",
+    "/images/treatments/oral-surgery.png",
   heroImage:
     "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1920",
 

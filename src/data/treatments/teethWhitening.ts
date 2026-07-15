@@ -8,7 +8,7 @@ export const teethWhitening: TreatmentDetail = {
     icon: "✨",
 
     image:
-        "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=600",
+        "/images/treatments/teeth-whitening.png",
 
     heroImage:
         "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=1920",

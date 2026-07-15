@@ -1,5 +1,6 @@
 "use client";
 
+import Marquee from "react-fast-marquee";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { testimonials } from "@/data/testimonials";
@@ -59,7 +60,64 @@ const TestimonialsSection = () => {
           light
         />
 
-        <div className="max-w-5xl mx-auto mt-16">
+        {/* ========================= */}
+        {/* Premium Reviews Marquee */}
+        {/* ========================= */}
+
+        <div className="mt-14 mb-16">
+          <Marquee
+            speed={35}
+            pauseOnHover
+            gradient={false}
+            autoFill
+          >
+            {testimonials.map((item) => (
+              <motion.div
+                key={item.id}
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.25 }}
+                className="mx-3"
+              >
+                <div className="flex items-center gap-4 rounded-full border border-white/10 bg-white/[0.05] backdrop-blur-xl px-6 py-3 hover:border-gold-400/40 hover:bg-white/[0.08] transition-all duration-300">
+                  {/* Stars */}
+                  <div className="flex gap-0.5">
+                    {Array.from({ length: item.rating }).map((_, i) => (
+                      <FiStar
+                        key={i}
+                        className="w-4 h-4 fill-gold-400 text-gold-400"
+                      />
+                    ))}
+                  </div>
+
+                  <div className="w-px h-5 bg-white/10" />
+
+                  <span className="font-semibold text-white whitespace-nowrap">
+                    {item.name}
+                  </span>
+
+                  <div className="w-1 h-1 rounded-full bg-gray-500" />
+
+                  <span className="rounded-full border border-primary-500/20 bg-primary-500/15 px-3 py-1 text-xs font-medium text-primary-300 whitespace-nowrap">
+                    {item.treatment}
+                  </span>
+
+                  <div className="w-1 h-1 rounded-full bg-gray-500" />
+
+                  <div className="flex items-center gap-1 text-gray-400 text-sm whitespace-nowrap">
+                    <FiMapPin className="w-3.5 h-3.5" />
+                    {item.location}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </Marquee>
+        </div>
+
+        {/* ========================= */}
+        {/* Featured Testimonial */}
+        {/* ========================= */}
+
+        <div className="max-w-5xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={current.id}
@@ -86,11 +144,10 @@ const TestimonialsSection = () => {
               {/* Top Glow */}
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent" />
 
-              {/* Floating Circle */}
+              {/* Floating Glow */}
               <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-primary-500/10 blur-[120px]" />
 
               <div className="relative p-8 md:p-14 lg:p-16">
-
                 {/* Verified Badge */}
                 <div className="flex justify-center mb-10">
                   <div className="inline-flex items-center gap-2 rounded-full border border-gold-400/20 bg-gold-400/10 px-5 py-2">
@@ -109,7 +166,7 @@ const TestimonialsSection = () => {
                       key={index}
                       className={`w-6 h-6 ${
                         index < current.rating
-                          ? "text-gold-400 fill-gold-400"
+                          ? "fill-gold-400 text-gold-400"
                           : "text-white/20"
                       }`}
                     />
@@ -122,34 +179,34 @@ const TestimonialsSection = () => {
                 </blockquote>
 
                 {/* Divider */}
-                <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto my-12" />
+                <div className="mx-auto my-12 h-px w-24 bg-gradient-to-r from-transparent via-gold-400 to-transparent" />
 
-                {/* User */}
+                {/* Patient */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                   {/* Avatar */}
                   <div className="relative">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-500 to-gold-500 blur-md opacity-60" />
 
-                    <div className="relative flex items-center justify-center w-20 h-20 rounded-full border border-gold-400/30 bg-dark-900">
-                      <span className="text-3xl font-bold text-white font-heading">
+                    <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-gold-400/30 bg-dark-900">
+                      <span className="font-heading text-3xl font-bold text-white">
                         {current.name.charAt(0)}
                       </span>
                     </div>
                   </div>
 
-                  {/* Info */}
+                  {/* Patient Info */}
                   <div className="text-center md:text-left">
                     <h3 className="text-xl font-semibold text-white">
                       {current.name}
                     </h3>
 
-                    <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 mt-2">
-                      <div className="flex items-center gap-1 text-gray-400 text-sm">
-                        <FiMapPin className="w-4 h-4" />
+                    <div className="mt-2 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+                      <div className="flex items-center gap-1 text-sm text-gray-400">
+                        <FiMapPin className="h-4 w-4" />
                         {current.location}
                       </div>
 
-                      <span className="hidden md:block w-1 h-1 rounded-full bg-gray-500" />
+                      <span className="hidden h-1 w-1 rounded-full bg-gray-500 md:block" />
 
                       <span className="rounded-full border border-primary-500/30 bg-primary-500/15 px-3 py-1 text-xs font-medium text-primary-300">
                         {current.treatment}
@@ -158,7 +215,7 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
 
-                {/* Animated Progress */}
+                {/* Progress Bar */}
                 <div className="mt-14">
                   <div className="mx-auto h-1 w-72 overflow-hidden rounded-full bg-white/10">
                     <motion.div
@@ -260,11 +317,11 @@ const TestimonialsSection = () => {
           >
             <div className="rounded-full border border-white/10 bg-white/[0.03] px-8 py-4 backdrop-blur-xl">
               <div className="flex flex-wrap items-center justify-center gap-3 text-center">
-                <span className="text-gold-400 text-lg">★★★★★</span>
+                <span className="text-lg text-gold-400">★★★★★</span>
 
                 <span className="text-sm text-gray-300">
-                  Trusted by thousands of patients across Pune for world-class
-                  dental care.
+                  Trusted by thousands of patients across Pune for exceptional
+                  dental care and life-changing smile transformations.
                 </span>
               </div>
             </div>

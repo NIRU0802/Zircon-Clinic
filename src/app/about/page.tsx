@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import { Image } from '@imagekit/next';
 import Layout from "@/components/layout/Layout";
 import DoctorCard from "@/components/team/DoctorCard";
 import DoctorExpertiseGrid from "@/components/team/DoctorExpertiseGrid";

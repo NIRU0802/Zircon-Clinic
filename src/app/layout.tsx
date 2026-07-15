@@ -5,6 +5,7 @@ import {
   Cormorant_Garamond,
 } from "next/font/google";
 import "@/styles/globals.css";
+import { ImageKitProvider } from "@imagekit/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -422,7 +423,13 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ImageKitProvider
+          urlEndpoint={process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT!}
+        >
+          {children}
+        </ImageKitProvider>
+      </body>
     </html>
   );
 }

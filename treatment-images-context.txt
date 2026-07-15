@@ -1,0 +1,3794 @@
+
+============================================================
+FILE: \src\data\treatments\advancedImplants.ts
+============================================================
+
+import { TreatmentDetail } from "./types";
+
+export const advancedImplants: TreatmentDetail = {
+  id: "3",
+  title: "Advanced Implants",
+  slug: "advanced-implants",
+  category: "Implants",
+  icon: "⚡",
+  image:
+    "/images/treatments/advanced-implants.png",
+  heroImage:
+    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1920",
+
+  tagline: "Full mouth restoration in a single day",
+
+  description:
+    "Advanced full mouth rehabilitation with All-on-4, All-on-6, and zygomatic implants for complex cases.",
+
+  longDescription:
+    "Advanced implant solutions are designed for patients who need full arch restoration or have complex dental situations including significant bone loss. Our All-on-4 and All-on-6 techniques allow us to restore an entire arch of teeth using just 4-6 strategically placed implants, often providing same-day teeth.",
+
+  successRate: "97%",
+
+  badge: "Advanced Solutions",
+
+  metaTitle: "Advanced Dental Implants | All-on-4 | Zircon",
+
+  metaDescription:
+    "Full mouth rehabilitation with All-on-4, All-on-6 implants. Same-day teeth available.",
+
+  heroStats: [
+    {
+      label: "Rating",
+      value: "4.9",
+    },
+    {
+      label: "Success",
+      value: "97%",
+    },
+    {
+      label: "Same Day",
+      value: "Teeth",
+    },
+  ],
+
+  showPriceComparison: true,
+
+  priceComparison: [
+    {
+      country: "USA",
+      flag: "🇺🇸",
+      price: "$20,000 – $30,000",
+    },
+    {
+      country: "UK",
+      flag: "🇬🇧",
+      price: "$15,000 – $25,000",
+    },
+    {
+      country: "Australia",
+      flag: "🇦🇺",
+      price: "$18,000 – $28,000",
+    },
+    {
+      country: "India (Average)",
+      flag: "🇮🇳",
+      price: "$5,000 – $8,000",
+    },
+  ],
+
+  clinicPrice: {
+    min: "$4,000",
+    max: "$7,000",
+    currency: "per arch",
+    inrRange: "₹3,50,000 – ₹6,00,000",
+  },
+
+  showAssessment: true,
+
+  assessmentQuestions: [
+    {
+      question: "How many teeth are you missing?",
+      options: [
+        "Multiple teeth",
+        "Most teeth",
+        "All teeth (one arch)",
+        "All teeth (both arches)",
+      ],
+    },
+    {
+      question: "Are you wearing dentures currently?",
+      options: [
+        "No",
+        "Partial dentures",
+        "Full dentures",
+        "Dentures but unhappy",
+      ],
+    },
+    {
+      question: "Have you been told you lack bone?",
+      options: [
+        "No",
+        "Yes, mild bone loss",
+        "Yes, significant bone loss",
+        "Not sure",
+      ],
+    },
+  ],
+
+  whatIsIt: {
+    title: "What Are Advanced Implant Procedures?",
+    description:
+      "Advanced implant procedures like All-on-4 and All-on-6 revolutionize full-mouth rehabilitation. Using strategically angled implants, we can restore an entire arch of teeth—even in patients with significant bone loss—often with same-day results.",
+
+    parts: [
+      {
+        name: "Full Arch Bridge",
+        description: "Complete set of teeth on implants",
+      },
+      {
+        name: "Strategic Implants",
+        description: "4-6 implants placed at optimal angles",
+      },
+      {
+        name: "Immediate Loading",
+        description: "Temporary teeth placed same day",
+      },
+    ],
+  },
+
+  benefits: [
+    {
+      title: "Same-Day Teeth",
+      description:
+        "Walk out with a complete smile on the day of surgery.",
+      icon: "⚡",
+    },
+    {
+      title: "No Bone Grafting",
+      description:
+        "Special angulation techniques avoid the need for bone grafts in most cases.",
+      icon: "🦴",
+    },
+    {
+      title: "Full Arch in 4 Implants",
+      description:
+        "An entire arch of teeth supported by just 4 strategically placed implants.",
+      icon: "🔧",
+    },
+    {
+      title: "Cost Effective",
+      description:
+        "Significantly more affordable than replacing each tooth individually.",
+      icon: "💰",
+    },
+    {
+      title: "Permanent Solution",
+      description:
+        "Fixed, non-removable teeth that function like natural teeth.",
+      icon: "🏆",
+    },
+    {
+      title: "Life Changing",
+      description:
+        "Dramatic improvement in quality of life, confidence, and nutrition.",
+      icon: "✨",
+    },
+  ],
+
+  solutions: [
+    {
+      title: "All-on-4",
+      subtitle: "Full arch on 4 implants",
+      bestFor: "Complete tooth loss (one arch)",
+      price: "From ₹4,50,000",
+      popular: true,
+      features: [
+        "4 implants per arch",
+        "Same-day temporary teeth",
+        "No bone grafting usually needed",
+        "Lifetime warranty",
+      ],
+    },
+    {
+      title: "All-on-6",
+      subtitle: "Full arch on 6 implants",
+      bestFor: "Greater stability needed",
+      price: "From ₹5,50,000",
+      features: [
+        "6 implants per arch",
+        "Maximum stability",
+        "Ideal for larger arches",
+        "Premium zirconia bridge",
+      ],
+    },
+    {
+      title: "Zygomatic Implants",
+      subtitle: "For severe bone loss cases",
+      bestFor: "Patients with severe upper jaw bone loss",
+      price: "From ₹6,00,000",
+      features: [
+        "No bone grafting required",
+        "Anchored in cheekbone",
+        "Immediate loading possible",
+        "Solution when others fail",
+      ],
+    },
+    {
+      title: "Full Mouth Rehabilitation",
+      subtitle: "Both arches restored",
+      bestFor: "Complete mouth restoration",
+      price: "From ₹8,00,000",
+      features: [
+        "Both upper & lower arches",
+        "Complete smile makeover",
+        "Premium materials",
+        "VIP care package",
+      ],
+    },
+  ],
+
+  process: [
+    {
+      title: "3D Evaluation & Planning",
+      duration: "90 minutes",
+      description:
+        "Complete 3D CBCT scan and digital planning for precise implant positioning.",
+    },
+    {
+      title: "Digital Smile Preview",
+      duration: "1 week",
+      description:
+        "See your new smile before surgery with digital design technology.",
+    },
+    {
+      title: "Surgery Day",
+      duration: "2-4 hours",
+      description:
+        "All implants placed and temporary teeth fitted in a single appointment.",
+    },
+    {
+      title: "Healing Phase",
+      duration: "3-4 months",
+      description:
+        "Implants fuse with bone while you enjoy your temporary teeth.",
+    },
+    {
+      title: "Final Prosthesis",
+      duration: "2 weeks",
+      description:
+        "Premium zirconia bridge crafted and fitted for your permanent smile.",
+    },
+    {
+      title: "Lifetime Care",
+      duration: "Ongoing",
+      description:
+        "Annual checkups and maintenance to keep your smile perfect.",
+    },
+  ],
+
+  pricingPlans: [
+    {
+      name: "All-on-4 (Single Arch)",
+      price: "₹4,50,000",
+      unit: "per arch",
+      features: [
+        "4 implants + bridge",
+        "Same-day teeth",
+        "3-year warranty",
+      ],
+    },
+    {
+      name: "All-on-6 (Single Arch)",
+      price: "₹5,50,000",
+      unit: "per arch",
+      popular: true,
+      features: [
+        "6 implants + bridge",
+        "Maximum stability",
+        "5-year warranty",
+      ],
+    },
+    {
+      name: "Full Mouth (Both Arches)",
+      price: "₹8,00,000",
+      unit: "complete",
+      features: [
+        "Both arches restored",
+        "Premium zirconia",
+        "Lifetime warranty",
+      ],
+    },
+  ],
+
+  emiStarting: "₹8,500/month",
+
+  beforeAfterCases: [
+    {
+      title: "All-on-4 Restoration",
+      description: "Complete upper arch restoration",
+    },
+    {
+      title: "Full Mouth Rehab",
+      description: "Both arches with All-on-6",
+    },
+    {
+      title: "Zygomatic Case",
+      description: "Severe bone loss solution",
+    },
+  ],
+
+  faqs: [
+    {
+      question: "What is All-on-4?",
+      answer:
+        "All-on-4 is a revolutionary technique where a full arch of teeth is supported by just 4 implants placed at strategic angles, providing maximum stability with minimal surgery.",
+    },
+    {
+      question: "Can I get teeth the same day?",
+      answer:
+        "Yes. Most patients receive fixed temporary teeth on the same day as surgery.",
+    },
+    {
+      question: "What if I have bone loss?",
+      answer:
+        "Advanced techniques like tilted implants and zygomatic implants often eliminate the need for bone grafting.",
+    },
+    {
+      question: "How long does surgery take?",
+      answer:
+        "Typically 2–4 hours per arch depending on complexity.",
+    },
+    {
+      question: "How long is recovery?",
+      answer:
+        "Most patients return to normal activities within one week.",
+    },
+  ],
+
+  whyChooseUs:
+    "Our advanced implant team has performed hundreds of All-on-4 and full-mouth rehabilitation cases using 3D-guided surgery and premium implant systems.",
+
+  duration: "Same-day teeth, final in 3–4 months",
+
+  recovery: "5–7 days",
+
+  priceRange: "₹4,50,000 - ₹8,00,000",
+};
+
+============================================================
+FILE: \src\data\treatments\brandPriceList.ts
+============================================================
+
+import { BrandPriceItem } from "./types";
+
+export const brandPriceList: BrandPriceItem[] = [
+  {
+    brand: "Delta Bio",
+    type: "Economy",
+    priceINR: "₹8,000",
+    priceUSD: "$87",
+    warranty: "5 Years",
+    tier: "budget",
+  },
+  {
+    brand: "MSDI",
+    type: "Economy",
+    priceINR: "₹9,500",
+    priceUSD: "$103",
+    warranty: "5 Years",
+    tier: "budget",
+  },
+  {
+    brand: "Simpladent",
+    type: "Economy",
+    priceINR: "₹15,000",
+    priceUSD: "$108",
+    warranty: "5 Years",
+    tier: "budget",
+  },
+  {
+    brand: "BioLine",
+    type: "Economy",
+    priceINR: "₹10,000",
+    priceUSD: "$130",
+    warranty: "7 Years",
+    tier: "budget",
+  },
+  {
+    brand: "Noris Medical",
+    type: "Economy",
+    priceINR: "₹12,000",
+    priceUSD: "$130",
+    warranty: "7 Years",
+    tier: "budget",
+  },
+  {
+    brand: "AlphaBio",
+    type: "Value",
+    priceINR: "₹15,000",
+    priceUSD: "$163",
+    warranty: "8 Years",
+    tier: "budget",
+  },
+  {
+    brand: "Adin",
+    type: "Value",
+    priceINR: "₹15,000",
+    priceUSD: "$163",
+    warranty: "8 Years",
+    tier: "budget",
+  },
+  {
+    brand: "Neo Biotech",
+    type: "Value",
+    priceINR: "₹18,000",
+    priceUSD: "$195",
+    warranty: "8 Years",
+    tier: "budget",
+  },
+  {
+    brand: "Point",
+    type: "Premium Budget",
+    priceINR: "₹20,000",
+    priceUSD: "$217",
+    warranty: "10 Years",
+    tier: "budget",
+  },
+  {
+    brand: "Point UV",
+    type: "Premium Budget",
+    priceINR: "₹22,000",
+    priceUSD: "$238",
+    warranty: "10 Years",
+    tier: "budget",
+  },
+  {
+    brand: "Osstem",
+    type: "Premium Value",
+    priceINR: "₹25,000",
+    priceUSD: "$271",
+    warranty: "10 Years",
+    tier: "standard",
+  },
+  {
+    brand: "Hiossen",
+    type: "Premium Value",
+    priceINR: "₹32,000",
+    priceUSD: "$347",
+    warranty: "10 Years",
+    tier: "standard",
+  },
+  {
+    brand: "Straumann BLT",
+    type: "Premium",
+    priceINR: "₹35,000",
+    priceUSD: "$379",
+    warranty: "15 Years",
+    tier: "standard",
+  },
+  {
+    brand: "Nobel Replace",
+    type: "Premium",
+    priceINR: "₹38,000",
+    priceUSD: "$412",
+    warranty: "15 Years",
+    tier: "standard",
+  },
+  {
+    brand: "Straumann Roxolid",
+    type: "Premium",
+    priceINR: "₹38,000",
+    priceUSD: "$412",
+    warranty: "Lifetime",
+    tier: "standard",
+  },
+  {
+    brand: "Nobel Active",
+    type: "Premium Plus",
+    priceINR: "₹45,000",
+    priceUSD: "$488",
+    warranty: "Lifetime",
+    tier: "premium",
+  },
+  {
+    brand: "Straumann BLX",
+    type: "Premium Plus",
+    priceINR: "₹45,000",
+    priceUSD: "$488",
+    warranty: "Lifetime",
+    tier: "premium",
+  },
+  {
+    brand: "Straumann TSX",
+    type: "Ultra Premium",
+    priceINR: "₹52,000",
+    priceUSD: "$563",
+    warranty: "Lifetime",
+    tier: "premium",
+  },
+  {
+    brand: "Straumann TM",
+    type: "Ultra Premium",
+    priceINR: "₹58,000",
+    priceUSD: "$628",
+    warranty: "Lifetime",
+    tier: "premium",
+  },
+  {
+    brand: "Straumann Ceramic",
+    type: "Metal-Free",
+    priceINR: "₹65,000",
+    priceUSD: "$704",
+    warranty: "Lifetime",
+    tier: "premium",
+  },
+  {
+    brand: "Nobel Pearl",
+    type: "Metal-Free",
+    priceINR: "₹75,000",
+    priceUSD: "$813",
+    warranty: "Lifetime",
+    tier: "premium",
+  },
+];
+
+============================================================
+FILE: \src\data\treatments\childDentistry.ts
+============================================================
+
+import { TreatmentDetail } from "./types";
+
+export const childDentistry: TreatmentDetail = {
+    id: "12",
+
+    title: "Child Dentistry",
+
+    slug: "child-dentistry",
+
+    category: "Children",
+
+    icon: "🧒",
+
+    image: "/images/treatments/child-dentistry.png",
+
+    heroImage: "/images/treatments/child-dentistry.png",
+
+    tagline:
+        "Gentle, painless & child-friendly dental care for healthy growing smiles.",
+
+    description:
+        "Comprehensive child dentistry services for infants, children, and teenagers in a safe, friendly, and comfortable environment.",
+
+    longDescription:
+        "Our Child Dentistry department provides complete dental care for infants, children, and teenagers. We focus on preventive dentistry, early diagnosis, painless treatments, and healthy oral development. From routine dental check-ups and fluoride treatments to tooth-coloured fillings, pulpotomy, space maintainers, emergency dental care, and minor oral surgical procedures, our experienced dentists ensure every child receives personalized care in a comfortable, child-friendly environment.",
+
+    successRate: "99%",
+
+    badge: "Kids Friendly",
+
+    metaTitle:
+        "Best Child Dentistry in Wakad, Pune | Kids Dental Clinic | Zircon Dental",
+
+    metaDescription:
+        "Looking for Child Dentistry in Wakad, Pune? Zircon Dental provides gentle children's dental care including check-ups, fluoride treatment, fillings, pulpotomy, space maintainers & emergency dental care.",
+
+    heroStats: [
+        {
+            label: "Children Treated",
+            value: "1000+",
+        },
+        {
+            label: "Success Rate",
+            value: "99%",
+        },
+        {
+            label: "Care",
+            value: "Pain-Free",
+        },
+    ],
+
+    showPriceComparison: false,
+
+    priceComparison: [],
+
+    clinicPrice: {
+        min: "$10",
+        max: "$120",
+        currency: "per procedure",
+        inrRange: "₹500 – ₹10,000",
+    },
+
+    showAssessment: true,
+
+    assessmentQuestions: [
+        {
+            question: "What is your child's age?",
+            options: [
+                "0–3 Years",
+                "4–7 Years",
+                "8–12 Years",
+                "13–16 Years",
+            ],
+        },
+        {
+            question: "What is the main concern?",
+            options: [
+                "Tooth Pain",
+                "Cavity",
+                "Broken Tooth",
+                "Routine Check-up",
+            ],
+        },
+        {
+            question: "Has your child visited a dentist before?",
+            options: [
+                "Yes",
+                "No",
+                "Not Sure",
+            ],
+        },
+    ],
+
+    whatIsIt: {
+        title: "What is Pediatric Dentistry?",
+
+        description:
+            "Pediatric Dentistry is a specialized branch of dentistry dedicated to the oral health of infants, children, and teenagers. It focuses on preventive care, early diagnosis, treatment of dental problems, and educating parents to ensure healthy smiles throughout childhood.",
+
+        parts: [
+            {
+                name: "Preventive Care",
+                description:
+                    "Regular dental check-ups, fluoride application, and dental sealants.",
+            },
+            {
+                name: "Restorative Care",
+                description:
+                    "Child-friendly tooth-colored fillings, crowns, and pulp therapy.",
+            },
+            {
+                name: "Growth Monitoring",
+                description:
+                    "Monitoring jaw development, eruption of teeth, and orthodontic needs.",
+            },
+        ],
+    },
+    benefits: [
+        {
+            title: "Child-Friendly Environment",
+            description:
+                "A warm, welcoming clinic designed to make every child feel relaxed and comfortable.",
+            icon: "🧸",
+        },
+        {
+            title: "Painless Treatment",
+            description:
+                "Gentle techniques and modern technology ensure a stress-free dental experience.",
+            icon: "😊",
+        },
+        {
+            title: "Early Detection",
+            description:
+                "Identify cavities, bite problems, and oral issues before they become serious.",
+            icon: "🔍",
+        },
+        {
+            title: "Healthy Smile Development",
+            description:
+                "Monitor the growth of teeth and jaws for proper oral development.",
+            icon: "😁",
+        },
+        {
+            title: "Preventive Care",
+            description:
+                "Fluoride treatments and sealants help protect children's teeth from decay.",
+            icon: "🛡️",
+        },
+        {
+            title: "Parent Education",
+            description:
+                "Expert guidance on brushing, diet, thumb sucking, and oral hygiene habits.",
+            icon: "👨‍👩‍👧",
+        },
+    ],
+
+    solutions: [
+        {
+            title: "Routine Dental Check-up",
+            subtitle: "Preventive oral examination",
+            bestFor: "Every child (6-monthly visits)",
+            price: "From ₹500",
+            popular: true,
+            features: [
+                "Complete oral examination",
+                "Digital diagnosis",
+                "Cleaning advice",
+                "Growth monitoring",
+            ],
+        },
+        {
+            title: "Fluoride Treatment",
+            subtitle: "Extra protection against cavities",
+            bestFor: "Children with cavity risk",
+            price: "From ₹800",
+            features: [
+                "Professional fluoride application",
+                "Strengthens enamel",
+                "Quick & painless",
+                "Reduces cavity risk",
+            ],
+        },
+        {
+            title: "Tooth-Coloured Fillings",
+            subtitle: "Natural-looking cavity treatment",
+            bestFor: "Milk & permanent teeth",
+            price: "From ₹1,500",
+            features: [
+                "Composite fillings",
+                "Natural appearance",
+                "Mercury-free",
+                "Single sitting",
+            ],
+        },
+        {
+            title: "Pulpotomy & Stainless Steel Crown",
+            subtitle: "Save severely decayed baby teeth",
+            bestFor: "Deep cavities in milk teeth",
+            price: "From ₹3,500",
+            features: [
+                "Pain relief",
+                "Preserves baby tooth",
+                "Durable crown",
+                "Child-friendly procedure",
+            ],
+        },
+        {
+            title: "Space Maintainer",
+            subtitle: "Maintain space for permanent teeth",
+            bestFor: "Early loss of baby teeth",
+            price: "From ₹4,000",
+            features: [
+                "Custom appliance",
+                "Prevents crowding",
+                "Easy maintenance",
+                "Improves alignment",
+            ],
+        },
+        {
+            title: "Emergency Pediatric Dental Care",
+            subtitle: "Immediate treatment for dental injuries",
+            bestFor: "Broken or knocked-out teeth",
+            price: "Consultation Required",
+            features: [
+                "Same-day appointment",
+                "Pain management",
+                "Trauma care",
+                "Emergency treatment",
+            ],
+        },
+    ],
+
+    process: [
+        {
+            title: "Friendly Consultation",
+            duration: "20-30 minutes",
+            description:
+                "Our pediatric dentist builds trust with your child before beginning the examination.",
+        },
+        {
+            title: "Dental Examination",
+            duration: "15 minutes",
+            description:
+                "A complete oral examination with digital X-rays if required.",
+        },
+        {
+            title: "Treatment Planning",
+            duration: "15 minutes",
+            description:
+                "We explain the condition and recommend the most suitable treatment to parents.",
+        },
+        {
+            title: "Comfortable Treatment",
+            duration: "30-90 minutes",
+            description:
+                "Gentle, minimally invasive treatment using child-friendly techniques.",
+        },
+        {
+            title: "Preventive Guidance",
+            duration: "10 minutes",
+            description:
+                "Parents receive guidance on brushing, diet, and cavity prevention.",
+        },
+        {
+            title: "Regular Follow-up",
+            duration: "Every 6 months",
+            description:
+                "Routine check-ups help monitor healthy growth and prevent future dental issues.",
+        },
+    ],
+
+    pricingPlans: [
+        {
+            name: "Kids Dental Check-up",
+            price: "₹500",
+            unit: "visit",
+            features: [
+                "Consultation",
+                "Oral examination",
+                "Treatment advice",
+                "Digital records",
+            ],
+        },
+        {
+            name: "Preventive Care Package",
+            price: "₹2,000",
+            unit: "package",
+            popular: true,
+            features: [
+                "Dental check-up",
+                "Fluoride application",
+                "Oral hygiene education",
+                "6-month follow-up",
+            ],
+        },
+        {
+            name: "Complete Pediatric Care",
+            price: "Custom Treatment Plan",
+            unit: "as required",
+            features: [
+                "Restorative treatment",
+                "Emergency care",
+                "Preventive procedures",
+                "Long-term follow-up",
+            ],
+        },
+    ],
+
+    emiStarting: "Affordable treatment plans available",
+    beforeAfterCases: [
+        {
+            title: "Cavity-Free Smile",
+            description:
+                "Early cavities treated with tooth-colored fillings, restoring healthy teeth and confidence.",
+        },
+        {
+            title: "Pulpotomy Success",
+            description:
+                "Deeply decayed baby tooth saved with pulpotomy and a stainless steel crown.",
+        },
+        {
+            title: "Healthy Smile Journey",
+            description:
+                "Regular preventive dental visits helping children maintain healthy teeth as they grow.",
+        },
+    ],
+
+    faqs: [
+        {
+            question: "When should my child first visit the dentist?",
+            answer:
+                "The first dental visit is recommended by the child's first birthday or within six months after the first tooth erupts.",
+        },
+        {
+            question: "How often should children have dental check-ups?",
+            answer:
+                "Routine dental check-ups every six months help prevent cavities and monitor healthy tooth development.",
+        },
+        {
+            question: "Are dental X-rays safe for children?",
+            answer:
+                "Yes. We use modern low-radiation digital X-rays only when clinically necessary, making them safe for children.",
+        },
+        {
+            question: "What causes cavities in children?",
+            answer:
+                "Frequent sugary foods, poor brushing habits, prolonged bottle feeding, and inadequate oral hygiene are the most common causes.",
+        },
+        {
+            question: "What is a pulpotomy?",
+            answer:
+                "A pulpotomy is a child-friendly procedure that removes infected pulp from a baby tooth while preserving the remaining healthy tooth until it naturally falls out.",
+        },
+        {
+            question: "How can I prevent cavities in my child?",
+            answer:
+                "Good brushing habits, fluoride toothpaste, regular dental visits, healthy eating, and fluoride treatments significantly reduce the risk of cavities.",
+        },
+        {
+            question: "Does pediatric dental treatment hurt?",
+            answer:
+                "Our pediatric dentists use gentle techniques, child-friendly communication, and modern anesthesia to make treatment as comfortable and stress-free as possible.",
+        },
+    ],
+
+    whyChooseUs:
+        "Our pediatric dental team provides compassionate, child-focused care in a fun and welcoming environment. Using modern technology, painless techniques, and preventive dentistry, we help children build healthy smiles and positive dental experiences that last a lifetime.",
+
+    duration: "20–90 minutes depending on treatment",
+
+    recovery: "Most children return to normal activities immediately or within 24 hours",
+
+    priceRange: "₹500 - ₹10,000",
+};
+
+============================================================
+FILE: \src\data\treatments\crownsBridges.ts
+============================================================
+
+import { TreatmentDetail } from "./types";
+
+export const crownsBridges: TreatmentDetail = {
+    id: "7",
+    title: "Crowns & Bridges",
+    slug: "crowns-bridges",
+    category: "Restorative",
+    icon: "👑",
+
+    image:
+        "/images/treatments/crown-bridges.png",
+
+    heroImage:
+        "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1920",
+
+    tagline: "Restore strength and beauty",
+
+    description:
+        "Premium ceramic and zirconia crowns and bridges for restoring damaged or missing teeth.",
+
+    longDescription:
+        "Dental crowns and bridges restore damaged, broken, or missing teeth with highly aesthetic and durable materials. Using CAD/CAM technology and premium ceramics, we create restorations that look, feel, and function like natural teeth.",
+
+    successRate: "97%",
+    badge: "Same-Day Options",
+
+    metaTitle: "Dental Crowns & Bridges | Zircon Dental",
+
+    metaDescription:
+        "Premium zirconia, E-Max, and ceramic crowns and bridges with natural aesthetics and long-lasting durability.",
+
+    heroStats: [
+        {
+            label: "Durability",
+            value: "15+ Years",
+        },
+        {
+            label: "CAD/CAM",
+            value: "Digital",
+        },
+        {
+            label: "Natural",
+            value: "100%",
+        },
+    ],
+
+    showPriceComparison: false,
+    priceComparison: [],
+
+    clinicPrice: {
+        min: "₹5,000",
+        max: "₹20,000",
+        currency: "per tooth",
+        inrRange: "₹5,000 – ₹20,000",
+    },
+
+    showBrandComparison: false,
+    brandPriceList: [],
+
+    showAssessment: false,
+    assessmentQuestions: [],
+
+    whatIsIt: {
+        title: "What Are Dental Crowns & Bridges?",
+        description:
+            "Crowns cover damaged teeth to restore strength, appearance, and function, while bridges replace one or more missing teeth using neighboring teeth or implants as support.",
+    },
+
+    benefits: [
+        {
+            title: "Natural Appearance",
+            description:
+                "Custom-made restorations match the color and shape of your natural teeth.",
+            icon: "😁",
+        },
+        {
+            title: "Long Lasting",
+            description:
+                "Premium zirconia and ceramic crowns can last well over a decade.",
+            icon: "🏆",
+        },
+        {
+            title: "Strong Materials",
+            description:
+                "Designed to withstand everyday chewing and biting forces.",
+            icon: "💪",
+        },
+        {
+            title: "Digital Precision",
+            description:
+                "CAD/CAM technology ensures accurate fit and comfort.",
+            icon: "💻",
+        },
+        {
+            title: "Improved Function",
+            description:
+                "Eat, speak, and smile with complete confidence.",
+            icon: "🍎",
+        },
+        {
+            title: "Protects Teeth",
+            description:
+                "Prevents further damage to weakened teeth.",
+            icon: "🛡️",
+        },
+    ],
+    solutions: [
+        {
+            title: "Zirconia Crown",
+            subtitle: "Strongest ceramic option",
+            bestFor: "Back teeth / maximum strength",
+            price: "From ₹10,000",
+            popular: true,
+            features: [
+                "Premium zirconia",
+                "Metal-free",
+                "Natural appearance",
+                "10-year warranty",
+            ],
+        },
+        {
+            title: "E-Max Crown",
+            subtitle: "Premium cosmetic crown",
+            bestFor: "Front teeth",
+            price: "From ₹15,000",
+            features: [
+                "Excellent translucency",
+                "Superior aesthetics",
+                "Natural smile",
+                "Long-lasting",
+            ],
+        },
+        {
+            title: "PFM Crown",
+            subtitle: "Porcelain fused to metal",
+            bestFor: "Budget-friendly restoration",
+            price: "From ₹5,000",
+            features: [
+                "Strong metal core",
+                "Affordable",
+                "Reliable performance",
+                "Natural porcelain finish",
+            ],
+        },
+        {
+            title: "Dental Bridge",
+            subtitle: "Replace one or more missing teeth",
+            bestFor: "Missing adjacent teeth",
+            price: "From ₹15,000",
+            features: [
+                "Fixed restoration",
+                "Natural appearance",
+                "Improves chewing",
+                "Quick treatment",
+            ],
+        },
+    ],
+
+    process: [
+        {
+            title: "Consultation",
+            duration: "30 Minutes",
+            description:
+                "Examination, digital X-rays, and treatment planning.",
+        },
+        {
+            title: "Tooth Preparation",
+            duration: "45 Minutes",
+            description:
+                "The tooth is carefully prepared and digital impressions are taken.",
+        },
+        {
+            title: "Temporary Crown",
+            duration: "15 Minutes",
+            description:
+                "A temporary restoration protects your tooth while the final crown is fabricated.",
+        },
+        {
+            title: "Laboratory Fabrication",
+            duration: "5–7 Days",
+            description:
+                "Your custom restoration is manufactured using premium materials.",
+        },
+        {
+            title: "Final Placement",
+            duration: "30 Minutes",
+            description:
+                "The crown or bridge is permanently cemented and adjusted for a perfect bite.",
+        },
+    ],
+
+    pricingPlans: [
+        {
+            name: "PFM Crown",
+            price: "₹5,000",
+            unit: "per tooth",
+            features: [
+                "Porcelain fused metal",
+                "Durable",
+                "Affordable",
+            ],
+        },
+        {
+            name: "Zirconia Crown",
+            price: "₹10,000",
+            unit: "per tooth",
+            popular: true,
+            features: [
+                "Metal-free",
+                "Premium strength",
+                "Natural aesthetics",
+            ],
+        },
+        {
+            name: "E-Max Crown",
+            price: "₹15,000",
+            unit: "per tooth",
+            features: [
+                "Best aesthetics",
+                "Premium ceramic",
+                "Ideal for front teeth",
+            ],
+        },
+    ],
+
+    emiStarting: "₹800/month",
+
+    beforeAfterCases: [
+        {
+            title: "Broken Front Tooth",
+            description:
+                "Restored using a premium E-Max crown.",
+        },
+        {
+            title: "Multiple Missing Teeth",
+            description:
+                "Smile restored with a custom ceramic bridge.",
+        },
+        {
+            title: "Damaged Molar",
+            description:
+                "Strength restored using a zirconia crown.",
+        },
+    ],
+    faqs: [
+        {
+            question: "Which crown material is best?",
+            answer:
+                "Zirconia crowns are ideal for back teeth because of their exceptional strength, while E-max crowns provide the best aesthetics for front teeth. Our dentists will recommend the best option based on your needs.",
+        },
+        {
+            question: "How long do crowns and bridges last?",
+            answer:
+                "With proper oral hygiene and regular dental check-ups, high-quality crowns and bridges typically last between 10 and 15 years, and often much longer.",
+        },
+        {
+            question: "Is getting a crown painful?",
+            answer:
+                "No. The procedure is performed under local anesthesia, making it comfortable and virtually painless. Mild sensitivity may occur for a day or two afterward.",
+        },
+        {
+            question: "Can a bridge replace multiple missing teeth?",
+            answer:
+                "Yes. Dental bridges can replace one or several adjacent missing teeth and restore both function and appearance without surgery.",
+        },
+        {
+            question: "Do zirconia crowns look natural?",
+            answer:
+                "Absolutely. Modern zirconia crowns closely mimic natural teeth in color, translucency, and strength, making them one of the most popular restorative options.",
+        },
+    ],
+
+    whyChooseUs:
+        "We combine advanced CAD/CAM technology, premium ceramic materials, and highly experienced restorative dentists to deliver crowns and bridges that fit precisely, look natural, and last for many years. Every restoration is digitally designed for superior comfort, aesthetics, and durability.",
+
+    duration: "2 visits over 5-7 days",
+
+    recovery: "No downtime",
+
+    priceRange: "₹5,000 - ₹20,000",
+};
+
+============================================================
+FILE: \src\data\treatments\dentalImplants.ts
+============================================================
+
+import { TreatmentDetail } from "./types";
+
+export const dentalImplants: TreatmentDetail = {
+    id: "2",
+    title: "Dental Implants",
+    slug: "dental-implants",
+    category: "Implants",
+    icon: "🦷",
+    image:
+        "/images/treatments/dental-implants.png",
+    heroImage:
+        "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1920",
+    tagline: "Confident smile with dental implants",
+    description:
+        "Best Dental Implants — Restore Your Smile with permanent, natural-looking dental implants.",
+    longDescription:
+        "Dental implants are the gold standard for tooth replacement, providing a permanent solution that mimics the natural structure of your teeth. At Zircon Dental, we've placed thousands of implants with a 98.5% success rate. A dental implant consists of three parts: a titanium post that's surgically placed into your jawbone, an abutment that connects the post to your new tooth, and a custom-crafted crown that looks and functions like your natural tooth. Unlike dentures or bridges, implants replace the entire tooth root, stimulating your jawbone and preventing the bone loss that typically occurs with missing teeth.",
+
+    successRate: "98.5%",
+    badge: "#1 Implant Centre",
+
+    metaTitle: "Best Dental Implants | Zircon Dental",
+    metaDescription:
+        "Get world-class dental implants starting at ₹25,000 with 98.5% success rate, lifetime warranty, and 0% EMI options.",
+
+    heroStats: [
+        {
+            label: "Rating",
+            value: "4.9",
+        },
+        {
+            label: "Success",
+            value: "98.5%",
+        },
+        {
+            label: "Years Exp.",
+            value: "15+",
+        },
+    ],
+
+    showPriceComparison: true,
+
+    priceComparison: [
+        {
+            country: "USA",
+            flag: "🇺🇸",
+            price: "$3,000 – $5,000",
+        },
+        {
+            country: "UK",
+            flag: "🇬🇧",
+            price: "$2,000 – $4,500",
+        },
+        {
+            country: "Australia",
+            flag: "🇦🇺",
+            price: "$2,000 – $4,000",
+        },
+        {
+            country: "India (Average)",
+            flag: "🇮🇳",
+            price: "$450 – $700",
+        },
+    ],
+
+    clinicPrice: {
+        min: "$300",
+        max: "$800",
+        currency: "per implant",
+        inrRange: "₹24,900 – ₹66,400",
+    },
+
+    showBrandComparison: true,
+
+    brandPriceList: [
+        {
+            brand: "Delta Bio",
+            type: "Economy",
+            priceINR: "₹8,000",
+            priceUSD: "$87",
+            warranty: "5 Years",
+            tier: "budget",
+        },
+        {
+            brand: "MSDI",
+            type: "Economy",
+            priceINR: "₹9,500",
+            priceUSD: "$103",
+            warranty: "5 Years",
+            tier: "budget",
+        },
+        {
+            brand: "Simpladent",
+            type: "Economy",
+            priceINR: "₹10,000",
+            priceUSD: "$108",
+            warranty: "5 Years",
+            tier: "budget",
+        },
+        {
+            brand: "BioLine",
+            type: "Economy",
+            priceINR: "₹12,000",
+            priceUSD: "$130",
+            warranty: "7 Years",
+            tier: "budget",
+        },
+        {
+            brand: "Noris Medical",
+            type: "Economy",
+            priceINR: "₹12,000",
+            priceUSD: "$130",
+            warranty: "7 Years",
+            tier: "budget",
+        },
+        {
+            brand: "AlphaBio",
+            type: "Value",
+            priceINR: "₹15,000",
+            priceUSD: "$163",
+            warranty: "8 Years",
+            tier: "budget",
+        },
+        {
+            brand: "Adin",
+            type: "Value",
+            priceINR: "₹15,000",
+            priceUSD: "$163",
+            warranty: "8 Years",
+            tier: "budget",
+        },
+        {
+            brand: "Neo Biotech",
+            type: "Value",
+            priceINR: "₹18,000",
+            priceUSD: "$195",
+            warranty: "8 Years",
+            tier: "budget",
+        },
+        {
+            brand: "Point",
+            type: "Premium Budget",
+            priceINR: "₹20,000",
+            priceUSD: "$217",
+            warranty: "10 Years",
+            tier: "budget",
+        },
+        {
+            brand: "Point UV",
+            type: "Premium Budget",
+            priceINR: "₹22,000",
+            priceUSD: "$238",
+            warranty: "10 Years",
+            tier: "budget",
+        },
+        {
+            brand: "Osstem",
+            type: "Premium Value",
+            priceINR: "₹25,000",
+            priceUSD: "$271",
+            warranty: "10 Years",
+            tier: "standard",
+        },
+        {
+            brand: "Hiossen",
+            type: "Premium Value",
+            priceINR: "₹32,000",
+            priceUSD: "$347",
+            warranty: "10 Years",
+            tier: "standard",
+        },
+        {
+            brand: "Straumann BLT",
+            type: "Premium",
+            priceINR: "₹35,000",
+            priceUSD: "$379",
+            warranty: "15 Years",
+            tier: "standard",
+        },
+        {
+            brand: "Nobel Replace",
+            type: "Premium",
+            priceINR: "₹38,000",
+            priceUSD: "$412",
+            warranty: "15 Years",
+            tier: "standard",
+        },
+        {
+            brand: "Straumann Roxolid",
+            type: "Premium",
+            priceINR: "₹38,000",
+            priceUSD: "$412",
+            warranty: "Lifetime",
+            tier: "standard",
+        },
+        {
+            brand: "Nobel Active",
+            type: "Premium Plus",
+            priceINR: "₹45,000",
+            priceUSD: "$488",
+            warranty: "Lifetime",
+            tier: "premium",
+        },
+        {
+            brand: "Straumann BLX",
+            type: "Premium Plus",
+            priceINR: "₹45,000",
+            priceUSD: "$488",
+            warranty: "Lifetime",
+            tier: "premium",
+        },
+        {
+            brand: "Straumann TSX",
+            type: "Ultra Premium",
+            priceINR: "₹52,000",
+            priceUSD: "$563",
+            warranty: "Lifetime",
+            tier: "premium",
+        },
+        {
+            brand: "Straumann TM",
+            type: "Ultra Premium",
+            priceINR: "₹58,000",
+            priceUSD: "$628",
+            warranty: "Lifetime",
+            tier: "premium",
+        },
+        {
+            brand: "Straumann Ceramic",
+            type: "Metal-Free",
+            priceINR: "₹65,000",
+            priceUSD: "$704",
+            warranty: "Lifetime",
+            tier: "premium",
+        },
+        {
+            brand: "Nobel Pearl",
+            type: "Metal-Free",
+            priceINR: "₹75,000",
+            priceUSD: "$813",
+            warranty: "Lifetime",
+            tier: "premium",
+        },
+    ],
+
+    showAssessment: true,
+
+    assessmentQuestions: [
+        {
+            question: "How many teeth are you currently missing?",
+            options: [
+                "None - I'm just exploring",
+                "1-2 teeth",
+                "3-5 teeth",
+                "6 or more / Full arch",
+            ],
+        },
+        {
+            question: "How long have your teeth been missing?",
+            options: [
+                "Less than 6 months",
+                "6-12 months",
+                "1-3 years",
+                "More than 3 years",
+            ],
+        },
+        {
+            question: "Are you currently wearing dentures?",
+            options: [
+                "No",
+                "Yes, partial dentures",
+                "Yes, full dentures",
+                "Yes, but they're uncomfortable",
+            ],
+        },
+        {
+            question: "Do you have any gum disease?",
+            options: [
+                "No",
+                "Mild",
+                "Moderate",
+                "Severe / Not sure",
+            ],
+        },
+        {
+            question: "Do you smoke?",
+            options: [
+                "No",
+                "Occasionally",
+                "Yes, regularly",
+                "Former smoker",
+            ],
+        },
+    ],
+
+    whatIsIt: {
+        title: "What Are Dental Implants?",
+        description:
+            "Dental implants are the gold standard for tooth replacement worldwide, providing a permanent solution that mimics the natural structure of your teeth. At Zircon Dental, we've placed thousands of implants with a 98.5% success rate. A dental implant consists of three parts: a titanium post that's surgically placed into your jawbone, an abutment that connects the post to your new tooth, and a custom-crafted crown that looks and functions like your natural tooth.",
+
+        parts: [
+            {
+                name: "Crown",
+                description: "Custom porcelain tooth that looks natural",
+            },
+            {
+                name: "Abutment",
+                description: "Connects implant to the crown",
+            },
+            {
+                name: "Implant",
+                description: "Titanium post fused with jawbone",
+            },
+        ],
+    },
+
+    benefits: [
+        {
+            title: "Natural Appearance",
+            description:
+                "Implants look and feel like your own teeth, blending perfectly with your natural smile.",
+            icon: "😁",
+        },
+        {
+            title: "Preserves Jawbone",
+            description:
+                "Implants stimulate bone growth, preventing the bone loss that occurs with missing teeth.",
+            icon: "🦴",
+        },
+        {
+            title: "Improved Oral Health",
+            description:
+                "Unlike bridges, implants don't require reducing adjacent teeth, preserving your natural tooth structure.",
+            icon: "🏥",
+        },
+        {
+            title: "Long-Lasting Solution",
+            description:
+                "With proper care, dental implants can last a lifetime, making them a cost-effective choice.",
+            icon: "⏳",
+        },
+        {
+            title: "Enhanced Comfort",
+            description:
+                "Implants eliminate the discomfort and embarrassment of removable dentures.",
+            icon: "✨",
+        },
+        {
+            title: "Restored Function",
+            description:
+                "Enjoy eating, speaking, and smiling with complete confidence and comfort.",
+            icon: "💪",
+        },
+    ],
+    solutions: [
+        {
+            title: "Single Tooth Implant",
+            subtitle: "Replace one missing tooth with a custom crown",
+            bestFor: "One missing tooth",
+            price: "From ₹25,000",
+            features: [
+                "Individual implant crown",
+                "Preserves adjacent teeth",
+                "Natural look and feel",
+                "Lifetime warranty",
+            ],
+        },
+        {
+            title: "Implant-Supported Bridge",
+            subtitle: "Replace multiple missing teeth with a permanent bridge",
+            bestFor: "Multiple adjacent missing teeth",
+            price: "From ₹2,50,000",
+            features: [
+                "Replaces 3+ consecutive teeth",
+                "More stable than traditional bridges",
+                "Prevents bone loss",
+                "Fixed permanent solution",
+            ],
+        },
+        {
+            title: "All-on-4 / All-on-6",
+            subtitle: "Full arch replacement using 4 or 6 implants",
+            bestFor: "Full arch or complete tooth loss",
+            price: "From ₹4,50,000",
+            popular: true,
+            features: [
+                "Complete smile restoration",
+                "Same-day temporary teeth",
+                "Fixed non-removable solution",
+                "Revolutionary same-day teeth",
+            ],
+        },
+        {
+            title: "Implant-Retained Denture",
+            subtitle: "Secure dentures with implant support",
+            bestFor: "Patients with existing dentures",
+            price: "From ₹2,00,000",
+            features: [
+                "Removable for cleaning",
+                "Eliminates denture slippage",
+                "Improved comfort and function",
+                "Budget-friendly option",
+            ],
+        },
+    ],
+
+    process: [
+        {
+            title: "Comprehensive Consultation",
+            duration: "60 minutes",
+            description:
+                "We begin with a thorough examination, including 3D CT scans, to assess your oral health and create a personalized treatment plan.",
+        },
+        {
+            title: "Treatment Planning",
+            duration: "Varies",
+            description:
+                "Our team designs your custom implant solution, selecting the ideal implant type, position, and restoration.",
+        },
+        {
+            title: "Implant Placement",
+            duration: "1-2 hours",
+            description:
+                "Using guided surgery technology, we precisely place the titanium implant into your jawbone.",
+        },
+        {
+            title: "Healing & Osseointegration",
+            duration: "3-6 months",
+            description:
+                "Your implant naturally fuses with your jawbone, creating a strong foundation.",
+        },
+        {
+            title: "Custom Restoration",
+            duration: "2-3 weeks",
+            description:
+                "We attach your custom-crafted crown, bridge, or denture, perfectly matched to your natural teeth.",
+        },
+        {
+            title: "Aftercare & Maintenance",
+            duration: "Ongoing",
+            description:
+                "Regular follow-ups to ensure your implant stays healthy for years to come.",
+        },
+    ],
+
+    pricingPlans: [
+        {
+            name: "Single Tooth Implant",
+            price: "₹1,50,000",
+            unit: "per implant",
+            features: [
+                "Titanium implant",
+                "Abutment & crown",
+                "5-year warranty",
+            ],
+        },
+        {
+            name: "All-on-4 Implants",
+            price: "₹4,50,000",
+            unit: "per arch",
+            popular: true,
+            features: [
+                "4 implants + full arch",
+                "Lifetime warranty",
+                "Same-day teeth",
+            ],
+        },
+        {
+            name: "Full Mouth Implants",
+            price: "₹8,00,000",
+            unit: "both arches",
+            features: [
+                "Complete smile restoration",
+                "Premium materials",
+                "VIP aftercare",
+            ],
+        },
+    ],
+
+    emiStarting: "₹2,500/month",
+
+    beforeAfterCases: [
+        {
+            title: "Single Implant",
+            description: "Treatment completed successfully",
+        },
+        {
+            title: "All-on-4 Bridge",
+            description: "Treatment completed successfully",
+        },
+        {
+            title: "Front Tooth Replacement",
+            description: "Treatment completed successfully",
+        },
+    ],
+
+    faqs: [
+        {
+            question: "How much do dental implants cost?",
+            answer:
+                "Dental implants at Zircon start from ₹25,000 per implant. The total cost depends on the number of implants, type of restoration, and any additional procedures needed. We offer 0% EMI options and free consultations.",
+        },
+        {
+            question: "Is dental implant surgery painful?",
+            answer:
+                "Modern implant surgery is performed under local anesthesia and is virtually painless. Most patients report less discomfort than a tooth extraction. We also offer sedation options for anxious patients.",
+        },
+        {
+            question: "How long do dental implants last?",
+            answer:
+                "With proper care, dental implants can last a lifetime. The titanium post fuses permanently with your jawbone. The crown on top typically lasts 10-15 years before needing replacement.",
+        },
+        {
+            question: "What is the success rate of dental implants?",
+            answer:
+                "Our clinic maintains a 98.5% success rate for dental implants, which is among the highest in the industry. Success depends on proper planning, skilled placement, and good oral hygiene.",
+        },
+        {
+            question: "Can I get implants if I have diabetes?",
+            answer:
+                "Yes, most diabetic patients can receive dental implants. Well-controlled diabetes does not significantly affect implant success rates. Our team will evaluate your overall health during consultation.",
+        },
+    ],
+
+    whyChooseUs:
+        "Zircon Dental & Cosmetic Centre is the premier destination for dental implant treatment. Our state-of-the-art clinic is equipped with 3D CBCT scanners, digital impression systems, and a dedicated implant surgery suite. Led by experienced implantologists with 15+ years of clinical experience, our team has successfully placed thousands of dental implants with a documented 98.5% success rate.",
+
+    duration: "3-6 months total",
+
+    recovery: "3-5 days initial",
+
+    priceRange: "₹25,000 - ₹50,000 per implant",
+};
+
+============================================================
+FILE: \src\data\treatments\immediateLoadImplants.ts
+============================================================
+
+import { TreatmentDetail } from "./types";
+
+export const immediateLoadImplants: TreatmentDetail = {
+    id: "1",
+    title: "Immediate Load Implants",
+    slug: "immediate-load-implants",
+    category: "Implants",
+    icon: "⚡",
+
+    image: "/images/treatments/immediate-load-implants.png",
+
+    heroImage: "/images/treatments/immediate-load-implants.png",
+
+    tagline: "Walk in with missing teeth. Walk out with a confident smile the same day.",
+
+    description:
+        "Immediate Load Implants, also known as Same-Day Dental Implants or Teeth-in-a-Day, allow eligible patients to receive dental implants and fixed temporary teeth in a single visit.",
+
+    longDescription:
+        "Immediate Load Implants are an advanced implant technique that allows carefully selected patients to leave the clinic with fixed temporary teeth on the very same day as implant placement. Instead of waiting several months without teeth, you can enjoy immediate function, improved appearance, and restored confidence while the implants naturally fuse with your jawbone. Using 3D CBCT imaging, digital smile planning, and premium implant systems, our specialists determine whether immediate loading is the safest and most predictable option for you.",
+
+    successRate: "98%",
+
+    badge: "Same-Day Teeth",
+
+    metaTitle:
+        "Immediate Load Dental Implants in Pune | Same Day Teeth | Zircon Dental",
+
+    metaDescription:
+        "Get fixed teeth on the same day with Immediate Load Dental Implants in Wakad, Pune. Advanced digital planning, experienced implantologists & flexible EMI.",
+
+    heroStats: [
+        {
+            label: "Success",
+            value: "98%",
+        },
+        {
+            label: "Treatment",
+            value: "Same Day",
+        },
+        {
+            label: "Recovery",
+            value: "Fast",
+        },
+    ],
+
+    showPriceComparison: true,
+
+    priceComparison: [
+        {
+            country: "USA",
+            flag: "🇺🇸",
+            price: "$8,000 – $15,000",
+        },
+        {
+            country: "UK",
+            flag: "🇬🇧",
+            price: "$7,000 – $13,000",
+        },
+        {
+            country: "Australia",
+            flag: "🇦🇺",
+            price: "$8,500 – $14,000",
+        },
+        {
+            country: "India (Average)",
+            flag: "🇮🇳",
+            price: "$2,500 – $5,000",
+        },
+    ],
+
+    clinicPrice: {
+        min: "$2,000",
+        max: "$4,500",
+        currency: "per arch",
+        inrRange: "₹1,75,000 – ₹3,75,000",
+    },
+
+    showAssessment: true,
+
+    assessmentQuestions: [
+        {
+            question: "How many teeth are you missing?",
+            options: [
+                "Single tooth",
+                "Multiple teeth",
+                "Full arch",
+                "Complete mouth",
+            ],
+        },
+        {
+            question: "How long have the teeth been missing?",
+            options: [
+                "Less than 3 months",
+                "3-12 months",
+                "More than 1 year",
+                "Many years",
+            ],
+        },
+        {
+            question: "Have you been told you have bone loss?",
+            options: [
+                "No",
+                "Mild bone loss",
+                "Severe bone loss",
+                "Not sure",
+            ],
+        },
+    ],
+
+    whatIsIt: {
+        title: "What Are Immediate Load Implants?",
+
+        description:
+            "Immediate Load Implants are an advanced dental implant procedure where implants are placed and fixed temporary teeth are attached within 24 hours. Instead of waiting several months without teeth, qualified patients can smile, speak, and eat with confidence immediately after treatment.",
+
+        parts: [
+            {
+                name: "Titanium Implant",
+                description:
+                    "Acts as an artificial tooth root placed into the jawbone.",
+            },
+            {
+                name: "Immediate Temporary Crown",
+                description:
+                    "A fixed temporary tooth attached on the same day.",
+            },
+            {
+                name: "Final Zirconia Crown",
+                description:
+                    "Permanent crown placed after complete healing for long-term strength and aesthetics.",
+            },
+        ],
+    },
+    benefits: [
+        {
+            title: "Same-Day Smile",
+            description:
+                "Leave the clinic with fixed temporary teeth on the same day of implant placement.",
+            icon: "⚡",
+        },
+        {
+            title: "Immediate Confidence",
+            description:
+                "Smile, speak, and attend social events without waiting months for replacement teeth.",
+            icon: "😁",
+        },
+        {
+            title: "Preserves Jaw Bone",
+            description:
+                "Dental implants stimulate the jawbone and help prevent bone loss after tooth extraction.",
+            icon: "🦴",
+        },
+        {
+            title: "Natural Appearance",
+            description:
+                "Temporary and final restorations are designed to closely match your natural smile.",
+            icon: "✨",
+        },
+        {
+            title: "Comfortable Eating",
+            description:
+                "Enjoy improved chewing ability with fixed teeth instead of removable dentures.",
+            icon: "🍎",
+        },
+        {
+            title: "Long-Term Solution",
+            description:
+                "With proper care, implants can provide a durable and long-lasting replacement for missing teeth.",
+            icon: "🏆",
+        },
+    ],
+
+    solutions: [
+        {
+            title: "Single Tooth Immediate Implant",
+            subtitle: "Replace one missing tooth",
+            bestFor: "Patients missing a single tooth",
+            price: "From ₹30,000",
+            popular: true,
+            features: [
+                "Same-day temporary crown",
+                "3D guided implant placement",
+                "Natural aesthetics",
+                "Lifetime implant support",
+            ],
+        },
+        {
+            title: "Multiple Immediate Implants",
+            subtitle: "Restore several missing teeth",
+            bestFor: "Multiple adjacent missing teeth",
+            price: "From ₹75,000",
+            features: [
+                "Multiple implants",
+                "Fixed temporary bridge",
+                "Digital smile planning",
+                "Premium implant systems",
+            ],
+        },
+        {
+            title: "Immediate Full Arch",
+            subtitle: "Same-day complete smile",
+            bestFor: "Patients with complete tooth loss",
+            price: "From ₹2,50,000",
+            features: [
+                "Full arch restoration",
+                "Immediate fixed teeth",
+                "Advanced digital workflow",
+                "Premium prosthesis",
+            ],
+        },
+        {
+            title: "Immediate Extraction & Implant",
+            subtitle: "Extraction + Implant in one visit",
+            bestFor: "Severely damaged teeth",
+            price: "From ₹35,000",
+            features: [
+                "Tooth extraction",
+                "Immediate implant placement",
+                "Bone preservation",
+                "Reduced treatment time",
+            ],
+        },
+    ],
+
+    process: [
+        {
+            title: "Consultation & CBCT Scan",
+            duration: "45-60 minutes",
+            description:
+                "Comprehensive examination, digital X-rays, CBCT scan, and evaluation to determine eligibility for immediate loading.",
+        },
+        {
+            title: "Digital Smile Planning",
+            duration: "1-2 days",
+            description:
+                "Advanced digital planning ensures accurate implant positioning and ideal smile design.",
+        },
+        {
+            title: "Implant Placement",
+            duration: "60-120 minutes",
+            description:
+                "Implants are placed using minimally invasive guided surgery under local anesthesia.",
+        },
+        {
+            title: "Temporary Teeth Placement",
+            duration: "Same Day",
+            description:
+                "A fixed temporary crown or bridge is attached immediately after implant placement.",
+        },
+        {
+            title: "Healing & Osseointegration",
+            duration: "3-4 months",
+            description:
+                "The implant naturally fuses with the jawbone while you continue using your temporary teeth.",
+        },
+        {
+            title: "Permanent Zirconia Crown",
+            duration: "1 Week",
+            description:
+                "Your custom-crafted permanent zirconia crown or bridge is placed for long-term function and aesthetics.",
+        },
+    ],
+
+    pricingPlans: [
+        {
+            name: "Single Immediate Implant",
+            price: "₹30,000",
+            unit: "per implant",
+            features: [
+                "Consultation",
+                "CBCT Scan",
+                "Immediate temporary crown",
+                "Follow-up visits",
+            ],
+        },
+        {
+            name: "Premium Immediate Implant",
+            price: "₹45,000",
+            unit: "per implant",
+            popular: true,
+            features: [
+                "Premium implant brand",
+                "Digital guided surgery",
+                "Immediate temporary crown",
+                "Extended warranty",
+            ],
+        },
+        {
+            name: "Immediate Full Arch",
+            price: "₹2,50,000",
+            unit: "per arch",
+            features: [
+                "Complete fixed teeth",
+                "Digital smile design",
+                "Same-day loading",
+                "Premium prosthesis",
+            ],
+        },
+    ],
+
+    emiStarting: "₹2,999/month",
+    beforeAfterCases: [
+        {
+            title: "Single Tooth Replacement",
+            description:
+                "Missing front tooth restored with an immediate implant and temporary crown on the same day.",
+        },
+        {
+            title: "Immediate Smile Makeover",
+            description:
+                "Multiple missing teeth replaced with fixed temporary teeth in one visit.",
+        },
+        {
+            title: "Full Arch Immediate Loading",
+            description:
+                "Complete upper arch restored with immediate fixed teeth using advanced implant techniques.",
+        },
+    ],
+
+    faqs: [
+        {
+            question: "What are Immediate Load Implants?",
+            answer:
+                "Immediate Load Implants are dental implants where a temporary fixed crown or bridge is attached within 24 hours of implant placement, allowing patients to leave with functional teeth on the same day.",
+        },
+        {
+            question: "Is everyone eligible for same-day implants?",
+            answer:
+                "No. Eligibility depends on bone quality, bone quantity, overall oral health, and implant stability. A CBCT scan helps determine if immediate loading is suitable.",
+        },
+        {
+            question: "Will I receive permanent teeth on the same day?",
+            answer:
+                "No. You'll receive high-quality temporary fixed teeth immediately. After 3–4 months of healing, they are replaced with permanent zirconia or ceramic crowns.",
+        },
+        {
+            question: "Is the procedure painful?",
+            answer:
+                "The procedure is performed under local anesthesia, making it comfortable. Mild swelling or soreness may occur for a few days and is easily managed with medication.",
+        },
+        {
+            question: "How long do Immediate Load Implants last?",
+            answer:
+                "With proper oral hygiene and regular dental check-ups, implants can last for decades, while the final crowns typically last 10–15 years or more.",
+        },
+        {
+            question: "Can I eat normally after surgery?",
+            answer:
+                "Soft foods are recommended during the initial healing period. Once healing is complete and the final crowns are placed, you can comfortably enjoy most foods.",
+        },
+        {
+            question: "How successful are Immediate Load Implants?",
+            answer:
+                "When performed on suitable candidates by experienced implant specialists, Immediate Load Implants have a success rate of over 98%.",
+        },
+    ],
+
+    whyChooseUs:
+        "Our implant specialists use advanced CBCT imaging, digital smile planning, computer-guided implant surgery, and internationally trusted implant systems to deliver safe, predictable, and natural-looking same-day smiles. Every treatment is customized to maximize long-term success and patient comfort.",
+
+    duration: "Same-day procedure, final teeth in 3–4 months",
+
+    recovery: "2–5 days",
+
+    priceRange: "₹30,000 - ₹2,50,000",
+};
+
+============================================================
+FILE: \src\data\treatments\index.ts
+============================================================
+
+import { immediateLoadImplants } from "./immediateLoadImplants";
+import { dentalImplants } from "./dentalImplants";
+import { advancedImplants } from "./advancedImplants";
+import { rootCanal } from "./rootCanal";
+import { smileDesign } from "./smileDesign";
+import { teethWhitening } from "./teethWhitening";
+import { crownsBridges } from "./crownsBridges";
+import { orthodontics } from "./orthodontics";
+import { oralSurgery } from "./oralSurgery";
+import { childDentistry } from "./childDentistry";
+
+// ✅ Export all shared types
+export * from "./types";
+
+// Export treatment data
+export * from "./immediateLoadImplants";
+export * from "./dentalImplants";
+export * from "./advancedImplants";
+export * from "./rootCanal";
+export * from "./smileDesign";
+export * from "./teethWhitening";
+export * from "./crownsBridges";
+export * from "./orthodontics";
+export * from "./oralSurgery";
+export * from "./brandPriceList";
+export * from "./childDentistry";
+
+export const treatments = [
+  immediateLoadImplants,
+  dentalImplants,
+  advancedImplants,
+  rootCanal,
+  smileDesign,
+  teethWhitening,
+  crownsBridges,
+  orthodontics,
+  oralSurgery,
+  childDentistry,
+];
+
+export const getTreatmentBySlug = (slug: string) =>
+  treatments.find((t) => t.slug === slug);
+
+export const getRelatedTreatments = (
+  slug: string,
+  limit = 4
+) =>
+  treatments
+    .filter((t) => t.slug !== slug)
+    .slice(0, limit);
+
+export const getTreatmentsByCategory = (category: string) =>
+  category === "All"
+    ? treatments
+    : treatments.filter((t) => t.category === category);
+
+export const getCategories = () => [
+  "All",
+  ...new Set(treatments.map((t) => t.category)),
+];
+
+============================================================
+FILE: \src\data\treatments\oralSurgery.ts
+============================================================
+
+import { TreatmentDetail } from "./types";
+
+export const oralSurgery: TreatmentDetail = {
+  id: "9",
+  title: "Oral Surgery",
+  slug: "oral-surgery",
+  category: "Surgery",
+  icon: "🏥",
+
+  image:
+    "/images/treatments/oral-surgery.png",
+  heroImage:
+    "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1920",
+
+  tagline: "Expert surgical care you can trust",
+
+  description:
+    "Wisdom teeth, jaw surgery, bone grafting, and complex extractions performed by experienced oral surgeons.",
+
+  longDescription:
+    "Our oral surgery department provides advanced surgical procedures using modern technology, CBCT imaging, minimally invasive techniques, and strict sterilization protocols for predictable outcomes and faster recovery.",
+
+  successRate: "99%",
+  badge: "Expert Oral Surgeons",
+
+  metaTitle: "Oral Surgery | Wisdom Tooth Removal | Zircon Dental",
+
+  metaDescription:
+    "Advanced oral surgery including wisdom teeth removal, bone grafting, jaw surgery, and surgical extractions.",
+
+  heroStats: [
+    {
+      label: "Success",
+      value: "99%",
+    },
+    {
+      label: "Recovery",
+      value: "Fast",
+    },
+    {
+      label: "Experience",
+      value: "15+ Years",
+    },
+  ],
+
+  showPriceComparison: false,
+  priceComparison: [],
+
+  clinicPrice: {
+    min: "₹3,000",
+    max: "₹50,000",
+    currency: "per procedure",
+    inrRange: "₹3,000 – ₹50,000",
+  },
+
+  showBrandComparison: false,
+  brandPriceList: [],
+
+  showAssessment: false,
+  assessmentQuestions: [],
+
+  whatIsIt: {
+    title: "What is Oral Surgery?",
+    description:
+      "Oral surgery includes procedures such as wisdom tooth removal, impacted tooth surgery, bone grafting, sinus lifts, cyst removal, and corrective jaw surgery performed by experienced specialists.",
+  },
+
+  benefits: [
+    {
+      title: "Experienced Surgeons",
+      description: "Treatment by skilled oral surgeons.",
+      icon: "👨‍⚕️",
+    },
+    {
+      title: "Modern Technology",
+      description: "CBCT guided surgical planning.",
+      icon: "🖥️",
+    },
+    {
+      title: "Minimal Pain",
+      description: "Advanced anesthesia techniques.",
+      icon: "💉",
+    },
+    {
+      title: "Fast Healing",
+      description: "Modern surgical protocols reduce recovery time.",
+      icon: "⚡",
+    },
+    {
+      title: "High Success",
+      description: "Evidence-based surgical techniques.",
+      icon: "🏆",
+    },
+    {
+      title: "Safe Procedures",
+      description: "Strict sterilization and safety standards.",
+      icon: "🛡️",
+    },
+  ],
+
+  solutions: [
+    {
+      title: "Wisdom Tooth Removal",
+      subtitle: "Safe surgical extraction",
+      bestFor: "Impacted wisdom teeth",
+      price: "From ₹5,000",
+      popular: true,
+      features: [
+        "CBCT planning",
+        "Minimal discomfort",
+        "Quick recovery",
+        "Experienced surgeon",
+      ],
+    },
+    {
+      title: "Bone Grafting",
+      subtitle: "Jaw bone reconstruction",
+      bestFor: "Dental implant preparation",
+      price: "From ₹15,000",
+      features: [
+        "Bone augmentation",
+        "Improved implant support",
+        "High success",
+        "Modern graft materials",
+      ],
+    },
+    {
+      title: "Sinus Lift",
+      subtitle: "Upper jaw bone enhancement",
+      bestFor: "Upper implant cases",
+      price: "From ₹25,000",
+      features: [
+        "Advanced technique",
+        "Safe procedure",
+        "Implant preparation",
+        "Minimal downtime",
+      ],
+    },
+    {
+      title: "Jaw Surgery",
+      subtitle: "Corrective jaw procedures",
+      bestFor: "Complex jaw conditions",
+      price: "From ₹50,000",
+      features: [
+        "Specialist care",
+        "Hospital support",
+        "Comprehensive planning",
+        "Long-term results",
+      ],
+    },
+  ],
+
+  process: [
+    {
+      title: "Consultation",
+      duration: "30 Minutes",
+      description:
+        "Clinical examination with digital imaging and diagnosis.",
+    },
+    {
+      title: "Treatment Planning",
+      duration: "30 Minutes",
+      description:
+        "Customized surgical plan with patient counseling.",
+    },
+    {
+      title: "Procedure",
+      duration: "30-120 Minutes",
+      description:
+        "Surgery performed under local anesthesia or sedation.",
+    },
+    {
+      title: "Recovery",
+      duration: "3-7 Days",
+      description:
+        "Healing instructions and medications for comfortable recovery.",
+    },
+    {
+      title: "Follow-up",
+      duration: "1 Week",
+      description:
+        "Healing evaluation and post-operative care.",
+    },
+  ],
+
+  pricingPlans: [
+    {
+      name: "Simple Extraction",
+      price: "₹3,000",
+      unit: "per tooth",
+      features: [
+        "Local anesthesia",
+        "Quick procedure",
+        "Post-op instructions",
+      ],
+    },
+    {
+      name: "Wisdom Tooth Surgery",
+      price: "₹8,000",
+      unit: "per tooth",
+      popular: true,
+      features: [
+        "Impacted tooth removal",
+        "Medicines included",
+        "Follow-up visit",
+      ],
+    },
+    {
+      name: "Bone Grafting",
+      price: "₹15,000",
+      unit: "per site",
+      features: [
+        "Premium graft material",
+        "Specialist surgeon",
+        "Healing monitoring",
+      ],
+    },
+  ],
+
+  emiStarting: "₹1,500/month",
+
+  beforeAfterCases: [
+    {
+      title: "Impacted Wisdom Tooth",
+      description: "Successful surgical removal with smooth recovery.",
+    },
+    {
+      title: "Bone Grafting",
+      description: "Jaw prepared successfully for implants.",
+    },
+  ],
+
+  faqs: [
+    {
+      question: "Is oral surgery painful?",
+      answer:
+        "No. Procedures are performed under local anesthesia or sedation, making treatment comfortable.",
+    },
+    {
+      question: "How long is recovery?",
+      answer:
+        "Most patients recover within 3-7 days depending on the procedure.",
+    },
+    {
+      question: "Will I need stitches?",
+      answer:
+        "Some procedures require dissolvable stitches which heal naturally.",
+    },
+    {
+      question: "Can I eat after surgery?",
+      answer:
+        "Yes, soft foods are recommended for the first few days after surgery.",
+    },
+  ],
+
+  whyChooseUs:
+    "Our experienced oral surgeons combine advanced technology with patient-focused care to deliver safe, comfortable, and predictable surgical outcomes.",
+
+  duration: "30 Minutes – 2 Hours",
+  recovery: "3–7 Days",
+  priceRange: "₹3,000 – ₹50,000",
+};
+
+============================================================
+FILE: \src\data\treatments\orthodontics.ts
+============================================================
+
+import { TreatmentDetail } from "./types";
+
+export const orthodontics: TreatmentDetail = {
+    id: "8",
+    title: "Orthodontics",
+    slug: "orthodontics",
+    category: "Orthodontics",
+    icon: "😬",
+
+    image:
+        "/images/treatments/Orthodontics.png",
+    heroImage:
+        "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1920",
+
+    tagline: "Straight teeth, perfect smile",
+
+    description:
+        "Braces, clear aligners, and lingual braces for children, teens, and adults.",
+
+    longDescription:
+        "Comprehensive orthodontic solutions using the latest technology to correct crooked teeth, bite problems, spacing, and jaw alignment while creating healthy, confident smiles.",
+
+    successRate: "98%",
+    badge: "All Ages Welcome",
+
+    metaTitle: "Orthodontics | Braces & Clear Aligners",
+    metaDescription:
+        "Metal braces, ceramic braces, clear aligners, and lingual braces with personalized treatment plans.",
+
+    heroStats: [
+        { label: "Success", value: "98%" },
+        { label: "Patients", value: "5000+" },
+        { label: "Experience", value: "15+ Years" },
+    ],
+
+    showPriceComparison: false,
+    priceComparison: [],
+
+    clinicPrice: {
+        min: "₹30,000",
+        max: "₹2,00,000",
+        currency: "Full Treatment",
+        inrRange: "₹30,000 – ₹2,00,000",
+    },
+
+    showBrandComparison: false,
+    brandPriceList: [],
+
+    showAssessment: false,
+    assessmentQuestions: [],
+
+    whatIsIt: {
+        title: "What Is Orthodontic Treatment?",
+        description:
+            "Orthodontic treatment straightens teeth, corrects bite problems, improves jaw alignment, and enhances both oral health and facial appearance using braces or clear aligners.",
+    },
+
+    benefits: [
+        {
+            title: "Straighter Smile",
+            description:
+                "Achieve beautifully aligned teeth for a confident smile.",
+            icon: "😁",
+        },
+        {
+            title: "Better Bite",
+            description:
+                "Correct overbite, underbite, crossbite, and open bite.",
+            icon: "🦷",
+        },
+        {
+            title: "Easy Cleaning",
+            description:
+                "Straight teeth are easier to brush and floss.",
+            icon: "🪥",
+        },
+        {
+            title: "Improved Speech",
+            description:
+                "Proper alignment improves pronunciation in some cases.",
+            icon: "🗣️",
+        },
+        {
+            title: "Jaw Health",
+            description:
+                "Reduces uneven pressure on teeth and jaw joints.",
+            icon: "💪",
+        },
+        {
+            title: "Long-Term Results",
+            description:
+                "Permanent improvements with proper retention.",
+            icon: "⭐",
+        },
+    ],
+
+    solutions: [
+        {
+            title: "Metal Braces",
+            subtitle: "Traditional orthodontic treatment",
+            bestFor: "Children & Teens",
+            price: "From ₹30,000",
+            features: [
+                "Most affordable",
+                "Highly effective",
+                "Suitable for all cases",
+                "Excellent durability",
+            ],
+        },
+        {
+            title: "Ceramic Braces",
+            subtitle: "Tooth-colored braces",
+            bestFor: "Adults",
+            price: "From ₹45,000",
+            features: [
+                "Less noticeable",
+                "Strong ceramic brackets",
+                "Comfortable",
+                "Great aesthetics",
+            ],
+        },
+        {
+            title: "Clear Aligners",
+            subtitle: "Virtually invisible treatment",
+            bestFor: "Working professionals",
+            price: "From ₹80,000",
+            popular: true,
+            features: [
+                "Removable",
+                "Nearly invisible",
+                "Comfortable",
+                "Digital treatment planning",
+            ],
+        },
+        {
+            title: "Lingual Braces",
+            subtitle: "Hidden behind teeth",
+            bestFor: "Complete invisibility",
+            price: "From ₹1,50,000",
+            features: [
+                "Invisible braces",
+                "Custom-made",
+                "Highly aesthetic",
+                "Premium treatment",
+            ],
+        },
+    ],
+
+    process: [
+        {
+            title: "Consultation",
+            duration: "45 mins",
+            description:
+                "Complete orthodontic examination with digital scans and X-rays.",
+        },
+        {
+            title: "Treatment Planning",
+            duration: "1 week",
+            description:
+                "Personalized treatment plan using digital technology.",
+        },
+        {
+            title: "Appliance Placement",
+            duration: "60-90 mins",
+            description:
+                "Braces fitted or aligners delivered.",
+        },
+        {
+            title: "Regular Reviews",
+            duration: "Every 4-6 weeks",
+            description:
+                "Adjustments and monitoring throughout treatment.",
+        },
+        {
+            title: "Retention",
+            duration: "Ongoing",
+            description:
+                "Retainers provided to maintain your new smile.",
+        },
+    ],
+
+    pricingPlans: [
+        {
+            name: "Metal Braces",
+            price: "₹30,000",
+            unit: "Full Treatment",
+            features: [
+                "Complete treatment",
+                "Regular adjustments",
+                "Retainers included",
+            ],
+        },
+        {
+            name: "Clear Aligners",
+            price: "₹80,000",
+            unit: "Full Treatment",
+            popular: true,
+            features: [
+                "Complete aligner set",
+                "Digital monitoring",
+                "Retainers included",
+            ],
+        },
+        {
+            name: "Lingual Braces",
+            price: "₹1,50,000",
+            unit: "Full Treatment",
+            features: [
+                "Hidden braces",
+                "Premium treatment",
+                "Retainers included",
+            ],
+        },
+    ],
+
+    emiStarting: "₹2,500/month",
+
+    beforeAfterCases: [
+        {
+            title: "Crowded Teeth",
+            description: "18-month orthodontic correction",
+        },
+        {
+            title: "Deep Bite",
+            description: "Clear aligner treatment",
+        },
+    ],
+    faqs: [
+        {
+            question: "Which is better: braces or clear aligners?",
+            answer:
+                "Both are highly effective. Metal braces are ideal for complex orthodontic problems, while clear aligners are nearly invisible, removable, and preferred by adults and working professionals.",
+        },
+        {
+            question: "How long does orthodontic treatment take?",
+            answer:
+                "Treatment usually takes between 6 and 24 months depending on the severity of the alignment problem and the treatment option selected.",
+        },
+        {
+            question: "Are braces painful?",
+            answer:
+                "You may experience mild soreness for a few days after braces are placed or adjusted. This discomfort is temporary and can usually be managed with over-the-counter pain relief.",
+        },
+        {
+            question: "Can adults get braces?",
+            answer:
+                "Absolutely. Orthodontic treatment is suitable for adults of all ages. Clear aligners and ceramic braces are especially popular among adult patients.",
+        },
+        {
+            question: "How often are follow-up appointments needed?",
+            answer:
+                "Most patients visit every 4 to 6 weeks so the orthodontist can monitor progress and make necessary adjustments.",
+        },
+    ],
+
+    whyChooseUs:
+        "Our orthodontic specialists combine years of experience with digital smile planning, 3D scanning, and advanced orthodontic technology to create personalized treatment plans. We offer everything from traditional braces to premium clear aligners, ensuring the right solution for every patient.",
+
+    duration: "6–24 months",
+
+    recovery: "Mild soreness for 2–3 days after adjustments",
+
+    priceRange: "₹30,000 - ₹2,00,000",
+};
+
+============================================================
+FILE: \src\data\treatments\rootCanal.ts
+============================================================
+
+import { TreatmentDetail } from "./types";
+
+export const rootCanal: TreatmentDetail = {
+    id: "4",
+    title: "Root Canal",
+    slug: "root-canal",
+    category: "General",
+    icon: "🔬",
+    image:
+        "/images/treatments/root-canal.png",
+    heroImage:
+        "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=1920",
+
+    tagline: "Save your natural teeth painlessly",
+
+    description:
+        "Pain-free root canal treatment using advanced rotary endodontics and microscopic precision.",
+
+    longDescription:
+        "Root canal treatment saves teeth that would otherwise need extraction due to infection or damage. Our endodontists use advanced rotary instruments and dental microscopes for exceptional precision. Modern root canal therapy has a success rate of over 95%.",
+
+    successRate: "95%+",
+
+    badge: "Pain-Free Treatment",
+
+    metaTitle: "Root Canal Treatment | Zircon Dental",
+
+    metaDescription:
+        "Painless root canal treatment with advanced rotary endodontics. 95%+ success rate.",
+
+    heroStats: [
+        {
+            label: "Pain-Free",
+            value: "100%",
+        },
+        {
+            label: "Success",
+            value: "95%+",
+        },
+        {
+            label: "Single Visit",
+            value: "Available",
+        },
+    ],
+
+    showPriceComparison: false,
+
+    priceComparison: [],
+
+    clinicPrice: {
+        min: "₹5,000",
+        max: "₹15,000",
+        currency: "per tooth",
+        inrRange: "₹5,000 – ₹15,000",
+    },
+
+    showAssessment: false,
+
+    assessmentQuestions: [],
+
+    whatIsIt: {
+        title: "What Is Root Canal Treatment?",
+        description:
+            "Root canal treatment removes infected pulp tissue from inside your tooth, cleans and shapes the canals, and seals them to prevent future infection. This saves your natural tooth and eliminates pain. With modern technology, it's as comfortable as getting a filling.",
+
+        parts: [
+            {
+                name: "Crown Restoration",
+                description: "Protective cap placed after treatment",
+            },
+            {
+                name: "Filling Material",
+                description: "Biocompatible material seals the canals",
+            },
+            {
+                name: "Cleaned Canals",
+                description: "Infected tissue removed completely",
+            },
+        ],
+    },
+
+    benefits: [
+        {
+            title: "Saves Natural Tooth",
+            description:
+                "Preserve your natural tooth instead of extraction.",
+            icon: "🦷",
+        },
+        {
+            title: "Virtually Painless",
+            description:
+                "Modern anesthesia makes the procedure comfortable.",
+            icon: "💉",
+        },
+        {
+            title: "95%+ Success Rate",
+            description:
+                "Highly predictable and reliable results.",
+            icon: "📊",
+        },
+        {
+            title: "Single Visit Option",
+            description:
+                "Many cases completed in just one appointment.",
+            icon: "⏰",
+        },
+        {
+            title: "Prevents Spread",
+            description:
+                "Stops infection from spreading to other teeth.",
+            icon: "🛡️",
+        },
+        {
+            title: "Cost Effective",
+            description:
+                "Much cheaper than extraction plus implant.",
+            icon: "💰",
+        },
+    ],
+    solutions: [
+        {
+            title: "Single Visit RCT",
+            subtitle: "Complete treatment in one appointment",
+            bestFor: "Simple cases",
+            price: "From ₹5,000",
+            features: [
+                "Completed in 60-90 mins",
+                "Rotary endodontics",
+                "Digital X-ray guided",
+                "Immediate relief",
+            ],
+        },
+        {
+            title: "Multi-Visit RCT",
+            subtitle: "For complex or infected cases",
+            bestFor: "Complex infections",
+            price: "From ₹8,000",
+            features: [
+                "Thorough disinfection",
+                "Calcium hydroxide dressing",
+                "Microscope-assisted",
+                "Higher success in complex cases",
+            ],
+        },
+        {
+            title: "Re-Treatment",
+            subtitle: "Redo of failed root canal",
+            bestFor: "Previously treated teeth",
+            price: "From ₹10,000",
+            features: [
+                "Removes old filling",
+                "Re-cleans canals",
+                "Advanced instruments",
+                "Microscope visualization",
+            ],
+        },
+        {
+            title: "RCT + Crown",
+            subtitle: "Complete root canal with crown",
+            bestFor: "Best long-term outcome",
+            price: "From ₹12,000",
+            popular: true,
+            features: [
+                "Root canal treatment",
+                "Zirconia/ceramic crown",
+                "Full protection",
+                "Best value package",
+            ],
+        },
+    ],
+
+    process: [
+        {
+            title: "Diagnosis & X-Ray",
+            duration: "15 minutes",
+            description:
+                "Digital X-ray to assess infection and plan treatment.",
+        },
+        {
+            title: "Anesthesia",
+            duration: "5 minutes",
+            description:
+                "Effective numbing for a completely pain-free experience.",
+        },
+        {
+            title: "Access & Cleaning",
+            duration: "30-45 minutes",
+            description:
+                "Remove infected pulp and clean all root canals with rotary instruments.",
+        },
+        {
+            title: "Shaping & Filling",
+            duration: "15-20 minutes",
+            description:
+                "Shape canals and fill with biocompatible material.",
+        },
+        {
+            title: "Crown Placement",
+            duration: "Next visit",
+            description:
+                "Protective crown placed to restore tooth strength and appearance.",
+        },
+    ],
+
+    pricingPlans: [
+        {
+            name: "Basic RCT",
+            price: "₹5,000",
+            unit: "per tooth",
+            features: [
+                "Single visit",
+                "Rotary cleaning",
+                "Post-op care",
+            ],
+        },
+        {
+            name: "RCT + Crown",
+            price: "₹15,000",
+            unit: "per tooth",
+            popular: true,
+            features: [
+                "Root canal",
+                "Zirconia crown",
+                "2-year warranty",
+            ],
+        },
+        {
+            name: "Micro-Endodontics",
+            price: "₹20,000",
+            unit: "per tooth",
+            features: [
+                "Microscope assisted",
+                "Complex cases",
+                "5-year warranty",
+            ],
+        },
+    ],
+
+    emiStarting: "₹1,250/month",
+
+    beforeAfterCases: [
+        {
+            title: "Infected Molar",
+            description: "Saved with single visit RCT",
+        },
+        {
+            title: "Front Tooth Trauma",
+            description: "Root canal + ceramic crown",
+        },
+    ],
+    faqs: [
+        {
+            question: "Is oral surgery painful?",
+            answer:
+                "No. Procedures are performed under local anesthesia or sedation, making treatment comfortable.",
+        },
+        {
+            question: "How long does recovery take?",
+            answer:
+                "Recovery depends on the procedure. Simple extractions usually heal within a few days, while more complex surgeries may take one to two weeks.",
+        },
+        {
+            question: "Will I need stitches?",
+            answer:
+                "Some procedures require dissolvable stitches that disappear naturally, while others may need removal during a follow-up visit.",
+        },
+        {
+            question: "Can I eat after surgery?",
+            answer:
+                "Yes. Soft, cool foods are recommended for the first few days. Your surgeon will provide detailed dietary instructions.",
+        },
+        {
+            question: "Do you provide sedation?",
+            answer:
+                "Yes. Local anesthesia, conscious sedation, and other options are available depending on your treatment and comfort level.",
+        },
+    ],
+
+    whyChooseUs:
+        "Our oral surgery team combines years of clinical expertise with advanced CBCT imaging, minimally invasive techniques, and strict sterilization protocols to deliver safe, comfortable, and predictable surgical outcomes. Every treatment plan is personalized to ensure faster healing and the best possible long-term results.",
+
+    duration: "30 minutes – 2 hours",
+    recovery: "3–7 days",
+    priceRange: "₹3,000 – ₹50,000",
+};
+
+============================================================
+FILE: \src\data\treatments\shared.ts
+============================================================
+
+import {
+    TreatmentFaq,
+    ImplantSolution,
+    ProcessStep,
+    TreatmentPlan,
+  } from "./types";
+  
+  export const commonImplantFaqs: TreatmentFaq[] = [
+    {
+      question: "How much do dental implants cost?",
+      answer:
+        "Dental implant treatment starts from ₹25,000 per implant. The final cost depends on the implant brand, bone condition, and restoration selected.",
+    },
+    {
+      question: "Is implant surgery painful?",
+      answer:
+        "No. Implant surgery is performed under local anesthesia and is generally more comfortable than most patients expect. Mild soreness for a few days is normal.",
+    },
+    {
+      question: "How long do implants last?",
+      answer:
+        "With proper oral hygiene and regular dental check-ups, implants can last decades and often a lifetime.",
+    },
+    {
+      question: "Can diabetics get implants?",
+      answer:
+        "Yes. Patients with well-controlled diabetes are usually excellent candidates for implant treatment after proper evaluation.",
+    },
+  ];
+  
+  export const standardImplantProcess: ProcessStep[] = [
+    {
+      title: "Consultation & 3D Scan",
+      duration: "45–60 mins",
+      description:
+        "Clinical examination, CBCT scan and treatment planning.",
+    },
+    {
+      title: "Implant Placement",
+      duration: "30–90 mins",
+      description:
+        "Titanium implant is precisely placed into the jawbone.",
+    },
+    {
+      title: "Healing Phase",
+      duration: "3–6 Months",
+      description:
+        "Natural bone integrates with the implant for long-term stability.",
+    },
+    {
+      title: "Final Crown",
+      duration: "1 Visit",
+      description:
+        "Custom ceramic crown is attached to complete your smile.",
+    },
+  ];
+  
+  export const singleImplantSolution: ImplantSolution = {
+    title: "Single Tooth Implant",
+    subtitle: "Permanent replacement for one missing tooth",
+    bestFor: "Single missing tooth",
+    price: "From ₹25,000",
+    features: [
+      "Natural appearance",
+      "Titanium implant",
+      "Ceramic crown",
+      "Preserves jawbone",
+    ],
+  };
+  
+  export const bridgeImplantSolution: ImplantSolution = {
+    title: "Implant Bridge",
+    subtitle: "Replace multiple missing teeth",
+    bestFor: "2–4 missing teeth",
+    price: "From ₹90,000",
+    features: [
+      "Fewer implants required",
+      "Strong & stable",
+      "Natural chewing",
+      "Long-lasting solution",
+    ],
+  };
+  
+  export const allOn4Solution: ImplantSolution = {
+    title: "All-on-4",
+    subtitle: "Complete fixed teeth on 4 implants",
+    bestFor: "Full arch replacement",
+    price: "From ₹4,50,000",
+    popular: true,
+    features: [
+      "Same-day temporary teeth",
+      "Only 4 implants",
+      "Fixed prosthesis",
+      "Premium smile restoration",
+    ],
+  };
+  
+  export const implantPricingPlans: TreatmentPlan[] = [
+    {
+      name: "Single Implant",
+      price: "₹25,000",
+      unit: "Per Implant",
+      features: [
+        "Titanium implant",
+        "Abutment",
+        "Ceramic crown",
+      ],
+    },
+    {
+      name: "Premium Implant",
+      price: "₹45,000",
+      unit: "Per Implant",
+      popular: true,
+      features: [
+        "Premium implant system",
+        "Lifetime support",
+        "Digital planning",
+      ],
+    },
+    {
+      name: "All-on-4",
+      price: "₹4,50,000",
+      unit: "Per Arch",
+      features: [
+        "Complete fixed bridge",
+        "4 implants",
+        "Temporary teeth included",
+      ],
+    },
+  ];
+
+============================================================
+FILE: \src\data\treatments\smileDesign.ts
+============================================================
+
+import { TreatmentDetail } from "./types";
+
+export const smileDesign: TreatmentDetail = {
+    id: "5",
+    title: "Smile Design",
+    slug: "smile-design",
+    category: "Cosmetic",
+    icon: "😁",
+
+    image:
+        "/images/treatments/smile-design.png",
+
+    heroImage:
+        "https://images.unsplash.com/photo-1581585095203-c0c5c6608e72?q=80&w=1920",
+
+    tagline: "Design your dream smile digitally",
+
+    description:
+        "Transform your smile with digital smile design technology. Preview your new smile before treatment.",
+
+    longDescription:
+        "Digital Smile Design (DSD) is a revolutionary approach that allows us to plan and preview your new smile before any treatment begins. Using advanced digital photography, facial analysis, and 3D software, we create a blueprint of your ideal smile.",
+
+    successRate: "99%",
+    badge: "Preview Before You Commit",
+
+    metaTitle: "Smile Design | Digital Smile Makeover | Zircon",
+
+    metaDescription:
+        "Transform your smile with digital smile design. See your new smile before treatment begins.",
+
+    heroStats: [
+        {
+            label: "Satisfaction",
+            value: "99%",
+        },
+        {
+            label: "Preview",
+            value: "Before",
+        },
+        {
+            label: "Natural",
+            value: "Results",
+        },
+    ],
+
+    showPriceComparison: false,
+    priceComparison: [],
+
+    clinicPrice: {
+        min: "₹8,000",
+        max: "₹25,000",
+        currency: "per tooth",
+        inrRange: "₹8,000 – ₹25,000",
+    },
+
+    showBrandComparison: false,
+    brandPriceList: [],
+
+    showAssessment: false,
+    assessmentQuestions: [],
+
+    whatIsIt: {
+        title: "What Is Digital Smile Design?",
+        description:
+            "Digital Smile Design uses advanced photography, facial analysis, and 3D software to create a preview of your perfect smile. You can see and approve the final result before any treatment begins.",
+    },
+
+    benefits: [
+        {
+            title: "Preview Before Treatment",
+            description:
+                "See your future smile digitally before starting treatment.",
+            icon: "👀",
+        },
+        {
+            title: "Customized Smile",
+            description:
+                "Every smile is designed according to your facial proportions.",
+            icon: "🎨",
+        },
+        {
+            title: "Natural Appearance",
+            description:
+                "Premium ceramic restorations provide realistic aesthetics.",
+            icon: "✨",
+        },
+        {
+            title: "Confidence Boost",
+            description:
+                "A beautiful smile improves confidence and personality.",
+            icon: "😁",
+        },
+        {
+            title: "Minimally Invasive",
+            description:
+                "Modern techniques preserve maximum natural tooth structure.",
+            icon: "🦷",
+        },
+        {
+            title: "Long Lasting Results",
+            description:
+                "Premium materials offer excellent durability and appearance.",
+            icon: "🏆",
+        },
+    ],
+    solutions: [
+        {
+            title: "Porcelain Veneers",
+            subtitle: "Ultra-thin porcelain shells",
+            bestFor: "Complete smile transformation",
+            price: "From ₹15,000/tooth",
+            popular: true,
+            features: [
+                "Custom shade matching",
+                "Minimal tooth preparation",
+                "10-15 year lifespan",
+                "Stain resistant",
+            ],
+        },
+        {
+            title: "Composite Bonding",
+            subtitle: "Direct tooth-colored restoration",
+            bestFor: "Minor cosmetic corrections",
+            price: "From ₹5,000/tooth",
+            features: [
+                "Single visit",
+                "No drilling",
+                "Budget friendly",
+                "Natural appearance",
+            ],
+        },
+        {
+            title: "Full Smile Makeover",
+            subtitle: "Complete cosmetic transformation",
+            bestFor: "Multiple smile concerns",
+            price: "From ₹1,50,000",
+            features: [
+                "Digital Smile Design",
+                "Premium veneers",
+                "Professional whitening",
+                "Complete makeover",
+            ],
+        },
+    ],
+
+    process: [
+        {
+            title: "Smile Analysis",
+            duration: "45 Minutes",
+            description:
+                "Facial photographs, digital scans and smile assessment are performed.",
+        },
+        {
+            title: "Digital Smile Design",
+            duration: "2-3 Days",
+            description:
+                "Your new smile is digitally designed for review before treatment.",
+        },
+        {
+            title: "Mock-up Trial",
+            duration: "30 Minutes",
+            description:
+                "Preview your future smile directly in your mouth before proceeding.",
+        },
+        {
+            title: "Treatment",
+            duration: "1-2 Visits",
+            description:
+                "Veneers, bonding, whitening or crowns are completed according to your plan.",
+        },
+        {
+            title: "Final Smile",
+            duration: "Immediate",
+            description:
+                "Enjoy a beautiful, natural-looking smile designed specifically for you.",
+        },
+    ],
+
+    pricingPlans: [
+        {
+            name: "Composite Bonding",
+            price: "₹5,000",
+            unit: "per tooth",
+            features: [
+                "Single visit",
+                "Natural finish",
+                "Affordable option",
+            ],
+        },
+        {
+            name: "Porcelain Veneers",
+            price: "₹15,000",
+            unit: "per tooth",
+            popular: true,
+            features: [
+                "Premium ceramics",
+                "Digital planning",
+                "10-year warranty",
+            ],
+        },
+        {
+            name: "Full Smile Makeover",
+            price: "₹1,50,000",
+            unit: "package",
+            features: [
+                "Smile Design",
+                "Multiple veneers",
+                "Professional whitening",
+            ],
+        },
+    ],
+
+    emiStarting: "₹3,000/month",
+
+    beforeAfterCases: [
+        {
+            title: "Smile Makeover",
+            description:
+                "Complete smile transformation with porcelain veneers.",
+        },
+        {
+            title: "Gap Closure",
+            description:
+                "Natural-looking closure using composite bonding.",
+        },
+        {
+            title: "Discolored Teeth",
+            description:
+                "Bright smile achieved using veneers and whitening.",
+        },
+    ],
+    faqs: [
+        {
+            question: "What is Digital Smile Design?",
+            answer:
+                "Digital Smile Design (DSD) is an advanced planning technique that allows you to preview your future smile before treatment begins using digital scans, facial analysis, and smile simulation.",
+        },
+        {
+            question: "Can I see my new smile before treatment?",
+            answer:
+                "Yes. We create a digital preview and, in many cases, a mock-up so you can visualize your new smile before making any permanent changes.",
+        },
+        {
+            question: "How long does a smile makeover take?",
+            answer:
+                "Most smile makeover treatments are completed within 1–3 weeks, depending on the number of teeth and procedures involved.",
+        },
+        {
+            question: "Are veneers permanent?",
+            answer:
+                "Porcelain veneers are a long-lasting cosmetic solution and can last 10–15 years or longer with proper care and regular dental check-ups.",
+        },
+        {
+            question: "Will my new smile look natural?",
+            answer:
+                "Absolutely. Every smile is customized according to your facial features, lip line, skin tone, and natural tooth proportions to achieve highly aesthetic results.",
+        },
+    ],
+
+    whyChooseUs:
+        "Our cosmetic dentistry team combines Digital Smile Design, premium ceramic materials, advanced photography, and artistic expertise to create beautiful, natural-looking smiles. Every treatment is personalized to complement your facial features while preserving maximum natural tooth structure.",
+
+    duration: "1–3 Weeks",
+    recovery: "Little to No Downtime",
+    priceRange: "₹5,000 – ₹1,50,000",
+};
+
+============================================================
+FILE: \src\data\treatments\teethWhitening.ts
+============================================================
+
+import { TreatmentDetail } from "./types";
+
+export const teethWhitening: TreatmentDetail = {
+    id: "6",
+    title: "Teeth Whitening",
+    slug: "teeth-whitening",
+    category: "Cosmetic",
+    icon: "✨",
+
+    image:
+        "/images/treatments/teeth-whitening.png",
+
+    heroImage:
+        "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=1920",
+
+    tagline: "Brighter smile in just 60 minutes",
+
+    description:
+        "Professional teeth whitening for a dramatically brighter smile in just one visit.",
+
+    longDescription:
+        "Our professional teeth whitening treatments safely remove stains caused by coffee, tea, tobacco, aging, and food pigments. Using dentist-supervised whitening systems, we can brighten your smile by up to 8 shades in a single appointment while protecting your enamel.",
+
+    successRate: "100%",
+    badge: "Instant Results",
+
+    metaTitle: "Professional Teeth Whitening | Zircon Dental",
+
+    metaDescription:
+        "Professional LED teeth whitening with instant results. Brighten your smile safely by up to 8 shades in one visit.",
+
+    heroStats: [
+        {
+            label: "Shades",
+            value: "8+",
+        },
+        {
+            label: "Time",
+            value: "60 Min",
+        },
+        {
+            label: "Safe",
+            value: "100%",
+        },
+    ],
+
+    showPriceComparison: false,
+    priceComparison: [],
+
+    clinicPrice: {
+        min: "₹8,000",
+        max: "₹20,000",
+        currency: "per session",
+        inrRange: "₹8,000 – ₹20,000",
+    },
+
+    showBrandComparison: false,
+    brandPriceList: [],
+
+    showAssessment: false,
+    assessmentQuestions: [],
+
+    whatIsIt: {
+        title: "What Is Professional Teeth Whitening?",
+        description:
+            "Professional teeth whitening uses dentist-approved whitening gels activated with advanced LED technology to safely remove deep stains and discoloration without damaging your enamel.",
+    },
+
+    benefits: [
+        {
+            title: "Instant Results",
+            description: "Notice a visibly brighter smile after just one session.",
+            icon: "⚡",
+        },
+        {
+            title: "Up To 8 Shades Whiter",
+            description: "Achieve dramatic whitening beyond over-the-counter products.",
+            icon: "✨",
+        },
+        {
+            title: "Safe Treatment",
+            description: "Performed under professional supervision for maximum safety.",
+            icon: "🛡️",
+        },
+        {
+            title: "Minimal Sensitivity",
+            description: "Advanced whitening systems reduce post-treatment sensitivity.",
+            icon: "😊",
+        },
+        {
+            title: "Long Lasting",
+            description: "Results can last months with proper oral care.",
+            icon: "🦷",
+        },
+        {
+            title: "Boost Confidence",
+            description: "A brighter smile enhances your appearance and confidence.",
+            icon: "😁",
+        },
+    ],
+    solutions: [
+        {
+            title: "In-Office Whitening",
+            subtitle: "Instant results in one appointment",
+            bestFor: "Quick smile enhancement",
+            price: "From ₹12,000",
+            popular: true,
+            features: [
+                "LED activated whitening",
+                "Up to 8 shades brighter",
+                "60-minute procedure",
+                "Immediate results",
+            ],
+        },
+        {
+            title: "Take-Home Whitening Kit",
+            subtitle: "Professional whitening at home",
+            bestFor: "Gradual whitening",
+            price: "From ₹8,000",
+            features: [
+                "Custom whitening trays",
+                "Professional whitening gel",
+                "2-week treatment",
+                "Convenient home use",
+            ],
+        },
+        {
+            title: "Premium Whitening Package",
+            subtitle: "In-office + home maintenance",
+            bestFor: "Maximum long-term whitening",
+            price: "From ₹18,000",
+            features: [
+                "LED whitening session",
+                "Custom take-home kit",
+                "Long-lasting results",
+                "Best overall value",
+            ],
+        },
+    ],
+
+    process: [
+        {
+            title: "Smile Assessment",
+            duration: "10 Minutes",
+            description:
+                "Evaluate tooth shade, oral health, and determine expected whitening results.",
+        },
+        {
+            title: "Professional Cleaning",
+            duration: "15 Minutes",
+            description:
+                "Remove plaque and surface stains before whitening treatment.",
+        },
+        {
+            title: "Gum Protection",
+            duration: "5 Minutes",
+            description:
+                "Protective barrier is applied to keep gums safe during treatment.",
+        },
+        {
+            title: "Whitening Procedure",
+            duration: "45–60 Minutes",
+            description:
+                "Professional whitening gel is activated using advanced LED technology.",
+        },
+        {
+            title: "Final Shade Comparison",
+            duration: "10 Minutes",
+            description:
+                "Compare before-and-after shades and receive aftercare instructions.",
+        },
+    ],
+
+    pricingPlans: [
+        {
+            name: "Take-Home Kit",
+            price: "₹8,000",
+            unit: "kit",
+            features: [
+                "Custom trays",
+                "Professional gel",
+                "Home treatment",
+            ],
+        },
+        {
+            name: "In-Office Whitening",
+            price: "₹12,000",
+            unit: "session",
+            popular: true,
+            features: [
+                "LED activated",
+                "Instant whitening",
+                "Professional supervision",
+            ],
+        },
+        {
+            name: "Premium Package",
+            price: "₹18,000",
+            unit: "package",
+            features: [
+                "Clinic whitening",
+                "Take-home maintenance kit",
+                "Longest-lasting results",
+            ],
+        },
+    ],
+
+    emiStarting: "₹1,000/month",
+
+    beforeAfterCases: [
+        {
+            title: "Coffee Stains",
+            description:
+                "Smile brightened by over 7 shades after one session.",
+        },
+        {
+            title: "Smoking Stains",
+            description:
+                "Deep discoloration significantly reduced with professional whitening.",
+        },
+        {
+            title: "Wedding Smile",
+            description:
+                "Instant whitening completed before a special occasion.",
+        },
+    ],
+    faqs: [
+        {
+            question: "How long do whitening results last?",
+            answer:
+                "Professional teeth whitening results typically last between 6 months and 2 years depending on your diet, oral hygiene, and lifestyle habits. Regular touch-ups help maintain your brighter smile.",
+        },
+        {
+            question: "Is professional teeth whitening safe?",
+            answer:
+                "Yes. Our whitening treatments are completely safe when performed under the supervision of our dentists. The products are specially formulated to protect your enamel while effectively removing stains.",
+        },
+        {
+            question: "Will my teeth become sensitive?",
+            answer:
+                "Some patients may experience mild temporary sensitivity, but it usually disappears within 24–48 hours. We use advanced desensitizing agents to minimize discomfort.",
+        },
+        {
+            question: "Can whitening remove all stains?",
+            answer:
+                "Professional whitening is highly effective for stains caused by coffee, tea, tobacco, wine, and aging. Certain internal stains may require veneers or other cosmetic treatments.",
+        },
+        {
+            question: "How many shades whiter can my teeth become?",
+            answer:
+                "Most patients achieve an improvement of 4–8 shades after a professional whitening session, depending on their original tooth color and type of staining.",
+        },
+    ],
+
+    whyChooseUs:
+        "Our cosmetic dentistry team uses premium professional whitening systems with advanced LED technology to safely brighten your smile while protecting your enamel. Every treatment is customized to achieve natural-looking, long-lasting results with minimal sensitivity.",
+
+    duration: "60–90 Minutes",
+    recovery: "No Downtime",
+    priceRange: "₹8,000 – ₹20,000",
+};
+
+============================================================
+FILE: \src\data\treatments\types.ts
+============================================================
+
+export interface TreatmentFaq {
+    question: string;
+    answer: string;
+  }
+  
+  export interface ImplantSolution {
+    title: string;
+    subtitle: string;
+    bestFor: string;
+    price: string;
+    features: string[];
+    popular?: boolean;
+  }
+  
+  export interface ProcessStep {
+    title: string;
+    duration: string;
+    description: string;
+  }
+  
+  export interface PriceComparisonItem {
+    country: string;
+    flag: string;
+    price: string;
+  }
+  
+  export interface TreatmentPlan {
+    name: string;
+    price: string;
+    unit: string;
+    features: string[];
+    popular?: boolean;
+  }
+  
+  export interface BrandPriceItem {
+    brand: string;
+    type: string;
+    priceINR: string;
+    priceUSD: string;
+    warranty: string;
+    tier: "budget" | "standard" | "premium";
+  }
+  
+  export interface TreatmentDetail {
+    id: string;
+    title: string;
+    slug: string;
+    category: string;
+    icon: string;
+    image: string;
+    heroImage: string;
+    tagline: string;
+    description: string;
+    longDescription: string;
+    successRate: string;
+   badge: string;
+    metaTitle: string;
+    metaDescription: string;
+  
+    heroStats: {
+      label: string;
+      value: string;
+    }[];
+  
+    showPriceComparison: boolean;
+    priceComparison: PriceComparisonItem[];
+  
+    clinicPrice: {
+      min: string;
+      max: string;
+      currency: string;
+      inrRange: string;
+    };
+  
+    showBrandComparison?: boolean;
+    brandPriceList?: BrandPriceItem[];
+  
+    showAssessment: boolean;
+  
+    assessmentQuestions: {
+      question: string;
+      options: string[];
+    }[];
+  
+    whatIsIt: {
+      title: string;
+      description: string;
+      parts?: {
+        name: string;
+        description: string;
+      }[];
+    };
+  
+    benefits: {
+      title: string;
+      description: string;
+      icon: string;
+    }[];
+  
+    solutions: ImplantSolution[];
+  
+    process: ProcessStep[];
+  
+    pricingPlans: TreatmentPlan[];
+  
+    emiStarting: string;
+  
+    beforeAfterCases: {
+      title: string;
+      description: string;
+    }[];
+  
+    faqs: TreatmentFaq[];
+  
+    whyChooseUs: string;
+  
+    duration: string;
+    recovery: string;
+    priceRange: string;
+  }

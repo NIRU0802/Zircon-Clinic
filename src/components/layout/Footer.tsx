@@ -221,10 +221,21 @@ const Footer = () => {
                   <FiMapPin className="w-4 h-4 text-primary-400" />
                 </div>
                 <div>
-                  <p className="text-white text-xs font-semibold uppercase tracking-wider mb-1">Location</p>
-                  Shop No. 72, Western Avenue,<br />
-                  Opp. Phoenix Mall Road,<br />
-                  Wakad, Pune - 411057
+                  <p className="text-white text-xs font-semibold uppercase tracking-wider mb-1">
+                    Location
+                  </p>
+
+                  <p className="text-gray-300 leading-relaxed">
+                    <span className="font-semibold text-white">
+                      Zircon Dental & Implant Studio
+                    </span>
+                    <br />
+                    Shop No. 72, Western Avenue,
+                    <br />
+                    Opp. Phoenix Mall Road,
+                    <br />
+                    Wakad, Pune 411057
+                  </p>
                 </div>
               </a>
 

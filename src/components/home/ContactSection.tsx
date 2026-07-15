@@ -40,7 +40,23 @@ const ContactSection = () => {
                 </a>
                 <a href={SITE_CONFIG.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 text-gray-400 text-sm hover:text-primary-400 transition-colors group">
                   <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0"><FiMapPin className="w-5 h-5 text-primary-400" /></div>
-                  <div><p className="text-white text-xs font-semibold uppercase tracking-wider mb-1">Visit Us</p>Shop No. 72, Western Avenue,<br />Opp. Phoenix Mall Road, Wakad, Pune</div>
+                  <div>
+                    <p className="text-white text-xs font-semibold uppercase tracking-wider mb-1">
+                      Visit Us
+                    </p>
+
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      <span className="font-semibold text-white">
+                        Zircon Dental & Implant Studio
+                      </span>
+                      <br />
+                      Shop No. 72, Western Avenue,
+                      <br />
+                      Opp. Phoenix Mall Road,
+                      <br />
+                      Wakad, Pune 411057
+                    </p>
+                  </div>
                 </a>
                 <div className="flex items-start gap-4 text-gray-400 text-sm">
                   <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0"><FiClock className="w-5 h-5 text-primary-400" /></div>

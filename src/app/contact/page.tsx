@@ -285,11 +285,15 @@ export default function ContactPage() {
                         Visit Us
                       </p>
                       <p className="text-white text-sm leading-relaxed">
+                        <span className="font-semibold">
+                          Zircon Dental & Implant Studio
+                        </span>
+                        <br />
                         Shop No. 72, Western Avenue,
                         <br />
                         Opp. Phoenix Mall Road,
                         <br />
-                        Wakad, Pune - 411057
+                        Wakad, Pune 411057
                       </p>
                     </div>
                   </a>

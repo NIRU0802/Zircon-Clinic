@@ -1,10 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+import type { NextConfig } from "next";
 
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
 
   typescript: {
     ignoreBuildErrors: false,
@@ -18,7 +15,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "**.unsplash.com",
+        hostname: "*.unsplash.com",
       },
       {
         protocol: "https",
@@ -48,4 +45,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

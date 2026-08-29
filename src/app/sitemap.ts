@@ -1,77 +1,36 @@
-import { MetadataRoute } from "next";
-import { treatments } from "@/data/treatments";
+import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://zircondentalpune.com";
+const SITE_URL = "https://zircondentalpune.com";
 
-// ✅ Must have "export default" for Next.js sitemap
+const staticPages = [
+  "",
+  "about",
+  "treatments",
+  "blog",
+  "gallery",
+  "pricing",
+  "contact",
+  "privacy",
+  "terms",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Static pages
-  const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: BASE_URL,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/treatments`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/pricing`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/gallery`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${BASE_URL}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/terms`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-  ];
+  const now = new Date();
 
-  // Dynamic treatment pages
-  const treatmentPages: MetadataRoute.Sitemap = treatments.map(
-    (treatment) => ({
-      url: `${BASE_URL}/treatments/${treatment.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    })
-  );
-
-  return [...staticPages, ...treatmentPages];
+  return staticPages.map((page) => ({
+    url: page ? `${SITE_URL}/${page}` : SITE_URL,
+    lastModified: now,
+    changeFrequency:
+      page === "blog" ? "weekly" : "monthly",
+    priority:
+      page === ""
+        ? 1
+        : page === "treatments"
+          ? 0.95
+          : page === "contact"
+            ? 0.9
+            : page === "about"
+              ? 0.8
+              : 0.6,
+  }));
 }

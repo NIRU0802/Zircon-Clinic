@@ -1,25 +1,19 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+
+const SITE_URL = "https://zircondentalpune.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-        disallow: [
-          "/api/",
-          "/_next/",
-          "/admin/",
-          "/*.json$",
-        ],
-      },
-      {
-        userAgent: "Googlebot",
-        allow: "/",
-        crawlDelay: 2,
-      },
-    ],
-    sitemap: "https://zircondentalpune.com/sitemap.xml",
-    host: "https://zircondentalpune.com",
+    rules: {
+      userAgent: "*",
+      allow: "/",
+      disallow: [
+        "/api/",
+        "/admin/",
+        "/private/",
+      ],
+    },
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   };
 }

@@ -1,4 +1,4 @@
-import { CLINIC, getCanonicalUrl } from "@/utils/seo";
+import { getCanonicalUrl } from "@/utils/seo";
 
 const BASE_URL = "https://zircondentalpune.com";
 const DENTIST_ID = `${BASE_URL}/#dentist`;

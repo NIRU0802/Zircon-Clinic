@@ -27,44 +27,50 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 const [status, setStatus] = useState<"success" | "error" | null>(null);
 
 const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-event.preventDefault();
-
-setIsSubmitting(true);
-setStatus(null);
-
-const form = event.currentTarget;
-const formData = new FormData(form);
-
-formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-formData.append(
+  event.preventDefault();
+  
+  setIsSubmitting(true);
+  setStatus(null);
+  
+  const form = event.currentTarget;
+  const formData = new FormData(form);
+  
+  formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+  formData.append(
   "subject",
   "New Dental Enquiry - Zircon Dental & Implant Studio"
-);
-formData.append("from_name", "Zircon Dental Website");
-
-try {
+  );
+  formData.append("from_name", "Zircon Dental Website");
+  
+  try {
   const response = await fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    body: formData,
+  method: "POST",
+  headers: {
+  Accept: "application/json",
+  },
+  body: formData,
   });
-
+  
   const data = await response.json();
-
-  if (data.success) {
+  
+  console.log("Web3Forms HTTP status:", response.status);
+  console.log("Web3Forms response:", data);
+  
+  if (response.ok && data.success) {
     setStatus("success");
     form.reset();
   } else {
-    console.error("Web3Forms error:", data);
+    console.error("Web3Forms rejected submission:", data);
     setStatus("error");
   }
-} catch (error) {
-  console.error("Web3Forms submission error:", error);
+  
+  } catch (error) {
+  console.error("Web3Forms network error:", error);
   setStatus("error");
-} finally {
+  } finally {
   setIsSubmitting(false);
-}
-
-};
+  }
+  };
 
 return ( <section className="section-padding bg-white relative overflow-hidden"> <div className="container-custom"> <SectionTitle
        badge="Wakad, Pune — Opp. Phoenix Mall"
@@ -72,7 +78,7 @@ return ( <section className="section-padding bg-white relative overflow-hidden">
        title='Get In <span class="text-gradient">Touch</span> With Zircon Dental'
        description="Visit our state-of-the-art clinic at Wakad or call us to book your appointment. Free consultation available."
      />
-     
+
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
       {/* Contact Information */}
       <motion.div

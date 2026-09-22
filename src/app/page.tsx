@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "zircon dental wakad",
   ],
   alternates: {
-    canonical: "https://zircondentalpune.com",
+    canonical: "https://www.zircondentalandimplantstudio.com",
   },
 };
 

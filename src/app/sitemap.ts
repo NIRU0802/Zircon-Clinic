@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { treatments } from "@/data/treatments";
 
-const SITE_URL = "https://zircondentalpune.com";
+const SITE_URL = "https://www.zircondentalandimplantstudio.com";
 
 const staticPages = [
   "",

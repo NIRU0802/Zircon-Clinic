@@ -35,7 +35,6 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-// ✅ Viewport config
 export const viewport: Viewport = {
   themeColor: "#0d9488",
   width: "device-width",
@@ -43,18 +42,13 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-// ✅ Full SEO Metadata
 export const metadata: Metadata = {
-  // Basic
   title: {
-    default:
-      "Zircon Dental & Implant Clinic | Best Dentist in Wakad, Pune",
+    default: "Zircon Dental & Implant Clinic | Best Dentist in Wakad, Pune",
     template: "%s | Zircon Dental Wakad, Pune",
   },
   description:
     "Zircon Dental & Implant Clinic in Wakad, Pune — Expert dental implants, smile design, root canal, orthodontics & oral surgery. 18+ years experience. 98.5% success rate. Free consultation. Call +91 75586 97707.",
-
-  // Keywords
   keywords: [
     "dentist in wakad pune",
     "dental clinic wakad",
@@ -79,8 +73,6 @@ export const metadata: Metadata = {
     "same day teeth pune",
     "full mouth rehabilitation pune",
   ],
-
-  // Authors & Creator
   authors: [
     {
       name: "Zircon Dental & Implant Clinic",
@@ -89,8 +81,6 @@ export const metadata: Metadata = {
   ],
   creator: "Zircon Dental & Implant Clinic",
   publisher: "Zircon Dental & Implant Clinic",
-
-  // Robots
   robots: {
     index: true,
     follow: true,
@@ -104,15 +94,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
-  // Open Graph
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://zircondentalpune.com",
     siteName: "Zircon Dental & Implant Clinic",
-    title:
-      "Zircon Dental & Implant Clinic | Best Dentist in Wakad, Pune",
+    title: "Zircon Dental & Implant Clinic | Best Dentist in Wakad, Pune",
     description:
       "Expert dental implants, smile design & complete dental care at Wakad, Pune. 18+ years experience. 98.5% success rate. Free consultation available.",
     images: [
@@ -125,39 +112,26 @@ export const metadata: Metadata = {
       },
     ],
   },
-
-  // Twitter
   twitter: {
     card: "summary_large_image",
-    title:
-      "Zircon Dental & Implant Clinic | Best Dentist in Wakad, Pune",
+    title: "Zircon Dental & Implant Clinic | Best Dentist in Wakad, Pune",
     description:
       "Expert dental implants & cosmetic dentistry in Wakad, Pune. Free consultation. Call +91 75586 97707.",
     images: ["https://zircondentalpune.com/og-image.jpg"],
     creator: "@zircondentalpune",
     site: "@zircondentalpune",
   },
-
-  // Canonical
   alternates: {
     canonical: "https://zircondentalpune.com",
     languages: {
       "en-IN": "https://zircondentalpune.com",
     },
   },
-
-  // App
   applicationName: "Zircon Dental & Implant Clinic",
   category: "Healthcare, Dental",
-
-  // Verification (add your actual codes)
   verification: {
     google: "YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
-    // yandex: "your-yandex-code",
-    // bing: "your-bing-code",
   },
-
-  // Icons
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -175,12 +149,9 @@ export const metadata: Metadata = {
     ],
     shortcut: "/favicon.ico",
   },
-
-  // Manifest
   manifest: "/manifest.json",
 };
 
-// ✅ FAQ content lives here so it stays in sync with generateFAQSchema
 const HOME_FAQS = [
   {
     question: "How much do dental implants cost in Pune?",
@@ -227,18 +198,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* ✅ Entity Layer: Dentist/LocalBusiness, Organization, WebSite, Doctors */}
         <JsonLd data={generateDentistSchema()} />
         <JsonLd data={generateOrganizationSchema()} />
         <JsonLd data={generateWebSiteSchema()} />
         {generateDoctorSchemas().map((doc, i) => (
           <JsonLd key={i} data={doc} />
         ))}
-
-        {/* ✅ FAQ Schema for Home Page */}
         <JsonLd data={generateFAQSchema(HOME_FAQS)} />
-
-        {/* ✅ BreadcrumbList Schema */}
         <JsonLd data={generateBreadcrumbSchema(HOME_BREADCRUMBS)} />
       </head>
       <body className={inter.className}>

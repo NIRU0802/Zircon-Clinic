@@ -1,6 +1,9 @@
+// F:\Work\ANITIGRAVITY\clinic-site\zircon\src\utils\seo.ts
+
+
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://zircondentalpune.com";
+export const SITE_URL = "https://www.zircondentalandimplantstudio.com";
 
 export const CLINIC_NAME = "Zircon Dental & Implant Clinic";
 

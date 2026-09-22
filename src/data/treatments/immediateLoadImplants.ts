@@ -201,7 +201,7 @@ export const immediateLoadImplants: TreatmentDetail = {
             title: "Immediate Full Arch",
             subtitle: "Same-day complete smile",
             bestFor: "Patients with complete tooth loss",
-            price: "From ₹2,50,000",
+            price: "From ₹3,50,000",
             features: [
                 "Full arch restoration",
                 "Immediate fixed teeth",

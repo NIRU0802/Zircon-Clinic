@@ -23,7 +23,7 @@ const Layout = ({ children }: LayoutProps) => {
       <ScrollProgress />
       <ScrollToTop />
       <Navbar />
-      <main className="overflow-hidden">{children}</main>
+      <main>{children}</main>
       <Footer />
       <BackToTop />
       <FloatingWhatsApp />

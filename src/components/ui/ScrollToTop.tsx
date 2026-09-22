@@ -9,11 +9,21 @@ export default function ScrollToTop() {
   useEffect(() => {
     if (window.location.hash) return;
 
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "instant",
+    window.history.scrollRestoration = "manual";
+
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    scrollToTop();
+
+    const frame = requestAnimationFrame(() => {
+      scrollToTop();
     });
+
+    return () => cancelAnimationFrame(frame);
   }, [pathname]);
 
   return null;

@@ -10,25 +10,31 @@ export const useSmoothScroll = () => {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      easing: (t: number) =>
+        Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
       touchMultiplier: 2,
     });
 
-    // ✅ Scroll to top on route change
-    lenis.scrollTo(0, { immediate: true });
+    // Always start a new page at the top.
+    lenis.scrollTo(0, {
+      immediate: true,
+    });
 
-    function raf(time: number) {
+    let animationFrameId: number;
+
+    const raf = (time: number) => {
       lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+      animationFrameId = requestAnimationFrame(raf);
+    };
 
-    requestAnimationFrame(raf);
+    animationFrameId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(animationFrameId);
       lenis.destroy();
     };
-  }, [pathname]); // ✅ Re-run when pathname changes
+  }, [pathname]);
 };

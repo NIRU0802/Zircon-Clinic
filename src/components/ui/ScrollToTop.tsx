@@ -7,13 +7,13 @@ export default function ScrollToTop() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Allow browser anchor links such as /about#our-team
-    if (window.location.hash) {
-      return;
-    }
+    if (window.location.hash) return;
 
-    // Always start a newly navigated page at the top
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
   }, [pathname]);
 
   return null;

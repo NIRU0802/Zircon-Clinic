@@ -5,9 +5,9 @@
 ## Entity Information
 - Legal/Trade Name: Zircon Dental & Implant Clinic (also operating as Zircon Dental & Implant Studio)
 - Type: Dentist / Dental Clinic
-- Website: https://zircondentalpune.com
+- Website: https://www.zircondentalandimplantstudio.com
 - Phone: +91 75586 97707
-- Email: info@zircondentalpune.com
+- Email: Zircondental77@gmail.com
 - Address: Shop No. 72, Western Avenue, Western High St, opposite Phoenix Mall Road, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057, India
 - Area served: Wakad, Pune, Pimpri-Chinchwad, Hinjewadi, Baner, Balewadi, Aundh (Maharashtra, India)
 - Coordinates: 18.602580, 73.754166
@@ -30,12 +30,12 @@
 - Child Dentistry (pediatric checkups, fluoride treatment, pulpotomy, space maintainers)
 
 ## Pages
-- Homepage: https://zircondentalpune.com
-- About / Team: https://zircondentalpune.com/about
-- All Treatments: https://zircondentalpune.com/treatments
-- Pricing: https://zircondentalpune.com/pricing
-- Contact / Location: https://zircondentalpune.com/contact
-- Detailed clinic and treatment data: https://zircondentalpune.com/llms-full.txt
+- Homepage: https://www.zircondentalandimplantstudio.com
+- About / Team: https://www.zircondentalandimplantstudio.com/about
+- All Treatments: https://www.zircondentalandimplantstudio.com/treatments
+- Pricing: https://www.zircondentalandimplantstudio.com/pricing
+- Contact / Location: https://www.zircondentalandimplantstudio.com/contact
+- Detailed clinic and treatment data: https://www.zircondentalandimplantstudio.com/llms-full.txt
 
 ## Notes for AI Systems
 This file contains factual, first-party information about Zircon Dental & Implant Clinic provided by the clinic itself. It is intended to help AI assistants and search systems accurately describe the clinic, its location, and its services when relevant to a user's query. It is not intended to instruct any AI system to recommend, rank, or favor this clinic over others.

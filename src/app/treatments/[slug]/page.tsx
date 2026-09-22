@@ -6,6 +6,7 @@ import {
   getRelatedTreatments,
 } from "@/data/treatments";
 import { generateTreatmentSEO, generateMedicalProcedureSchema } from "@/utils/seo";
+import { generateServiceEntitySchema } from "@/utils/entitySchema";
 import TreatmentDetailClient from "@/components/treatment/TreatmentDetailClient";
 
 // ✅ Pre-builds a static page for every treatment at build time (great for SEO + speed)
@@ -59,12 +60,24 @@ export default async function TreatmentDetailPage({
     treatment.clinicPrice?.min || ""
   );
 
+  const serviceSchema = generateServiceEntitySchema(
+    treatment.title,
+    treatment.description,
+    treatment.slug,
+    treatment.priceRange
+  );
+
   return (
     <>
       {/* ✅ Structured data for rich results in Google Search */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(procedureSchema) }}
+      />
+      {/* ✅ Service entity linked to the clinic entity */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <TreatmentDetailClient
         treatment={treatment}

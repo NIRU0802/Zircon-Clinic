@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { treatments } from "@/data/treatments";
 
 const SITE_URL = "https://zircondentalpune.com";
 
@@ -17,11 +18,10 @@ const staticPages = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  return staticPages.map((page) => ({
+  const staticUrls: MetadataRoute.Sitemap = staticPages.map((page) => ({
     url: page ? `${SITE_URL}/${page}` : SITE_URL,
     lastModified: now,
-    changeFrequency:
-      page === "blog" ? "weekly" : "monthly",
+    changeFrequency: page === "blog" ? "weekly" : "monthly",
     priority:
       page === ""
         ? 1
@@ -33,4 +33,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
               ? 0.8
               : 0.6,
   }));
+
+  const treatmentUrls: MetadataRoute.Sitemap = treatments.map(
+    (treatment) => ({
+      url: `${SITE_URL}/treatments/${treatment.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    })
+  );
+
+  return [...staticUrls, ...treatmentUrls];
 }

@@ -6,6 +6,15 @@ import {
 } from "next/font/google";
 import "@/styles/globals.css";
 import { ImageKitProvider } from "@imagekit/next";
+import {
+  generateDentistSchema,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+  generateDoctorSchemas,
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+} from "@/utils/seo";
+import JsonLd from "@/components/seo/JsonLd";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -171,6 +180,41 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
+// ✅ FAQ content lives here so it stays in sync with generateFAQSchema
+const HOME_FAQS = [
+  {
+    question: "How much do dental implants cost in Pune?",
+    answer:
+      "Dental implants at Zircon Dental, Wakad start from ₹25,000 per implant. All-on-4 implants start from ₹4,50,000 per arch. We offer 0% EMI options and free consultation.",
+  },
+  {
+    question: "Is consultation free at Zircon Dental Wakad?",
+    answer:
+      "Yes, your first consultation at Zircon Dental & Implant Clinic, Wakad, Pune is completely free. This includes examination, basic X-ray, treatment planning and cost estimate.",
+  },
+  {
+    question: "What is the success rate of dental implants at Zircon Dental?",
+    answer:
+      "Zircon Dental maintains a 98.5% success rate for dental implants, which is among the highest in Pune. We use internationally certified titanium implant systems.",
+  },
+  {
+    question: "Where is Zircon Dental Clinic located in Pune?",
+    answer:
+      "Zircon Dental & Implant Clinic is located at Shop No. 72, Western Avenue, opposite Phoenix Mall Road, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Pune - 411057.",
+  },
+  {
+    question: "Do you offer same-day dental implants in Pune?",
+    answer:
+      "Yes! With our All-on-4 immediate loading protocol, you can walk out with a complete set of fixed teeth on the same day as surgery at our Wakad clinic.",
+  },
+];
+
+const HOME_BREADCRUMBS = [
+  { name: "Home", url: "https://zircondentalpune.com" },
+  { name: "Treatments", url: "https://zircondentalpune.com/treatments" },
+  { name: "Pricing", url: "https://zircondentalpune.com/pricing" },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -183,245 +227,19 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* ✅ Local Business Schema - Most important for dental SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Dentist",
-              "@id": "https://zircondentalpune.com/#dentist",
-              name: "Zircon Dental & Implant Clinic",
-              alternateName: "Zircon Dental Wakad",
-              description:
-                "Premier dental implant clinic in Wakad, Pune offering dental implants, smile design, root canal, orthodontics and oral surgery.",
-              url: "https://zircondentalpune.com",
-              logo: "https://zircondentalpune.com/logo.png",
-              image: "https://zircondentalpune.com/og-image.jpg",
-              telephone: "+917558697707",
-              email: "info@zircondentalpune.com",
-              currenciesAccepted: "INR",
-              paymentAccepted:
-                "Cash, Credit Card, Debit Card, UPI, EMI",
-              priceRange: "₹₹",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress:
-                  "Shop No. 72, WESTERN AVENU, Western High St, opp. Phoenix Mall Road, Shankar Kalat Nagar",
-                addressLocality: "Wakad",
-                addressRegion: "Maharashtra",
-                postalCode: "411057",
-                addressCountry: "IN",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: "18.5989",
-                longitude: "73.7638",
-              },
-              hasMap:
-                "https://www.google.com/maps/place/Wakad,+Pune",
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                  ],
-                  opens: "09:00",
-                  closes: "21:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "Saturday",
-                  opens: "09:00",
-                  closes: "19:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "Sunday",
-                  opens: "10:00",
-                  closes: "14:00",
-                },
-              ],
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.9",
-                reviewCount: "500",
-                bestRating: "5",
-                worstRating: "1",
-              },
-              medicalSpecialty: [
-                "Dentistry",
-                "Oral Surgery",
-                "Orthodontics",
-                "Implantology",
-                "Cosmetic Dentistry",
-              ],
-              availableService: [
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Dental Implants",
-                  description:
-                    "Permanent tooth replacement with titanium implants",
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  name: "All-on-4 Implants",
-                  description:
-                    "Full arch restoration with 4 implants, same-day teeth",
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Root Canal Treatment",
-                  description:
-                    "Pain-free root canal with rotary endodontics",
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Smile Design",
-                  description:
-                    "Digital smile makeover with veneers and cosmetic dentistry",
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Teeth Whitening",
-                  description:
-                    "Professional LED teeth whitening, up to 8 shades brighter",
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Orthodontics",
-                  description:
-                    "Braces and clear aligners for teeth straightening",
-                },
-              ],
-              sameAs: [
-                "https://instagram.com/zircondentalpune",
-                "https://facebook.com/zircondentalpune",
-                "https://youtube.com/@zircondentalpune",
-              ],
-            }),
-          }}
-        />
-
-        {/* ✅ Doctor/Physician Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Physician",
-              name: "Dr. Akansha Lakde",
-              jobTitle:
-                "Chief Dental Surgeon & Implantologist",
-              description:
-                "Renowned oral and maxillofacial surgeon with 18+ years experience in dental implants and full mouth rehabilitation at Zircon Dental, Wakad, Pune.",
-              worksFor: {
-                "@type": "Dentist",
-                name: "Zircon Dental & Implant Clinic",
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Wakad, Pune",
-                  addressRegion: "Maharashtra",
-                  addressCountry: "IN",
-                },
-              },
-              medicalSpecialty: "Dentistry",
-              hasCredential: [
-                "MDS - Oral & Maxillofacial Surgery",
-                "Fellow - International Congress of Oral Implantologists (ICOI)",
-                "Certified - Advanced Implantology, Germany",
-              ],
-            }),
-          }}
-        />
+        {/* ✅ Entity Layer: Dentist/LocalBusiness, Organization, WebSite, Doctors */}
+        <JsonLd data={generateDentistSchema()} />
+        <JsonLd data={generateOrganizationSchema()} />
+        <JsonLd data={generateWebSiteSchema()} />
+        {generateDoctorSchemas().map((doc, i) => (
+          <JsonLd key={i} data={doc} />
+        ))}
 
         {/* ✅ FAQ Schema for Home Page */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "How much do dental implants cost in Pune?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Dental implants at Zircon Dental, Wakad start from ₹25,000 per implant. All-on-4 implants start from ₹4,50,000 per arch. We offer 0% EMI options and free consultation.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is consultation free at Zircon Dental Wakad?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, your first consultation at Zircon Dental & Implant Clinic, Wakad, Pune is completely free. This includes examination, basic X-ray, treatment planning and cost estimate.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "What is the success rate of dental implants at Zircon Dental?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Zircon Dental maintains a 98.5% success rate for dental implants, which is among the highest in Pune. We use internationally certified titanium implant systems.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Where is Zircon Dental Clinic located in Pune?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Zircon Dental & Implant Clinic is located at Shop No. 72, Western Avenue, opposite Phoenix Mall Road, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Pune - 411057.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Do you offer same-day dental implants in Pune?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes! With our All-on-4 immediate loading protocol, you can walk out with a complete set of fixed teeth on the same day as surgery at our Wakad clinic.",
-                  },
-                },
-              ],
-            }),
-          }}
-        />
+        <JsonLd data={generateFAQSchema(HOME_FAQS)} />
 
         {/* ✅ BreadcrumbList Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://zircondentalpune.com",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Treatments",
-                  item: "https://zircondentalpune.com/treatments",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Pricing",
-                  item: "https://zircondentalpune.com/pricing",
-                },
-              ],
-            }),
-          }}
-        />
+        <JsonLd data={generateBreadcrumbSchema(HOME_BREADCRUMBS)} />
       </head>
       <body className={inter.className}>
         <ImageKitProvider

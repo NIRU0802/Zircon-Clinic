@@ -32,7 +32,7 @@ export const doctorDetailedInfo = {
     image: "/images/doctors/dr-akansha.jpg",
     experience: "10+",
     patients: "10K+",
-    bio: "Dr. Akansha Lakde is a renowned oral and maxillofacial surgeon with 18+ years of experience in dental implants and full mouth rehabilitation. A pioneer in same-day dental implants, she has transformed thousands of smiles using cutting-edge technology and minimally invasive techniques. Her expertise in zygomatic and basal implants has helped patients who were previously told they couldn't get implants.",
+    bio: "Dr. Akansha Lakde is a renowned oral and maxillofacial surgeon with 10+ years of experience in dental implants and full mouth rehabilitation. A pioneer in same-day dental implants, she has transformed thousands of smiles using cutting-edge technology and minimally invasive techniques. Her expertise in zygomatic and basal implants has helped patients who were previously told they couldn't get implants.",
     education: [
       "MDS - Oral & Maxillofacial Surgery",
       "Fellow - International Congress of Oral Implantologists (ICOI)",

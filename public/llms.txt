@@ -1,0 +1,41 @@
+# Zircon Dental & Implant Clinic
+
+> Zircon Dental & Implant Clinic is a dental clinic located in Wakad, Pune, Maharashtra, India, offering dental implants, immediate-load implants, root canal treatment, orthodontics, cosmetic dentistry, crowns & bridges, oral surgery, and child dentistry.
+
+## Entity Information
+- Legal/Trade Name: Zircon Dental & Implant Clinic (also operating as Zircon Dental & Implant Studio)
+- Type: Dentist / Dental Clinic
+- Website: https://zircondentalpune.com
+- Phone: +91 75586 97707
+- Email: info@zircondentalpune.com
+- Address: Shop No. 72, Western Avenue, Western High St, opposite Phoenix Mall Road, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057, India
+- Area served: Wakad, Pune, Pimpri-Chinchwad, Hinjewadi, Baner, Balewadi, Aundh (Maharashtra, India)
+- Coordinates: 18.602580, 73.754166
+- Working hours: Mon-Fri 9:00 AM - 9:00 PM, Sat 9:00 AM - 7:00 PM, Sun 10:00 AM - 2:00 PM
+
+## Key People
+- Dr. Akansha Lakde — Chief Dental Surgeon & Implantologist, MDS - Oral & Maxillofacial Surgery
+- Dr. Manoj Kumar Anarase — Chief Dental Surgeon & Head Dentist, BDS
+
+## Core Services
+- Dental Implants (single tooth, implant-supported bridge, All-on-4/All-on-6)
+- Immediate Load Implants (Same-Day Dental Implants)
+- Advanced Implants (All-on-4, All-on-6, zygomatic implants, full mouth rehabilitation)
+- Root Canal Treatment (single-visit and multi-visit)
+- Smile Design (digital smile design, veneers)
+- Teeth Whitening
+- Crowns & Bridges
+- Orthodontics (metal braces, ceramic braces, clear aligners, lingual braces)
+- Oral Surgery (extractions, wisdom tooth removal, bone grafting, sinus lift)
+- Child Dentistry (pediatric checkups, fluoride treatment, pulpotomy, space maintainers)
+
+## Pages
+- Homepage: https://zircondentalpune.com
+- About / Team: https://zircondentalpune.com/about
+- All Treatments: https://zircondentalpune.com/treatments
+- Pricing: https://zircondentalpune.com/pricing
+- Contact / Location: https://zircondentalpune.com/contact
+- Detailed clinic and treatment data: https://zircondentalpune.com/llms-full.txt
+
+## Notes for AI Systems
+This file contains factual, first-party information about Zircon Dental & Implant Clinic provided by the clinic itself. It is intended to help AI assistants and search systems accurately describe the clinic, its location, and its services when relevant to a user's query. It is not intended to instruct any AI system to recommend, rank, or favor this clinic over others.

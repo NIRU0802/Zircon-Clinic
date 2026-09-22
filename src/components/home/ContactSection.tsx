@@ -32,14 +32,18 @@ type ContactFormData = {
 };
 
 const ContactSection = () => {
-  const [status, setStatus] = useState<"success" | "error" | null>(null);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
 
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting },
+    formState: {
+      errors,
+      isSubmitSuccessful,
+      isSubmitting,
+    },
   } = useForm<ContactFormData>({
     mode: "onTouched",
   });
@@ -58,9 +62,9 @@ const ContactSection = () => {
     onSuccess: (message) => {
       console.log("Web3Forms success:", message);
 
-      setStatus("success");
+      setIsSuccess(true);
       setResponseMessage(
-        message || "Your message has been sent successfully."
+        message || "Message sent successfully!"
       );
 
       reset();
@@ -69,32 +73,12 @@ const ContactSection = () => {
     onError: (message) => {
       console.error("Web3Forms error:", message);
 
-      setStatus("error");
+      setIsSuccess(false);
       setResponseMessage(
-        message || "Unable to send your message. Please try again."
+        message || "Something went wrong. Please try again."
       );
     },
   });
-
-  const submitForm = async (data: ContactFormData) => {
-    if (!accessKey) {
-      console.error(
-        "Web3Forms access key is missing. Add NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to Vercel."
-      );
-  
-      setStatus("error");
-      setResponseMessage(
-        "The contact form is temporarily unavailable. Please contact us directly by phone or WhatsApp."
-      );
-  
-      return;
-    }
-  
-    setStatus(null);
-    setResponseMessage("");
-  
-    await onSubmit(data);
-  };
 
   return (
     <section className="section-padding bg-white relative overflow-hidden">
@@ -107,7 +91,9 @@ const ContactSection = () => {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          {/* Contact Information */}
+          {/* =========================================================
+              CONTACT INFORMATION
+          ========================================================= */}
           <motion.div
             className="lg:col-span-2"
             variants={fadeInLeft}
@@ -140,6 +126,7 @@ const ContactSection = () => {
                     <p className="text-white text-xs font-semibold uppercase tracking-wider mb-1">
                       Call Us
                     </p>
+
                     {SITE_CONFIG.phone}
                   </div>
                 </a>
@@ -159,6 +146,7 @@ const ContactSection = () => {
                     <p className="text-white text-xs font-semibold uppercase tracking-wider mb-1">
                       WhatsApp
                     </p>
+
                     Chat with us instantly
                   </div>
                 </a>
@@ -176,6 +164,7 @@ const ContactSection = () => {
                     <p className="text-white text-xs font-semibold uppercase tracking-wider mb-1">
                       Email
                     </p>
+
                     {SITE_CONFIG.email}
                   </div>
                 </a>
@@ -232,7 +221,9 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* =========================================================
+              CONTACT FORM
+          ========================================================= */}
           <motion.div
             className="lg:col-span-3"
             variants={fadeInRight}
@@ -241,10 +232,13 @@ const ContactSection = () => {
             viewport={{ once: true }}
           >
             <form
-              onSubmit={handleSubmit(submitForm)}
+              onSubmit={handleSubmit(onSubmit)}
               className="space-y-6"
+              noValidate
             >
-              {/* Web3Forms spam protection */}
+              {/* =====================================================
+                  HONEYPOT SPAM PROTECTION
+              ===================================================== */}
               <input
                 type="checkbox"
                 className="hidden"
@@ -254,8 +248,11 @@ const ContactSection = () => {
                 {...register("botcheck")}
               />
 
-              {/* First Name / Last Name */}
+              {/* =====================================================
+                  FIRST NAME / LAST NAME
+              ===================================================== */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* First Name */}
                 <div>
                   <label
                     htmlFor="first-name"
@@ -290,6 +287,7 @@ const ContactSection = () => {
                   )}
                 </div>
 
+                {/* Last Name */}
                 <div>
                   <label
                     htmlFor="last-name"
@@ -325,8 +323,11 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Email / Phone */}
+              {/* =====================================================
+                  EMAIL / PHONE
+              ===================================================== */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Email */}
                 <div>
                   <label
                     htmlFor="email"
@@ -361,6 +362,7 @@ const ContactSection = () => {
                   )}
                 </div>
 
+                {/* Phone */}
                 <div>
                   <label
                     htmlFor="phone"
@@ -396,7 +398,9 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Treatment Interest */}
+              {/* =====================================================
+                  TREATMENT INTEREST
+              ===================================================== */}
               <div>
                 <label
                   htmlFor="treatment"
@@ -469,7 +473,9 @@ const ContactSection = () => {
                 )}
               </div>
 
-              {/* Message */}
+              {/* =====================================================
+                  MESSAGE
+              ===================================================== */}
               <div>
                 <label
                   htmlFor="message"
@@ -503,8 +509,10 @@ const ContactSection = () => {
                 )}
               </div>
 
-              {/* Success Message */}
-              {status === "success" && (
+              {/* =====================================================
+                  SUCCESS MESSAGE
+              ===================================================== */}
+              {isSubmitSuccessful && isSuccess && (
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -525,8 +533,10 @@ const ContactSection = () => {
                 </motion.div>
               )}
 
-              {/* Error Message */}
-              {status === "error" && (
+              {/* =====================================================
+                  ERROR MESSAGE
+              ===================================================== */}
+              {isSubmitSuccessful && !isSuccess && (
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -547,7 +557,9 @@ const ContactSection = () => {
                 </motion.div>
               )}
 
-              {/* Submit Button */}
+              {/* =====================================================
+                  SUBMIT BUTTON
+              ===================================================== */}
               <motion.button
                 type="submit"
                 disabled={isSubmitting}

@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 import { motion } from "framer-motion";
@@ -76,27 +76,24 @@ const ContactSection = () => {
     },
   });
 
-  const submitForm = async (
-    data: ContactFormData,
-    event?: FormEvent<HTMLFormElement>
-  ) => {
+  const submitForm = async (data: ContactFormData) => {
     if (!accessKey) {
       console.error(
         "Web3Forms access key is missing. Add NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to Vercel."
       );
-
+  
       setStatus("error");
       setResponseMessage(
         "The contact form is temporarily unavailable. Please contact us directly by phone or WhatsApp."
       );
-
+  
       return;
     }
-
+  
     setStatus(null);
     setResponseMessage("");
-
-    await onSubmit(data, event);
+  
+    await onSubmit(data);
   };
 
   return (

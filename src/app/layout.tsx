@@ -2,8 +2,7 @@ import type { Metadata, Viewport } from "next";
 import {
   Inter,
   Playfair_Display,
-  Cormorant_Garamond,
-} from "next/font/google";
+  Cormorant_Garamond, Geist } from "next/font/google";
 import "@/styles/globals.css";
 import { ImageKitProvider } from "@imagekit/next";
 import {
@@ -15,6 +14,9 @@ import {
   generateBreadcrumbSchema,
 } from "@/utils/seo";
 import JsonLd from "@/components/seo/JsonLd";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -194,7 +196,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-IN"
-      className={`${inter.variable} ${playfair.variable} ${cormorant.variable}`}
+      className={cn(inter.variable, playfair.variable, cormorant.variable, "font-sans", geist.variable)}
       suppressHydrationWarning
     >
       <head>

@@ -203,11 +203,7 @@ const TreatmentsSection = () => {
                           alt={treatment.title}
                           fill
                           priority={index < 4}
-                          sizes="
-                            (max-width:768px)100vw,
-                            (max-width:1200px)50vw,
-                            25vw
-                          "
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                           className="
                             object-cover
                             transition-transform

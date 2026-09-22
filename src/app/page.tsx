@@ -49,7 +49,7 @@ export default function Home() {
       <PricingSection />
       <StatsCounter />
       <WhyChooseUs />
-      <VideoSection />
+      {/* <VideoSection /> */}
       <DoctorsSection />
       <TestimonialsSection />
       <GallerySection />

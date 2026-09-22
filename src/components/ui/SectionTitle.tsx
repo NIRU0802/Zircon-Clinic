@@ -5,24 +5,34 @@ import { fadeInUp } from "@/utils/animations";
 
 interface SectionTitleProps {
   subtitle?: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   badge?: string;
   center?: boolean;
+  align?: "left" | "center";
   light?: boolean;
 }
 
 const SectionTitle = ({
   subtitle,
+  eyebrow,
   title,
   description,
   badge,
   center = true,
+  align,
   light = false,
 }: SectionTitleProps) => {
+  const isCentered = align ? align === "center" : center;
+
+  const eyebrowText = eyebrow || subtitle;
+
   return (
     <motion.div
-      className={`mb-16 md:mb-20 ${center ? "text-center" : "text-left"}`}
+      className={`mb-16 md:mb-20 ${
+        isCentered ? "text-center" : "text-left"
+      }`}
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
@@ -38,6 +48,7 @@ const SectionTitle = ({
           }`}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+
           <span
             className={`text-[10px] font-semibold tracking-[0.2em] uppercase ${
               light ? "text-gold-400" : "text-primary-600"
@@ -48,8 +59,8 @@ const SectionTitle = ({
         </motion.div>
       )}
 
-      {/* Subtitle */}
-      {subtitle && (
+      {/* Eyebrow / Subtitle */}
+      {eyebrowText && (
         <motion.span
           className={`inline-flex items-center gap-3 text-sm font-semibold tracking-[0.25em] uppercase mb-4 ${
             light ? "text-gold-400" : "text-primary-500"
@@ -60,7 +71,9 @@ const SectionTitle = ({
               light ? "bg-gold-400" : "bg-primary-500"
             }`}
           />
-          {subtitle}
+
+          {eyebrowText}
+
           <span
             className={`w-8 h-px ${
               light ? "bg-gold-400" : "bg-primary-500"
@@ -80,9 +93,9 @@ const SectionTitle = ({
       {/* Description */}
       {description && (
         <p
-          className={`subtitle max-w-2xl ${center ? "mx-auto" : ""} ${
-            light ? "text-gray-400" : "text-gray-500"
-          }`}
+          className={`subtitle max-w-2xl ${
+            isCentered ? "mx-auto" : ""
+          } ${light ? "text-gray-400" : "text-gray-500"}`}
         >
           {description}
         </p>
@@ -91,7 +104,7 @@ const SectionTitle = ({
       {/* Decorative Line */}
       <div
         className={`mt-6 flex items-center gap-2 ${
-          center ? "justify-center" : "justify-start"
+          isCentered ? "justify-center" : "justify-start"
         }`}
       >
         <span
@@ -99,11 +112,13 @@ const SectionTitle = ({
             light ? "bg-gold-500" : "bg-primary-500"
           }`}
         />
+
         <span
           className={`w-3 h-3 rounded-full ${
             light ? "bg-gold-500" : "bg-primary-500"
           }`}
         />
+
         <span
           className={`w-12 h-0.5 rounded-full ${
             light ? "bg-gold-500" : "bg-primary-500"

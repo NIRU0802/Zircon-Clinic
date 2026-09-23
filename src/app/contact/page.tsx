@@ -625,8 +625,8 @@ export default function ContactPage() {
                       type="text"
                       placeholder="Enter your full name"
                       className={`w-full min-w-0 px-4 py-3.5 rounded-xl border text-sm focus:outline-none focus:ring-2 transition-all ${errors.first_name
-                          ? "border-red-500 focus:ring-red-500/20"
-                          : "border-gray-200 focus:ring-primary-500/20 focus:border-primary-500"
+                        ? "border-red-500 focus:ring-red-500/20"
+                        : "border-gray-200 focus:ring-primary-500/20 focus:border-primary-500"
                         }`}
                       {...register("first_name", {
                         required: "Please enter your name",
@@ -659,8 +659,8 @@ export default function ContactPage() {
                       type="tel"
                       placeholder="+91 98XXXXXXXX"
                       className={`w-full min-w-0 px-4 py-3.5 rounded-xl border text-sm focus:outline-none focus:ring-2 transition-all ${errors.phone
-                          ? "border-red-500 focus:ring-red-500/20"
-                          : "border-gray-200 focus:ring-primary-500/20 focus:border-primary-500"
+                        ? "border-red-500 focus:ring-red-500/20"
+                        : "border-gray-200 focus:ring-primary-500/20 focus:border-primary-500"
                         }`}
                       {...register("phone", {
                         required: "Please enter your phone number",
@@ -694,8 +694,8 @@ export default function ContactPage() {
                     type="email"
                     placeholder="you@example.com"
                     className={`w-full px-4 py-3.5 rounded-xl border text-sm focus:outline-none focus:ring-2 transition-all ${errors.email
-                        ? "border-red-500 focus:ring-red-500/20"
-                        : "border-gray-200 focus:ring-primary-500/20 focus:border-primary-500"
+                      ? "border-red-500 focus:ring-red-500/20"
+                      : "border-gray-200 focus:ring-primary-500/20 focus:border-primary-500"
                       }`}
                     {...register("email", {
                       pattern: {
@@ -725,8 +725,8 @@ export default function ContactPage() {
                   <select
                     id="treatment_interest"
                     className={`w-full px-4 py-3.5 rounded-xl border text-sm bg-white focus:outline-none focus:ring-2 transition-all ${errors.treatment_interest
-                        ? "border-red-500 focus:ring-red-500/20"
-                        : "border-gray-200 focus:ring-primary-500/20 focus:border-primary-500"
+                      ? "border-red-500 focus:ring-red-500/20"
+                      : "border-gray-200 focus:ring-primary-500/20 focus:border-primary-500"
                       }`}
                     {...register("treatment_interest", {
                       required: "Please select a treatment",
@@ -811,14 +811,14 @@ export default function ContactPage() {
                           return "Please select a time for your appointment.";
                         }
 
+                        if (!value) {
+                          return "Please select a valid date and time.";
+                        }
+
                         const selectedDate = new Date(value);
                         const now = new Date();
 
-                        if (
-                          Number.isNaN(
-                            selectedDate.getTime()
-                          )
-                        ) {
+                        if (Number.isNaN(selectedDate.getTime())) {
                           return "Please select a valid date and time.";
                         }
 
@@ -844,8 +844,8 @@ export default function ContactPage() {
                     <PopoverTrigger>
                       <span
                         className={`w-full flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl border text-sm text-left bg-white transition-all cursor-pointer ${errors.preferred_date_time
-                            ? "border-red-500"
-                            : "border-gray-200"
+                          ? "border-red-500"
+                          : "border-gray-200"
                           }`}
                       >
                         <span
@@ -958,13 +958,8 @@ export default function ContactPage() {
 
                                     let nextTime = appointmentTime;
 
-                                    if (
-                                      isSameCalendarDay(date, pickerNow) &&
-                                      appointmentTime
-                                    ) {
-                                      const [hours, minutes] = appointmentTime
-                                        .split(":")
-                                        .map(Number);
+                                    if (isSameCalendarDay(date, pickerNow) && appointmentTime) {
+                                      const [hours, minutes] = appointmentTime.split(":").map(Number);
 
                                       const selected = new Date(
                                         date.getFullYear(),
@@ -982,9 +977,7 @@ export default function ContactPage() {
 
                                     setValue(
                                       "preferred_date_time",
-                                      nextTime
-                                        ? toDateTimeLocal(date, nextTime)
-                                        : "",
+                                      nextTime ? toDateTimeLocal(date, nextTime) : "",
                                       {
                                         shouldDirty: true,
                                         shouldTouch: true,
@@ -1002,7 +995,6 @@ export default function ContactPage() {
                                     return checkDate < today;
                                   }}
                                   className="w-full max-w-[320px]"
-                                  initialFocus
                                 />
                               </div>
                             </div>
@@ -1081,10 +1073,10 @@ export default function ContactPage() {
                                             );
                                           }}
                                           className={`min-h-10 w-full rounded-lg border px-2 py-2 text-xs font-medium transition-all ${selected
-                                              ? "border-primary-600 bg-primary-600 text-white shadow-sm"
-                                              : disabled
-                                                ? "cursor-not-allowed border-gray-100 bg-gray-50 text-gray-300"
-                                                : "border-gray-200 bg-white text-gray-600 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-600"
+                                            ? "border-primary-600 bg-primary-600 text-white shadow-sm"
+                                            : disabled
+                                              ? "cursor-not-allowed border-gray-100 bg-gray-50 text-gray-300"
+                                              : "border-gray-200 bg-white text-gray-600 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-600"
                                             }`}
                                         >
                                           {option.label}
@@ -1255,8 +1247,8 @@ export default function ContactPage() {
                 >
                   <FiSend
                     className={`w-4 h-4 mr-2 ${isSubmitting
-                        ? "animate-pulse"
-                        : ""
+                      ? "animate-pulse"
+                      : ""
                       }`}
                   />
 

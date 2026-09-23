@@ -571,8 +571,8 @@ const ContactSection = () => {
                       placeholder="Enter your full name"
                       autoComplete="name"
                       className={`w-full px-4 py-3.5 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all ${errors.first_name
-                          ? "border-red-500"
-                          : "border-gray-200"
+                        ? "border-red-500"
+                        : "border-gray-200"
                         }`}
                       {...register("first_name", {
                         required: "Please enter your full name.",
@@ -607,8 +607,8 @@ const ContactSection = () => {
                       placeholder="Enter your phone number"
                       autoComplete="tel"
                       className={`w-full px-4 py-3.5 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all ${errors.phone
-                          ? "border-red-500"
-                          : "border-gray-200"
+                        ? "border-red-500"
+                        : "border-gray-200"
                         }`}
                       {...register("phone", {
                         required: "Please enter your phone number.",
@@ -648,8 +648,8 @@ const ContactSection = () => {
                     placeholder="Enter your email address"
                     autoComplete="email"
                     className={`w-full px-4 py-3.5 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all ${errors.email
-                        ? "border-red-500"
-                        : "border-gray-200"
+                      ? "border-red-500"
+                      : "border-gray-200"
                       }`}
                     {...register("email", {
                       pattern: {
@@ -689,8 +689,8 @@ const ContactSection = () => {
                     id="contact-treatment"
                     defaultValue=""
                     className={`w-full px-4 py-3.5 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-gray-500 ${errors.treatment_interest
-                        ? "border-red-500"
-                        : "border-gray-200"
+                      ? "border-red-500"
+                      : "border-gray-200"
                       }`}
                     {...register(
                       "treatment_interest",
@@ -776,46 +776,34 @@ const ContactSection = () => {
                   <input
                     id="contact-preferred-date-time"
                     type="hidden"
-                    {...register(
-                      "preferred_date_time",
-                      {
-                        validate: (value) => {
-                          if (
-                            !appointmentDate
-                          ) {
-                            return true;
-                          }
-
-                          if (
-                            !appointmentTime
-                          ) {
-                            return "Please select a time for your appointment.";
-                          }
-
-                          const selectedDate =
-                            new Date(value);
-
-                          const now =
-                            new Date();
-
-                          if (
-                            Number.isNaN(
-                              selectedDate.getTime()
-                            )
-                          ) {
-                            return "Please select a valid date and time.";
-                          }
-
-                          if (
-                            selectedDate <= now
-                          ) {
-                            return "Please select a future date and time for your appointment.";
-                          }
-
+                    {...register("preferred_date_time", {
+                      validate: (value) => {
+                        if (!appointmentDate) {
                           return true;
-                        },
-                      }
-                    )}
+                        }
+
+                        if (!appointmentTime) {
+                          return "Please select a time for your appointment.";
+                        }
+
+                        if (!value) {
+                          return "Please select a valid date and time.";
+                        }
+
+                        const selectedDate = new Date(value);
+                        const now = new Date();
+
+                        if (Number.isNaN(selectedDate.getTime())) {
+                          return "Please select a valid date and time.";
+                        }
+
+                        if (selectedDate <= now) {
+                          return "Please select a future date and time for your appointment.";
+                        }
+
+                        return true;
+                      },
+                    })}
                   />
 
                   {/* =================================================
@@ -835,8 +823,8 @@ const ContactSection = () => {
 
                       <span
                         className={`w-full flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl border text-sm text-left bg-white transition-all cursor-pointer ${errors.preferred_date_time
-                            ? "border-red-500"
-                            : "border-gray-200"
+                          ? "border-red-500"
+                          : "border-gray-200"
                           }`}
                       >
 
@@ -1104,7 +1092,6 @@ const ContactSection = () => {
                                   }}
 
                                   className="w-full max-w-[320px]"
-                                  initialFocus
                                 />
 
                               </div>
@@ -1230,10 +1217,10 @@ const ContactSection = () => {
 
                                             }}
                                             className={`min-h-10 w-full rounded-lg border px-2 py-2 text-xs font-medium transition-all ${selected
-                                                ? "border-primary-600 bg-primary-600 text-white shadow-sm"
-                                                : disabled
-                                                  ? "cursor-not-allowed border-gray-100 bg-gray-50 text-gray-300"
-                                                  : "border-gray-200 bg-white text-gray-600 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-600"
+                                              ? "border-primary-600 bg-primary-600 text-white shadow-sm"
+                                              : disabled
+                                                ? "cursor-not-allowed border-gray-100 bg-gray-50 text-gray-300"
+                                                : "border-gray-200 bg-white text-gray-600 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-600"
                                               }`}
                                           >
                                             {
@@ -1330,8 +1317,8 @@ const ContactSection = () => {
                     rows={5}
                     placeholder="Tell us anything you'd like our team to know..."
                     className={`w-full px-4 py-3.5 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all resize-none ${errors.message
-                        ? "border-red-500"
-                        : "border-gray-200"
+                      ? "border-red-500"
+                      : "border-gray-200"
                       }`}
                     {...register("message", {
                       maxLength: {

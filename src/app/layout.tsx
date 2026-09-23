@@ -16,6 +16,9 @@ import {
 import JsonLd from "@/components/seo/JsonLd";
 import { cn } from "@/lib/utils";
 
+const SITE_URL = "https://www.zircondentalandimplantstudio.com";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/images/Logo.png`;
+
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({
@@ -78,7 +81,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Zircon Dental & Implant Clinic",
-      url: "https://zircondentalpune.com",
+      url: SITE_URL,
     },
   ],
   creator: "Zircon Dental & Implant Clinic",
@@ -99,18 +102,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://zircondentalpune.com",
+    url: SITE_URL,
     siteName: "Zircon Dental & Implant Clinic",
     title: "Zircon Dental & Implant Clinic | Best Dentist in Wakad, Pune",
     description:
       "Expert dental implants, smile design & complete dental care at Wakad, Pune. 18+ years experience. 98.5% success rate. Free consultation available.",
     images: [
       {
-        url: "https://zircondentalpune.com/og-image.jpg",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
         alt: "Zircon Dental & Implant Clinic - Wakad, Pune",
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },
@@ -119,21 +122,18 @@ export const metadata: Metadata = {
     title: "Zircon Dental & Implant Clinic | Best Dentist in Wakad, Pune",
     description:
       "Expert dental implants & cosmetic dentistry in Wakad, Pune. Free consultation. Call +91 75586 97707.",
-    images: ["https://zircondentalpune.com/og-image.jpg"],
+    images: [DEFAULT_OG_IMAGE],
     creator: "@zircondentalpune",
     site: "@zircondentalpune",
   },
   alternates: {
-    canonical: "https://zircondentalpune.com",
+    canonical: SITE_URL,
     languages: {
-      "en-IN": "https://zircondentalpune.com",
+      "en-IN": SITE_URL,
     },
   },
   applicationName: "Zircon Dental & Implant Clinic",
   category: "Healthcare, Dental",
-  verification: {
-    google: "YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
-  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -183,9 +183,9 @@ const HOME_FAQS = [
 ];
 
 const HOME_BREADCRUMBS = [
-  { name: "Home", url: "https://zircondentalpune.com" },
-  { name: "Treatments", url: "https://zircondentalpune.com/treatments" },
-  { name: "Pricing", url: "https://zircondentalpune.com/pricing" },
+  { name: "Home", url: SITE_URL },
+  { name: "Treatments", url: `${SITE_URL}/treatments` },
+  { name: "Pricing", url: `${SITE_URL}/pricing` },
 ];
 
 export default function RootLayout({

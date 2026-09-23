@@ -18,14 +18,14 @@ export const LOCATION = {
   country: "India",
   countryCode: "IN",
   address:
-    "Shop No. 72, Western Avenue, Western High St, opposite Phoenix Mall Road, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057, India",
+    "Shop No. 72, Western Avenue, Opp. Phoenix Mall Road, Wakad, Pune 411057, India",
   // ✅ Verified accurate coordinates (matches SITE_CONFIG.coordinates in utils/constants.ts)
   latitude: 18.602580182434046,
   longitude: 73.75416581077242,
   mapUrl: "https://maps.app.goo.gl/GDjxUeF31CDmJMYF9",
 };
 
-export const DEFAULT_OG_IMAGE = "/og-image.jpg";
+export const DEFAULT_OG_IMAGE = "/images/Logo.png";
 
 export const DEFAULT_DESCRIPTION =
   "Zircon Dental & Implant Clinic is a modern dental clinic in Wakad, Pune, offering dental implants, root canal treatment, braces, aligners, crowns, veneers, teeth whitening and comprehensive dental care.";
@@ -222,7 +222,7 @@ export function generateDentistSchema() {
     image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
     description: DEFAULT_DESCRIPTION,
     telephone: "+917558697707",
-    email: "info@zircondentalpune.com",
+    email: "Zircondental77@gmail.com",
     priceRange: "₹₹",
     currenciesAccepted: "INR",
     paymentAccepted: "Cash, Credit Card, Debit Card, UPI, Bank Transfer, EMI",
@@ -230,7 +230,7 @@ export function generateDentistSchema() {
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "Shop No. 72, Western Avenue, Western High St, opposite Phoenix Mall Road, Shankar Kalat Nagar",
+        "Shop No. 72, Western Avenue, Opp. Phoenix Mall Road",
       addressLocality: "Wakad",
       addressRegion: "Maharashtra",
       postalCode: "411057",

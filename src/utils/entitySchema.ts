@@ -1,6 +1,6 @@
-import { getCanonicalUrl } from "@/utils/seo";
+import { SITE_URL, getCanonicalUrl } from "@/utils/seo";
 
-const BASE_URL = "https://zircondentalpune.com";
+const BASE_URL = SITE_URL;
 const DENTIST_ID = `${BASE_URL}/#dentist`;
 const WEBSITE_ID = `${BASE_URL}/#website`;
 const ORG_ID = `${BASE_URL}/#organization`;
@@ -21,7 +21,7 @@ export function generateEntitySchema() {
     alternateName: "Zircon Dental & Implant Studio",
     url: BASE_URL,
     telephone: "+917558697707",
-    email: "info@zircondentalpune.com",
+    email: "Zircondental77@gmail.com",
     priceRange: "₹₹",
     currenciesAccepted: "INR",
     paymentAccepted: "Cash, Credit Card, Debit Card, UPI, Bank Transfer, EMI",

@@ -13,7 +13,7 @@ export const CLINIC = {
   email: "Zircondental77@gmail.com",
 };
 
-export const DEFAULT_OG_IMAGE = "/og-image.jpg";
+export const DEFAULT_OG_IMAGE = "/images/Logo.png";
 
 export const DEFAULT_DESCRIPTION =
   "Zircon Dental & Implant Clinic is a modern dental clinic in Wakad, Pune, offering dental implants, root canal treatment, braces, aligners, crowns, veneers, teeth whitening and comprehensive dental care.";

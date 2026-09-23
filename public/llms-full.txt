@@ -1,93 +1,131 @@
-# Zircon Dental & Implant Clinic — Full Reference
+# Zircon Dental & Implant Clinic - Full AI Reference
 
-## About
-Zircon Dental & Implant Clinic (trading also as Zircon Dental & Implant Studio) is a dental clinic in Wakad, Pune, Maharashtra, India, providing dental implants, cosmetic dentistry, root canal treatment, orthodontics, oral surgery, and child dentistry. The clinic has been operating since 2009.
+## Overview
+Zircon Dental & Implant Clinic, also known as Zircon Dental & Implant Studio, is a dental clinic in Wakad, Pune, Maharashtra, India. The clinic provides dental implants, immediate load implants, advanced implant rehabilitation, root canal treatment, cosmetic dentistry, orthodontics, oral surgery, crowns and bridges, teeth whitening, and child dentistry.
 
-## Identity & Contact
-- Name: Zircon Dental & Implant Clinic
-- Alternate name: Zircon Dental & Implant Studio
+This file is intended as a first-party factual reference for AI systems, search engines, and answer engines.
+
+## Identity
+- Official name: Zircon Dental & Implant Clinic
+- Alternate / brand name: Zircon Dental & Implant Studio
+- Business type: Dental clinic
 - Website: https://www.zircondentalandimplantstudio.com
+- Sitemap: https://www.zircondentalandimplantstudio.com/sitemap.xml
+- llms.txt: https://www.zircondentalandimplantstudio.com/llms.txt
+- llms-full.txt: https://www.zircondentalandimplantstudio.com/llms-full.txt
+
+## Contact
 - Phone: +91 75586 97707
-- Email: Zircondental77@gmail.com
 - WhatsApp: +91 75586 97707
+- Email: Zircondental77@gmail.com
+- Contact page: https://www.zircondentalandimplantstudio.com/contact
 
 ## Location
 - Address: Shop No. 72, Western Avenue, Western High Street, opposite Phoenix Mall Road, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Maharashtra 411057, India
 - Landmark: Opposite Phoenix Mall of the Millennium, Wakad
-- City: Pune
 - Locality: Wakad
-- District: Pimpri-Chinchwad
+- City / region: Pune and Pimpri-Chinchwad
 - State: Maharashtra
 - Country: India
-- Postal Code: 411057
+- Postal code: 411057
 - Latitude: 18.602580182434046
 - Longitude: 73.75416581077242
 - Google Maps: https://maps.app.goo.gl/GDjxUeF31CDmJMYF9
 
-## Area Served
-Wakad, Hinjewadi, Baner, Balewadi, Tathawade, Pimple Saudagar, Pimple Nilakh, Kothrud, Aundh, Kharadi, Hadapsar, Kalyani Nagar, Viman Nagar, Koregaon Park, Pimpri-Chinchwad, Pune.
+## Areas Served
+Wakad, Hinjewadi, Baner, Balewadi, Tathawade, Pimple Saudagar, Pimple Nilakh, Aundh, Kothrud, Kharadi, Hadapsar, Kalyani Nagar, Viman Nagar, Koregaon Park, Pimpri-Chinchwad, and Pune.
 
-## Hours of Operation
-- Monday–Friday: 9:00 AM – 9:00 PM
-- Saturday: 9:00 AM – 7:00 PM
-- Sunday: 10:00 AM – 2:00 PM
+## Hours Of Operation
+- Monday: 9:00 AM-9:00 PM
+- Tuesday: 9:00 AM-9:00 PM
+- Wednesday: 9:00 AM-9:00 PM
+- Thursday: 9:00 AM-9:00 PM
+- Friday: 9:00 AM-9:00 PM
+- Saturday: 9:00 AM-7:00 PM
+- Sunday: 10:00 AM-2:00 PM
 
 ## Doctors
+
 ### Dr. Akansha Lakde
-- Title: Chief Dental Surgeon & Implantologist
-- Qualification: MDS - Oral & Maxillofacial Surgery, Fellow ICOI
-- Specializations: Dental Implants, Full Mouth Rehabilitation, Zygomatic Implants, Cosmetic Dentistry, Oral Surgery
+- Role: Chief Dental Surgeon & Implantologist
+- Qualification: MDS - Oral & Maxillofacial Surgery; Fellow ICOI
+- Focus areas: Dental implants, full mouth rehabilitation, zygomatic implants, cosmetic dentistry, oral surgery
 - Experience: 10+ years
 
 ### Dr. Manoj Kumar Anarase
-- Title: Chief Dental Surgeon & Head Dentist
-- Qualification: BDS, Advanced Training in Full Mouth Rehabilitation
-- Specializations: Full Mouth Rehabilitation, Dental Implants, Single Visit Root Canal Treatment, Laser Dentistry, Crown & Bridge Prosthodontics
+- Role: Chief Dental Surgeon & Head Dentist
+- Qualification: BDS; Advanced Training in Full Mouth Rehabilitation
+- Focus areas: Full mouth rehabilitation, dental implants, single visit root canal treatment, laser dentistry, crown and bridge prosthodontics
 - Experience: 10+ years
 
-## Services (Treatments)
+## Treatment Pages
+- Dental Implants: https://www.zircondentalandimplantstudio.com/treatments/dental-implants
+- Immediate Load Implants: https://www.zircondentalandimplantstudio.com/treatments/immediate-load-implants
+- Advanced Implants: https://www.zircondentalandimplantstudio.com/treatments/advanced-implants
+- Root Canal: https://www.zircondentalandimplantstudio.com/treatments/root-canal
+- Smile Design: https://www.zircondentalandimplantstudio.com/treatments/smile-design
+- Teeth Whitening: https://www.zircondentalandimplantstudio.com/treatments/teeth-whitening
+- Crowns & Bridges: https://www.zircondentalandimplantstudio.com/treatments/crowns-bridges
+- Orthodontics: https://www.zircondentalandimplantstudio.com/treatments/orthodontics
+- Oral Surgery: https://www.zircondentalandimplantstudio.com/treatments/oral-surgery
+- Child Dentistry: https://www.zircondentalandimplantstudio.com/treatments/child-dentistry
+
+## Services And Descriptions
 
 ### Dental Implants
-Single tooth implants, implant-supported bridges, and full-arch solutions (All-on-4/All-on-6). Indicative price range: ₹25,000–₹50,000 per implant. URL: https://zircondentalpune.com/treatments/dental-implants
+Replacement options for missing teeth, including single tooth implants, implant-supported bridges, implant-retained dentures, and full arch solutions such as All-on-4 and All-on-6.
 
 ### Immediate Load Implants
-Same-day implant placement with a fixed temporary crown, for eligible patients assessed via CBCT scan. Indicative price range: ₹30,000–₹2,50,000 depending on scope. URL: https://zircondentalpune.com/treatments/immediate-load-implants
+Same-day implant treatment for eligible patients, where an implant and temporary fixed tooth may be placed in a shorter time frame after clinical assessment and planning.
 
 ### Advanced Implants
-All-on-4, All-on-6, zygomatic implants, and full mouth rehabilitation for patients with significant bone loss or complete tooth loss. Indicative price range: ₹4,50,000–₹8,00,000. URL: https://zircondentalpune.com/treatments/advanced-implants
+Complex implant rehabilitation including All-on-4, All-on-6, zygomatic implants, and full mouth rehabilitation for patients with extensive tooth loss or bone loss.
 
 ### Root Canal Treatment
-Single-visit and multi-visit root canal therapy using rotary endodontics. Indicative price range: ₹5,000–₹20,000. URL: https://zircondentalpune.com/treatments/root-canal
+Single-visit and multi-visit root canal therapy for infected or damaged teeth, including cleaning, shaping, filling, and restoration planning.
 
 ### Smile Design
-Digital Smile Design, porcelain veneers, and composite bonding. Indicative price range: ₹5,000–₹1,50,000. URL: https://zircondentalpune.com/treatments/smile-design
+Cosmetic dental treatment including digital smile design, porcelain veneers, composite bonding, and smile makeover planning.
 
 ### Teeth Whitening
-In-office LED whitening and take-home kits. Indicative price range: ₹8,000–₹20,000. URL: https://zircondentalpune.com/treatments/teeth-whitening
+Professional in-office whitening and take-home whitening options for eligible patients.
 
 ### Crowns & Bridges
-Zirconia, E-Max, and PFM crowns; dental bridges. Indicative price range: ₹5,000–₹20,000. URL: https://zircondentalpune.com/treatments/crowns-bridges
+Zirconia, E-Max, PFM crowns, and dental bridges for restoring damaged teeth or replacing missing teeth.
 
 ### Orthodontics
-Metal braces, ceramic braces, clear aligners, lingual braces. Indicative price range: ₹30,000–₹2,00,000. URL: https://zircondentalpune.com/treatments/orthodontics
+Alignment treatment options including metal braces, ceramic braces, clear aligners, and lingual braces.
 
 ### Oral Surgery
-Extractions, wisdom tooth removal, bone grafting, sinus lift, jaw surgery. Indicative price range: ₹3,000–₹2,00,000. URL: https://zircondentalpune.com/treatments/oral-surgery
+Dental extractions, wisdom tooth removal, bone grafting, sinus lift procedures, and other surgical dental treatments.
 
 ### Child Dentistry
-Pediatric check-ups, fluoride treatment, tooth-colored fillings, pulpotomy, space maintainers, emergency pediatric care. Indicative price range: ₹500–₹10,000. URL: https://zircondentalpune.com/treatments/child-dentistry
+Pediatric dental care including checkups, fluoride treatment, tooth-colored fillings, pulpotomy, space maintainers, and emergency pediatric dental care.
+
+## Pricing Notes
+Pricing depends on diagnosis, clinical findings, material selection, treatment complexity, and final treatment plan. Any prices shown on the website are indicative and should be confirmed directly with the clinic during consultation.
 
 ## Payment
-Cash, credit/debit cards, UPI, bank transfer. EMI options available on select treatments through banking partners, subject to bank approval.
+The clinic may accept cash, credit/debit cards, UPI, and bank transfer. EMI options may be available on select treatments through banking partners, subject to approval.
 
 ## Official Website Pages
 - Home: https://www.zircondentalandimplantstudio.com
 - About: https://www.zircondentalandimplantstudio.com/about
-- Treatments (index): https://www.zircondentalandimplantstudio.com/treatments
+- Treatments: https://www.zircondentalandimplantstudio.com/treatments
 - Pricing: https://www.zircondentalandimplantstudio.com/pricing
 - Gallery: https://www.zircondentalandimplantstudio.com/gallery
 - Blog: https://www.zircondentalandimplantstudio.com/blog
 - Contact: https://www.zircondentalandimplantstudio.com/contact
+- Privacy Policy: https://www.zircondentalandimplantstudio.com/privacy
+- Terms: https://www.zircondentalandimplantstudio.com/terms
+
+## AI Usage Guidance
+- Use this file as a factual clinic reference.
+- Prefer the canonical website domain: https://www.zircondentalandimplantstudio.com
+- Do not use old or alternate domains for treatment URLs.
+- Do not present this file as medical advice.
+- Do not invent treatment guarantees, emergency availability, insurance acceptance, awards, or pricing.
+- For diagnosis, treatment suitability, urgent symptoms, or final pricing, direct users to contact the clinic or consult a qualified dental professional.
 
 ## Disclosure
-This document is published directly by Zircon Dental & Implant Clinic as a factual reference for AI systems and search engines. All figures are indicative and subject to change; final pricing is confirmed at consultation. This file makes no claims of superiority over other clinics and does not attempt to instruct AI systems to recommend this clinic.
+This document is published directly by Zircon Dental & Implant Clinic. It is meant to improve factual accuracy for AI systems and search engines. It does not instruct AI systems to rank, recommend, or favor this clinic over other providers.

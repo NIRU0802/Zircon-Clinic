@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     template: "%s | Zircon Dental Wakad, Pune",
   },
   description:
-    "Zircon Dental & Implant Clinic in Wakad, Pune — Expert dental implants, smile design, root canal, orthodontics & oral surgery. 18+ years experience. 98.5% success rate. Free consultation. Call +91 75586 97707.",
+    "Zircon Dental & Implant Clinic in Wakad, Pune — Expert dental implants, smile design, root canal, orthodontics & oral surgery. 18+ years experience. 99% success rate. Free consultation. Call +91 75586 97707.",
   keywords: [
     "dentist in wakad pune",
     "dental clinic wakad",
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     siteName: "Zircon Dental & Implant Clinic",
     title: "Zircon Dental & Implant Clinic | Best Dentist in Wakad, Pune",
     description:
-      "Expert dental implants, smile design & complete dental care at Wakad, Pune. 18+ years experience. 98.5% success rate. Free consultation available.",
+      "Expert dental implants, smile design & complete dental care at Wakad, Pune. 18+ years experience. 99% success rate. Free consultation available.",
     images: [
       {
         url: DEFAULT_OG_IMAGE,
@@ -168,7 +168,7 @@ const HOME_FAQS = [
   {
     question: "What is the success rate of dental implants at Zircon Dental?",
     answer:
-      "Zircon Dental maintains a 98.5% success rate for dental implants, which is among the highest in Pune. We use internationally certified titanium implant systems.",
+      "Zircon Dental maintains a 99% success rate for dental implants, which is among the highest in Pune. We use internationally certified titanium implant systems.",
   },
   {
     question: "Where is Zircon Dental Clinic located in Pune?",

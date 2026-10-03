@@ -14,14 +14,14 @@ export const dentalImplants: TreatmentDetail = {
     description:
         "Best Dental Implants — Restore Your Smile with permanent, natural-looking dental implants.",
     longDescription:
-        "Dental implants are the gold standard for tooth replacement, providing a permanent solution that mimics the natural structure of your teeth. At Zircon Dental, we've placed thousands of implants with a 98.5% success rate. A dental implant consists of three parts: a titanium post that's surgically placed into your jawbone, an abutment that connects the post to your new tooth, and a custom-crafted crown that looks and functions like your natural tooth. Unlike dentures or bridges, implants replace the entire tooth root, stimulating your jawbone and preventing the bone loss that typically occurs with missing teeth.",
+        "Dental implants are the gold standard for tooth replacement, providing a permanent solution that mimics the natural structure of your teeth. At Zircon Dental, we've placed thousands of implants with a 99% success rate. A dental implant consists of three parts: a titanium post that's surgically placed into your jawbone, an abutment that connects the post to your new tooth, and a custom-crafted crown that looks and functions like your natural tooth. Unlike dentures or bridges, implants replace the entire tooth root, stimulating your jawbone and preventing the bone loss that typically occurs with missing teeth.",
 
-    successRate: "98.5%",
+    successRate: "99%",
     badge: "#1 Implant Centre",
 
     metaTitle: "Best Dental Implants | Zircon Dental",
     metaDescription:
-        "Get world-class dental implants starting at ₹25,000 with 98.5% success rate, lifetime warranty, and 0% EMI options.",
+        "Get world-class dental implants starting at ₹25,000 with 99% success rate, lifetime warranty, and 0% EMI options.",
 
     heroStats: [
         {
@@ -30,7 +30,7 @@ export const dentalImplants: TreatmentDetail = {
         },
         {
             label: "Success",
-            value: "98.5%",
+            value: "99%",
         },
         {
             label: "Years Exp.",
@@ -296,7 +296,7 @@ export const dentalImplants: TreatmentDetail = {
     whatIsIt: {
         title: "What Are Dental Implants?",
         description:
-            "Dental implants are the gold standard for tooth replacement worldwide, providing a permanent solution that mimics the natural structure of your teeth. At Zircon Dental, we've placed thousands of implants with a 98.5% success rate. A dental implant consists of three parts: a titanium post that's surgically placed into your jawbone, an abutment that connects the post to your new tooth, and a custom-crafted crown that looks and functions like your natural tooth.",
+            "Dental implants are the gold standard for tooth replacement worldwide, providing a permanent solution that mimics the natural structure of your teeth. At Zircon Dental, we've placed thousands of implants with a 99% success rate. A dental implant consists of three parts: a titanium post that's surgically placed into your jawbone, an abutment that connects the post to your new tooth, and a custom-crafted crown that looks and functions like your natural tooth.",
 
         parts: [
             {
@@ -513,7 +513,7 @@ export const dentalImplants: TreatmentDetail = {
         {
             question: "What is the success rate of dental implants?",
             answer:
-                "Our clinic maintains a 98.5% success rate for dental implants, which is among the highest in the industry. Success depends on proper planning, skilled placement, and good oral hygiene.",
+                "Our clinic maintains a 99% success rate for dental implants, which is among the highest in the industry. Success depends on proper planning, skilled placement, and good oral hygiene.",
         },
         {
             question: "Can I get implants if I have diabetes?",
@@ -523,7 +523,7 @@ export const dentalImplants: TreatmentDetail = {
     ],
 
     whyChooseUs:
-        "Zircon Dental & Cosmetic Centre is the premier destination for dental implant treatment. Our state-of-the-art clinic is equipped with 3D CBCT scanners, digital impression systems, and a dedicated implant surgery suite. Led by experienced implantologists with 15+ years of clinical experience, our team has successfully placed thousands of dental implants with a documented 98.5% success rate.",
+        "Zircon Dental & Cosmetic Centre is the premier destination for dental implant treatment. Our state-of-the-art clinic is equipped with 3D CBCT scanners, digital impression systems, and a dedicated implant surgery suite. Led by experienced implantologists with 15+ years of clinical experience, our team has successfully placed thousands of dental implants with a documented 99% success rate.",
 
     duration: "3-6 months total",
 

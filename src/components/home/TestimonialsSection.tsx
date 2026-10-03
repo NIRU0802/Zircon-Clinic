@@ -244,7 +244,7 @@ const TestimonialsSection = () => {
 
                     <div className="text-center">
                       <h4 className="text-3xl font-bold text-gold-400">
-                        98%
+                        99%
                       </h4>
                       <p className="mt-2 text-sm uppercase tracking-wider text-gray-400">
                         Patient Satisfaction

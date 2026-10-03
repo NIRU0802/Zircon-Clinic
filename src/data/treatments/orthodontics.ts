@@ -20,7 +20,7 @@ export const orthodontics: TreatmentDetail = {
     longDescription:
         "Comprehensive orthodontic solutions using the latest technology to correct crooked teeth, bite problems, spacing, and jaw alignment while creating healthy, confident smiles.",
 
-    successRate: "98%",
+    successRate: "99%",
     badge: "All Ages Welcome",
 
     metaTitle: "Orthodontics | Braces & Clear Aligners",
@@ -28,7 +28,7 @@ export const orthodontics: TreatmentDetail = {
         "Metal braces, ceramic braces, clear aligners, and lingual braces with personalized treatment plans.",
 
     heroStats: [
-        { label: "Success", value: "98%" },
+        { label: "Success", value: "99%" },
         { label: "Patients", value: "5000+" },
         { label: "Experience", value: "15+ Years" },
     ],

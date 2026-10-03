@@ -319,7 +319,7 @@ export default function AboutPage() {
                 Located at Wakad, opposite Phoenix Mall Road, our clinic
                 has grown from a small practice to one of the most trusted
                 dental centres in Pimpri-Chinchwad and greater Pune. With
-                over 10,000 patients treated and a 98.5% implant success
+                over 10,000 patients treated and a 99% implant success
                 rate, we combine cutting-edge technology with artistic
                 precision to create smiles that transform lives. Our team
                 of specialists is trained internationally and committed to
@@ -361,7 +361,7 @@ export default function AboutPage() {
                 {[
                   "10+ Years Experience",
                   "10,000+ Patients",
-                  "98.5% Success Rate",
+                  "99% Success Rate",
                   "0% EMI Available",
                   "3D CBCT Technology",
                   "Same Day Implants",
@@ -533,7 +533,7 @@ export default function AboutPage() {
                 highlights={[
                   { title: "10+", subtitle: "Years Experience" },
                   { title: "10,000+", subtitle: "Treatments" },
-                  { title: "98.5%", subtitle: "Success Rate" },
+                  { title: "99%", subtitle: "Success Rate" },
                   { title: "100+", subtitle: "Courses" },
                 ]}
                 memberships={["IDA", "ISOI", "ICOI", "Cosmetic Dentistry"]}
@@ -561,7 +561,7 @@ export default function AboutPage() {
                     items={[
                       { title: "10+", subtitle: "Years Experience" },
                       { title: "10,000+", subtitle: "Treatments" },
-                      { title: "98.5%", subtitle: "Success Rate" },
+                      { title: "99%", subtitle: "Success Rate" },
                       { title: "100+", subtitle: "Courses" },
                     ]}
                   />

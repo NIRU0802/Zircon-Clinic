@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title:
     "Best Dentist in Wakad Pune | Zircon Dental & Implant Clinic",
   description:
-    "Zircon Dental & Implant Clinic — Wakad's most trusted dental clinic. Dental implants from ₹25,000, smile design, root canal & orthodontics. 18+ years expertise. 98.5% success rate. Free consultation. Call +91 75586 97707.",
+    "Zircon Dental & Implant Clinic — Wakad's most trusted dental clinic. Dental implants from ₹25,000, smile design, root canal & orthodontics. 18+ years expertise. 99% success rate. Free consultation. Call +91 75586 97707.",
   keywords: [
     "best dentist wakad pune",
     "dental implants wakad pune",

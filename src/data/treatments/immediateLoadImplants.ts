@@ -19,7 +19,7 @@ export const immediateLoadImplants: TreatmentDetail = {
     longDescription:
         "Immediate Load Implants are an advanced implant technique that allows carefully selected patients to leave the clinic with fixed temporary teeth on the very same day as implant placement. Instead of waiting several months without teeth, you can enjoy immediate function, improved appearance, and restored confidence while the implants naturally fuse with your jawbone. Using 3D CBCT imaging, digital smile planning, and premium implant systems, our specialists determine whether immediate loading is the safest and most predictable option for you.",
 
-    successRate: "98%",
+    successRate: "99%",
 
     badge: "Same-Day Teeth",
 
@@ -32,7 +32,7 @@ export const immediateLoadImplants: TreatmentDetail = {
     heroStats: [
         {
             label: "Success",
-            value: "98%",
+            value: "99%",
         },
         {
             label: "Treatment",
@@ -352,7 +352,7 @@ export const immediateLoadImplants: TreatmentDetail = {
         {
             question: "How successful are Immediate Load Implants?",
             answer:
-                "When performed on suitable candidates by experienced implant specialists, Immediate Load Implants have a success rate of over 98%.",
+                "When performed on suitable candidates by experienced implant specialists, Immediate Load Implants have a success rate of over 99*%.",
         },
     ],
 

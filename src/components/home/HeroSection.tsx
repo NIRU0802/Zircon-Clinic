@@ -169,7 +169,7 @@ const HeroSection = () => {
                 { value: "10K+", label: "Happy Patients" },
                 { value: "10+", label: "Years Experience" },
                 { value: "5000+", label: "Implants Placed" },
-                { value: "98%", label: "Success Rate" },
+                { value: "99%", label: "Success Rate" },
               ].map((stat, index) => (
                 <div key={index} className="text-left">
                   <p className="text-3xl md:text-4xl font-heading font-bold text-white mb-1">

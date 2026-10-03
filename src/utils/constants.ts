@@ -54,5 +54,5 @@ export const STATS = [
   { value: 10000, suffix: "+", label: "Happy Patients", icon: "😊" },
   { value: 10, suffix: "+", label: "Years Experience", icon: "🏆" },
   { value: 2500, suffix: "+", label: "Dental Implants", icon: "🦷" },
-  { value: 98.5, suffix: "%", label: "Success Rate", icon: "⭐" },
+  { value: 99, suffix: "%", label: "Success Rate", icon: "⭐" },
 ];

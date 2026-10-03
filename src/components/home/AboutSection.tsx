@@ -129,8 +129,8 @@ const AboutSection = () => {
             <p className="text-gray-500 leading-relaxed mb-8">
               Located at Wakad, opposite Phoenix Mall Road, we have grown to
               become one of the most trusted dental centres in
-              Pimpri-Chinchwad and greater Pune. With over 50,000 patients
-              treated and a 98.5% implant success rate, every smile we create
+              Pimpri-Chinchwad and greater Pune. With over 10,000 patients
+              treated and a 99% implant success rate, every smile we create
               is a masterpiece.
             </p>
 

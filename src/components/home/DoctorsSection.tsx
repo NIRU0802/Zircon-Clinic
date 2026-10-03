@@ -11,9 +11,9 @@ const doctorMeta = [
     accent: "primary",
     roleLabel: "Chief Implantologist",
     stats: [
-      { title: "15+", subtitle: "Years" },
-      { title: "10K+", subtitle: "Patients" },
-      { title: "98.5%", subtitle: "Success" },
+      { title: "10+", subtitle: "Years" },
+      { title: "10K+", subtitle: "Patients Treated" },
+      { title: "99%", subtitle: "Implant Success" },
     ],
     expertise: ["Dental Implants", "All-on-4", "Full Mouth Rehab"],
   },
@@ -21,7 +21,7 @@ const doctorMeta = [
     accent: "gold",
     roleLabel: "Prosthodontist",
     stats: [
-      { title: "12+", subtitle: "Years" },
+      { title: "10+", subtitle: "Years" },
       { title: "7K+", subtitle: "Patients" },
       { title: "97%", subtitle: "Satisfaction" },
     ],

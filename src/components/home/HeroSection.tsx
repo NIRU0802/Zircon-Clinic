@@ -142,22 +142,6 @@ const HeroSection = () => {
                 Book Free Consultation
               </GradientButton>
 
-              {/* Watch Video Button */}
-              <motion.button
-                className="flex items-center gap-3 px-8 py-5 text-white group"
-                whileHover={{ x: 5 }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="w-14 h-14 rounded-full border-2 border-white/30 flex items-center justify-center group-hover:border-gold-400 group-hover:bg-gold-400/10 transition-all duration-300">
-                  <FiPlay className="w-5 h-5 ml-0.5" />
-                </div>
-                <div className="text-left">
-                  <span className="text-xs text-white/60 uppercase tracking-wider block">
-                    Watch
-                  </span>
-                  <span className="text-sm font-semibold">Our Story</span>
-                </div>
-              </motion.button>
             </motion.div>
 
             {/* --- Stats Bar --- */}

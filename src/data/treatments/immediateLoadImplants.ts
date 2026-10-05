@@ -359,9 +359,9 @@ export const immediateLoadImplants: TreatmentDetail = {
     whyChooseUs:
         "Our implant specialists use advanced CBCT imaging, digital smile planning, computer-guided implant surgery, and internationally trusted implant systems to deliver safe, predictable, and natural-looking same-day smiles. Every treatment is customized to maximize long-term success and patient comfort.",
 
-    duration: "Same-day procedure, final teeth in 3–4 months",
+    duration: "Same-day procedure, final teeth in 3 days",
 
     recovery: "2–5 days",
 
-    priceRange: "₹30,000 - ₹2,50,000",
+    priceRange: "₹30,000 - ₹5,00,000",
 };

@@ -524,8 +524,7 @@ export default function AboutPage() {
               <DoctorCard
                 doctor={{
                   ...doctors[0],
-                  image:
-                    "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1200",
+                  image: "/images/doctors/dr-manoj-anarase.webp",
                 }}
                 roleLabel="Chief Implantologist"
                 accent="primary"
@@ -574,14 +573,13 @@ export default function AboutPage() {
               <DoctorCard
                 doctor={{
                   ...doctors[1],
-                  image:
-                    "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=1200",
+                  image: "/images/doctors/dr-akansha-lakde.webp",
                 }}
                 roleLabel="Prosthodontist & Cosmetic Specialist"
                 accent="gold"
                 expertise={["Smile Design", "Crowns & Bridges", "Veneers", "CAD/CAM Dentistry"]}
                 highlights={[
-                  { title: "10+", subtitle: "Years Experience" },
+                  { title: "5+", subtitle: "Years Experience" },
                   { title: "7,000+", subtitle: "Treatments" },
                   { title: "97%", subtitle: "Satisfaction" },
                   { title: "50+", subtitle: "Courses" },
@@ -609,7 +607,7 @@ export default function AboutPage() {
                   <DoctorStatsGrid
                     accent="gold"
                     items={[
-                      { title: "10+", subtitle: "Years Experience" },
+                      { title: "5+", subtitle: "Years Experience" },
                       { title: "7,000+", subtitle: "Treatments" },
                       { title: "97%", subtitle: "Satisfaction" },
                       { title: "50+", subtitle: "Courses" },

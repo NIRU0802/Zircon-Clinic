@@ -24,8 +24,7 @@ import {
 } from "react-icons/fi";
 
 const TreatmentsSection = () => {
-  const [activeCategory, setActiveCategory] =
-    useState("All");
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const categories = useMemo(
     () => getCategories(),
@@ -83,8 +82,8 @@ const TreatmentsSection = () => {
           subtitle="Our Treatments"
           title='Complete <span class="text-gradient">Dental Care</span> Solutions'
           description="
-          Advanced dental treatments combining technology,
-          expertise and personalized patient care.
+            Advanced dental treatments combining technology,
+            expertise and personalized patient care.
           "
         />
 
@@ -105,12 +104,8 @@ const TreatmentsSection = () => {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() =>
-                setActiveCategory(category)
-              }
-              aria-pressed={
-                activeCategory === category
-              }
+              onClick={() => setActiveCategory(category)}
+              aria-pressed={activeCategory === category}
               className={`
                 relative
                 px-6
@@ -121,20 +116,21 @@ const TreatmentsSection = () => {
                 transition-all
                 whitespace-nowrap
 
-                ${activeCategory === category
-                  ? `
-                    bg-primary-600
-                    text-white
-                    shadow-lg
-                    shadow-primary-500/30
-                  `
-                  : `
-                    bg-white
-                    text-gray-600
-                    border
-                    border-gray-100
-                    hover:text-primary-600
-                  `
+                ${
+                  activeCategory === category
+                    ? `
+                      bg-primary-600
+                      text-white
+                      shadow-lg
+                      shadow-primary-500/30
+                    `
+                    : `
+                      bg-white
+                      text-gray-600
+                      border
+                      border-gray-100
+                      hover:text-primary-600
+                    `
                 }
               `}
             >
@@ -194,8 +190,9 @@ const TreatmentsSection = () => {
                       <div
                         className="
                           relative
-                          h-60
+                          h-64
                           overflow-hidden
+                          bg-gray-100
                         "
                       >
                         <Image
@@ -206,9 +203,11 @@ const TreatmentsSection = () => {
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                           className="
                             object-cover
+                            object-center
                             transition-transform
                             duration-700
-                            group-hover:scale-110
+                            ease-out
+                            group-hover:scale-105
                           "
                         />
 
@@ -221,6 +220,7 @@ const TreatmentsSection = () => {
                             via-black/10
                           "
                         />
+
                         {/* Category Badge */}
 
                         <div

@@ -260,7 +260,7 @@ const Footer = () => {
       <div className="border-t border-white/5">
         <div className="container-custom py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-xs">
-            &copy; {currentYear} Zircon Dental &amp; Implant Clinic. All rights reserved.
+            &copy; {currentYear} Zircon Dental &amp; Implant Studio. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-xs text-gray-500">
             <Link href="/privacy" className="hover:text-primary-400 transition-colors">Privacy Policy</Link>
